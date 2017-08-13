@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KELUARGA YANG DAPAT DIHUBUNGI"
+                android:textSize="22sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hubungan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelurahan/Desa"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kecamatan"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kota/Kabupaten"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propinsi"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Pos"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Telepon"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No HP"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Kantor"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat Kantor"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kota/Kabupaten"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Telepon"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No HP"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/dark_grey"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABCDEFGH"
+                android:textSize="18sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>

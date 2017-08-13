@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#42b665">
+
+    <TextView
+        android:id="@+id/Pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan 5 digit PIN Anda"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="230dp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/digit1"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_below="@+id/Pin"
+        android:inputType="numberPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/digit2"
+        android:digits="1"/>
+
+    <EditText
+        android:id="@+id/digit2"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_below="@+id/Pin"
+        android:inputType="numberPassword"
+        android:layout_toLeftOf="@+id/digit3"
+        android:layout_marginLeft="20dp"
+        android:digits="1"/>
+
+    <EditText
+        android:id="@+id/digit3"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:inputType="numberPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/Pin"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:digits="1"/>
+
+    <EditText
+        android:id="@+id/digit4"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:layout_below="@+id/Pin"
+        android:inputType="numberPassword"
+        android:layout_toRightOf="@+id/digit3"
+        android:layout_marginRight="20dp"
+        android:digits="1"/>
+
+    <EditText
+        android:id="@+id/digit5"
+        android:layout_width="22dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:inputType="numberPassword"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/Pin"
+        android:layout_toRightOf="@+id/digit4"
+        android:digits="1"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="masuk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button1"
+        android:textColor="#fff"
+        android:textAllCaps="true"
+        android:layout_below="@+id/digit3"
+        android:onClick="goToPasien"/>
+
+</RelativeLayout>

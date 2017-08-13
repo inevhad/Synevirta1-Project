@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">eHealth</string>
+
+    <string name="profil">Profil Pasien</string>
+    <string name="rekammedis">Rekam Medis</string>
+    <string name="pencarian">Pencarian</string>
+    <string name="dialog_title">Kartu yang Anda masukkan salah</string>
+    <string name="dialog_msg">Silahkan coba lagi atau masukkan lain</string>
+
+</resources>

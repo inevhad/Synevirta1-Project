@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="@android:style/Theme.Holo.Light">-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--<style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">-->
+
+    <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--<item name="android:actionBarStyle">@style/CustomActionBar</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash;<style name="CustomActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">&ndash;&gt;-->
+    <!--<style name="CustomActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">-->
+    <!--<item name="android:background">#0c501c</item>-->
+        <!--<item name="android:titleTextStyle">@style/CustomTextColor</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash;<style name="CustomTextColor" parent="Theme.AppCompat.DayNight.DarkActionBar">&ndash;&gt;-->
+    <!--<style name="CustomTextColor" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">-->
+    <!--<item name="android:textColor">@android:color/white</item>-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
