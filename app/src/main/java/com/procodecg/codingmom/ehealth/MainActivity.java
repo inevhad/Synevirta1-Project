@@ -2,6 +2,7 @@ package com.procodecg.codingmom.ehealth;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -42,10 +43,10 @@ public class MainActivity extends Activity {
     }
 
 //    public void goToPin(View v){
-//        Intent activity = new Intent(this, PinActivity.class);
+//        Intent activity = new Intent(this, Pin2Activity.class);
 //        startActivity(activity);
 //        finish();
-////        Toast.makeText(MainActivity.this, "Kartu yang Anda masukkan salah atau data tidak ditemukan, masukkan kartu lain",
-////                Toast.LENGTH_LONG).show();
+//        Toast.makeText(MainActivity.this, "Kartu yang Anda masukkan salah atau data tidak ditemukan, masukkan kartu lain",
+//                Toast.LENGTH_LONG).show();
 //    }
 }

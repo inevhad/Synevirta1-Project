@@ -16,14 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IsidataActivity"></activity>
-        <activity android:name=".PinActivity"></activity>
-        <activity android:name=".PasiensyncActivity"></activity>
-        <activity android:name=".BottombarActivity"></activity>
-        <activity android:name=".PasiendetailActivity"></activity>
-        <activity android:name=".KeluargaActivity"></activity>
-
-
+        <activity android:name=".IsidataActivity" />
+        <activity android:name=".PinActivity" />
+        <activity android:name=".PasiensyncActivity" />
+        <activity android:name=".BottombarActivity" />
+        <activity android:name=".PasiendetailActivity" />
+        <activity android:name=".KeluargaActivity" />
+        <activity android:name=".Pin2Activity"></activity>
     </application>
 
 </manifest>
