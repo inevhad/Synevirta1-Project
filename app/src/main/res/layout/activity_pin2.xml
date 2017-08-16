@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#42b665"
+    tools:context="com.procodecg.codingmom.ehealth.Pin2Activity">
+
+    <TextView
+        android:id="@+id/PinText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Masukkan 5 digit PIN Anda"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="230dp"
+        android:textSize="20sp" />
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:pinWidth="30dp"
+        app:pinHeight="30dp"
+        app:pinLength="5"
+        app:cursorVisible="true"
+        app:forceKeyboard="true"
+        app:inputType="number"
+        app:password="false"
+        />
+
+    <!--Button
+        android:id="@+id/btnMasukPin"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="masuk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button1"
+        android:textColor="#fff"
+        android:textAllCaps="true"
+        android:layout_below="@id/pinView"
+        android:onClick="goToPasien"/-->
+</RelativeLayout>
