@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by macbookpro on 7/25/17.
@@ -40,13 +41,15 @@ public class MainActivity extends Activity {
 
             }
         });
+
     }
 
-//    public void goToPin(View v){
-//        Intent activity = new Intent(this, Pin2Activity.class);
-//        startActivity(activity);
-//        finish();
+/*   public void goToPin(View v){
+        Intent activity = new Intent(this, Pin2Activity.class);
+        startActivity(activity);
+        finish();
 //        Toast.makeText(MainActivity.this, "Kartu yang Anda masukkan salah atau data tidak ditemukan, masukkan kartu lain",
 //                Toast.LENGTH_LONG).show();
-//    }
+    }
+*/
 }
