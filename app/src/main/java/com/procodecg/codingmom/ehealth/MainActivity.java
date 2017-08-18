@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-
+/*
         Button mShowDialog = (Button) findViewById(R.id.btnShowDialog);
         mShowDialog.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -41,15 +41,15 @@ public class MainActivity extends Activity {
 
             }
         });
-
+ */
     }
 
-/*   public void goToPin(View v){
+   public void goToPin(View v){
         Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);
         finish();
 //        Toast.makeText(MainActivity.this, "Kartu yang Anda masukkan salah atau data tidak ditemukan, masukkan kartu lain",
 //                Toast.LENGTH_LONG).show();
     }
-*/
+
 }
