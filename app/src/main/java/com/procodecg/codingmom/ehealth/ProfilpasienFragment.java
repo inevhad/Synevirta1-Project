@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 
 public class ProfilpasienFragment extends Fragment {
 
-    public static android.support.v4.app.Fragment newInstance() {
+    public static Fragment newInstance() {
             ProfilpasienFragment fragment = new ProfilpasienFragment();
             return fragment;
         }

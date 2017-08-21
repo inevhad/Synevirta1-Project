@@ -16,13 +16,36 @@ public class PasiensyncActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_pasiensync);
-    }
 
+
+    //SINKRONISASI BERHASIL
+    }
     public void goToProfil(View v){
         Intent activity = new Intent(this, BottombarActivity.class);
         startActivity(activity);
         finish();
-//        Toast.makeText(PasiensyncActivity.this, "Data pasien tidak ditemukan, masukkan kartu lain",
-//                Toast.LENGTH_LONG).show();
     }
 }
+
+//    //SINKRONISASI TIDAK BERHASIL
+//    Button mShowDialog = (Button) findViewById(R.id.btnShowDialog);
+//        mShowDialog.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View view) {
+//            AlertDialog.Builder mBuilder = new AlertDialog.Builder(PasiensyncActivity.this);
+//            mBuilder.setIcon(R.drawable.logo2);
+//            mBuilder.setTitle("Kartu pasien tidak dapat diakses");
+//            mBuilder.setMessage("Silahkan coba lagi");
+//            mBuilder.setCancelable(false);
+//            mBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//        @Override
+//        public void onClick(DialogInterface dialogInterface, int i) {
+//            dialogInterface.dismiss();
+//            }
+//            });
+//            AlertDialog alertDialog = mBuilder.create();
+//            alertDialog.show();
+//        }
+//        });
+//        }
+//        }
