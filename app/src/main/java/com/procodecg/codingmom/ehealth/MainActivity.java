@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     }
 }
 
-//        //KARTU SALAH
+        //KARTU SALAH
 //        Button mShowDialog = (Button) findViewById(R.id.btnShowDialog);
 //        mShowDialog.setOnClickListener(new View.OnClickListener() {
 //            @Override
