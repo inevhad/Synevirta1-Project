@@ -1,5 +1,6 @@
 package com.procodecg.codingmom.ehealth;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,7 +20,7 @@ public class RekammedisFragment extends Fragment {
                 return fragment;
         }
 
-       boolean buka = false;
+        boolean buka = false;
 
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -68,20 +69,22 @@ public class RekammedisFragment extends Fragment {
                             contentDinamis.setVisibility(View.GONE);
                             buka = false;
                             }
-
-
                         }
-
                 });
 
-//            public void goToTambah(View v){
-//                Intent activity = new Intent(this.getActivity(), IsirekammedisActivity.class);
-//                startActivity(activity);
-//
-//            }
+            Button btnTambah = (Button)view.findViewById(R.id.btnTambah);
+            btnTambah.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent activity = new Intent(getActivity(), IsirekammedisActivity.class);
+                    startActivity(activity);
 
+                }
+
+            });
 
 
             return view;
         }
+
 }

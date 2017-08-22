@@ -11,7 +11,9 @@
         android:id="@+id/btnStatis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Rekam Medis Statis" />
+        android:text="Data Rekam Medis Statis"
+        android:layout_margin="10dp"
+        android:background="@drawable/button2"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,143 +34,218 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/alergi">
 
                 <TextView
-                    android:id="@+id/alergi"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Alergi"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/isiAlergi"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:layout_marginLeft="10dp"
+                    android:text="17-10-2016  Alergi Cipro dan turunan nya"
+                    />
+
+                <!--<Button-->
+                <!--android:id="@+id/addAlergi"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rwytOperasi"
+                android:layout_below="@id/alergi">
 
                 <TextView
-                    android:id="@+id/rwytOperasi"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Riwayat Operasi"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/isiRwytOperasi"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:layout_marginLeft="10dp"
+                    android:text="10-11-2015  Operasi appendix"
+                    />
+
+                <!--<Button-->
+                <!--android:id="@+id/addRwytOperasi"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rwytRs"
+                android:layout_below="@+id/rwytOperasi">
 
                 <TextView
-                    android:id="@+id/rwytRs"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Riwayat Rawat Inap"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/isiRwytRS"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:text="10-11-2015  Operasi appendix"/>
+
+                <!--<Button-->
+                <!--android:id="@+id/addRwytRS"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rwytPenyKronis"
+                android:layout_below="@id/rwytRs">
 
                 <TextView
-                    android:id="@+id/rwytPenyKronis"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Riwayat Penyakit Kronis"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/isiRwytPenyKronis"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:text="15-10-2015  Infeksi Appendix"
+                    />
 
+                <!--<Button-->
+                <!--android:id="@+id/addRwytPenyKronis"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/penyBawaan"
+                android:layout_below="@+id/rwytPenyKronis">
 
                 <TextView
-                    android:id="@+id/penyBawaan"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="Riwayat Penyakit Bawaan"/>
 
-                <Button
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/isiPenyBawaan"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:text="NA"
+                    />
+
+                <!--<Button-->
+                <!--android:id="@+id/addPenyBawaan"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:id="@+id/faktorRisiko"
+                android:layout_below="@id/penyBawaan">
 
                 <TextView
-                    android:id="@+id/faktorRisiko"
-                    android:layout_margin="10dp"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:text="Faktor Risiko"/>
-
-                <Button
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tampilkan"/>
+                    android:textSize="16dp"
+                    android:text="Faktor Risiko"/>
+
+                <TextView
+                    android:id="@+id/isiFaktorRisiko"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NA"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <!--<Button-->
+                <!--android:id="@+id/addFaktorRisiko"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
 
             </LinearLayout>
 
         </LinearLayout>
 
-
+<!--Divider-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
 
 
     <Button
         android:id="@+id/btnDinamis"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Data Rekam Medis Dinamis" />
-
-
+        android:text="Data Rekam Medis Dinamis"
+        android:layout_margin="10dp"
+        android:background="@drawable/button2"/>
 
         <LinearLayout
             android:id="@+id/contentDinamis"
@@ -183,7 +260,8 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="Rekam medis diurutkan berdasarkan tanggal pemeriksaan"
-                android:textSize="20dp" />
+                android:textSize="16sp"
+                android:layout_gravity="center"/>
 
             <Button
                 android:id="@+id/btnTambah"

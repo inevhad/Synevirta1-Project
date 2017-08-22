@@ -3,9 +3,8 @@ package com.procodecg.codingmom.ehealth;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -61,7 +60,7 @@ public class Pin2Activity extends SessionManagement {
             public void onDataEntered(Pinview pinview, boolean b) {
 //          jika pin benar
                 if (pinview.getValue().toString().equals("12345")) {
-                    Toast.makeText(Pin2Activity.this, "Pin anda benar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Pin2Activity.this, "Pin Anda benar", Toast.LENGTH_SHORT).show();
                     hideKeyboard(Pin2Activity.this);
                     Intent activity = new Intent(Pin2Activity.this, PasiensyncActivity.class);
                     startActivity(activity);
@@ -71,7 +70,7 @@ public class Pin2Activity extends SessionManagement {
 
                     clearPin((ViewGroup) pinview);
                     pinview.clearFocus();
-                    Toast.makeText(getApplicationContext(), "PIN yang anda masukkan salah",
+                    Toast.makeText(getApplicationContext(), "PIN yang Anda masukkan salah",
                             Toast.LENGTH_SHORT).show();
 
                     numberOfRemainingLoginAttempts--;

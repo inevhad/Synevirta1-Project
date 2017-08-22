@@ -5,7 +5,7 @@
     <string name="rekammedis">Rekam Medis</string>
     <string name="pencarian">Pencarian</string>
     <string name="dialog_title">Kartu yang Anda masukkan salah</string>
-    <string name="dialog_msg">Silahkan coba lagi atau masukkan lain</string>
-    <string name="dialog_title_pin">Pin yang Anda masukkan 3 kali salah</string>
+    <string name="dialog_msg">Silahkan coba lagi atau masukkan kartu lain</string>
+    <string name="dialog_title_pin">Anda sudah 3 kali salah memasukkan PIN</string>
     <string name="dialog_msg_pin">Silahkan masukkan kartu kembali</string>>
 </resources>

@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".IsidataActivity" />
         <activity android:name=".PinActivity" />
         <activity android:name=".PasiensyncActivity" />
         <activity android:name=".BottombarActivity" />
         <activity android:name=".PasiendetailActivity" />
         <activity android:name=".KeluargaActivity" />
         <activity android:name=".Pin2Activity"></activity>
+        <activity android:name=".IsirekammedisActivity"></activity>
     </application>
 
 </manifest>

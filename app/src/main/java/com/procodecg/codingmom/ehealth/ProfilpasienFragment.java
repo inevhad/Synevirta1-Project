@@ -40,9 +40,7 @@ public class ProfilpasienFragment extends Fragment {
                     Intent activity = new Intent(getActivity(), PasiendetailActivity.class);
                     startActivity(activity);
 
-//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                            .setAction("Action", null).show();
-                }
+               }
             };
             fabDetail.setOnClickListener(listener);
 
@@ -53,11 +51,6 @@ public class ProfilpasienFragment extends Fragment {
 
                     Intent activity = new Intent(getActivity(), KeluargaActivity.class);
                     startActivity(activity);
-
-//                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                            .setAction("Action", null).show();
-
-
 
                 }
             };
