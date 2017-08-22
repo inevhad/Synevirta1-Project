@@ -7,7 +7,9 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,19 @@ public class Pin2Activity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
+//  fungsi menghapus pin input yang salah
+    private void clearForm(ViewGroup group)
+    {
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View view = group.getChildAt(i);
+            if (view instanceof EditText) {
+                ((EditText) view).getText().clear();
+            }
+            if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0))
+                clearForm((ViewGroup)view);
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +60,17 @@ public class Pin2Activity extends AppCompatActivity {
             public void onDataEntered(Pinview pinview, boolean b) {
 //          jika pin benar
                 if (pinview.getValue().toString().equals("12345")) {
-                    Toast.makeText(Pin2Activity.this, "Pin benar", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Pin2Activity.this, "Pin anda benar", Toast.LENGTH_SHORT).show();
                     hideKeyboard(Pin2Activity.this);
                     Intent activity = new Intent(Pin2Activity.this, PasiensyncActivity.class);
                     startActivity(activity);
                     finish();
 //          jika pin salah
                 } else {
-                    Toast.makeText(getApplicationContext(), "Login/PIN yang anda masukkan salah",
+
+                    clearForm((ViewGroup) pinview);
+                    pinview.clearFocus();
+                    Toast.makeText(getApplicationContext(), "PIN yang anda masukkan salah",
                             Toast.LENGTH_SHORT).show();
 
                     numberOfRemainingLoginAttempts--;
