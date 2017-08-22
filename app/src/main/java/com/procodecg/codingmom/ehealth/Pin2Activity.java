@@ -14,8 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.goodiebag.pinview.Pinview;
+import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 
-public class Pin2Activity extends AppCompatActivity {
+public class Pin2Activity extends SessionManagement {
 
 // batas jumlah input pin salah yang diperbolehkan
     private int numberOfRemainingLoginAttempts = 3;
@@ -33,7 +34,7 @@ public class Pin2Activity extends AppCompatActivity {
     }
 
 //  fungsi menghapus pin input yang salah
-    private void clearForm(ViewGroup group)
+    private void clearPin(ViewGroup group)
     {
         for (int i = 0, count = group.getChildCount(); i < count; ++i) {
             View view = group.getChildAt(i);
@@ -41,7 +42,7 @@ public class Pin2Activity extends AppCompatActivity {
                 ((EditText) view).getText().clear();
             }
             if(view instanceof ViewGroup && (((ViewGroup)view).getChildCount() > 0))
-                clearForm((ViewGroup)view);
+                clearPin((ViewGroup)view);
         }
     }
 
@@ -68,7 +69,7 @@ public class Pin2Activity extends AppCompatActivity {
 //          jika pin salah
                 } else {
 
-                    clearForm((ViewGroup) pinview);
+                    clearPin((ViewGroup) pinview);
                     pinview.clearFocus();
                     Toast.makeText(getApplicationContext(), "PIN yang anda masukkan salah",
                             Toast.LENGTH_SHORT).show();
@@ -109,11 +110,11 @@ public class Pin2Activity extends AppCompatActivity {
         });
     }
 
-    public void goToPasien(View v){
+/*    public void goToPasien(View v){
         Intent activity = new Intent(this, PasiensyncActivity.class);
         startActivity(activity);
         finish();
     }
-
+*/
 
 }
