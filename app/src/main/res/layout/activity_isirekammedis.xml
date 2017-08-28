@@ -13,16 +13,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <!--TextView
                 android:id="@+id/pemeriksaan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:text="Pemeriksaan Fisik"
                 android:textSize="18dp"
-                android:textStyle="bold" />
+                android:textStyle="bold" /-->
 
-            <LinearLayout
+            <!--LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -149,8 +149,9 @@
                     android:layout_weight="1" />
 
             </LinearLayout>
-
+    </LinearLayout-->
             <!--DATA ISIAN PEMERIKSAAN-->
+
 
             <LinearLayout
                 android:id="@+id/rwytPenyDulu"
