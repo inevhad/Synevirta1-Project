@@ -19,8 +19,10 @@
         <activity android:name=".PinActivity" />
         <activity android:name=".PasiensyncActivity" />
         <activity android:name=".BottombarActivity" />
-        <activity android:name=".PasiendetailActivity" />
-        <activity android:name=".KeluargaActivity" />
+        <activity android:name=".PasiendetailActivity"
+            android:theme="@style/AppTheme.CustomTheme"/>
+        <activity android:name=".KeluargaActivity"
+            android:theme="@style/AppTheme.CustomTheme"/>
         <activity android:name=".Pin2Activity"></activity>
         <activity android:name=".IsirekammedisActivity"></activity>
     </application>

@@ -19,4 +19,6 @@ public class IsirekammedisActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_isirekammedis);
     }
+
 }
+

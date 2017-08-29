@@ -13,18 +13,15 @@
         <!--<item name="android:actionBarStyle">@style/CustomActionBar</item>-->
     <!--</style>-->
 
-    <!--&lt;!&ndash;<style name="CustomActionBar" parent="Theme.AppCompat.DayNight.DarkActionBar">&ndash;&gt;-->
-    <!--<style name="CustomActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">-->
-    <!--<item name="android:background">#0c501c</item>-->
-        <!--<item name="android:titleTextStyle">@style/CustomTextColor</item>-->
-    <!--</style>-->
-
-    <!--&lt;!&ndash;<style name="CustomTextColor" parent="Theme.AppCompat.DayNight.DarkActionBar">&ndash;&gt;-->
-    <!--<style name="CustomTextColor" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">-->
-    <!--<item name="android:textColor">@android:color/white</item>-->
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.CustomTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
 
 </resources>

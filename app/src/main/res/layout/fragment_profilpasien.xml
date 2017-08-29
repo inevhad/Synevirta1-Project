@@ -33,7 +33,7 @@
                 app:backgroundTint="#42b665"
                 android:clickable="true"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_action_detail" />
+                android:src="@drawable/information" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fabKeluarga"
@@ -43,7 +43,7 @@
                 android:clickable="true"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
-                android:src="@drawable/ic_action_family" />
+                android:src="@drawable/kontak" />
 
 
 

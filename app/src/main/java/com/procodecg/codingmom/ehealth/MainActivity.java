@@ -7,8 +7,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import static com.procodecg.codingmom.ehealth.Pin2Activity.hideKeyboard;
-
 /**
  * Created by macbookpro on 7/25/17.
  */
@@ -24,7 +22,7 @@ public class MainActivity extends Activity {
         //KARTU BENAR
     }
     public void goToPin(View v){
-        Intent activity = new Intent(this, Pin2Activity.class);
+        Intent activity = new Intent(this, PinActivity.class);
         startActivity(activity);
         finish();
     }

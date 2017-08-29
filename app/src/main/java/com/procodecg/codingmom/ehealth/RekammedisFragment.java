@@ -37,7 +37,7 @@ public class RekammedisFragment extends Fragment {
 
            final View view = inflater.inflate(R.layout.fragment_rekammedis, container, false);
             ((BottombarActivity) getActivity()).setTitleText("Rekam Medis");
-
+            ((BottombarActivity) getActivity()).setSubTitleText();
 
 
                 Button btnStatis = (Button) view.findViewById(R.id.btnStatis);

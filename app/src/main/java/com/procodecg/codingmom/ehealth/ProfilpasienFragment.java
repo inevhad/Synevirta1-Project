@@ -31,6 +31,8 @@ public class ProfilpasienFragment extends Fragment {
 
             final View view = inflater.inflate(R.layout.fragment_profilpasien, container, false);
             ((BottombarActivity) getActivity()).setTitleText("Profil Pasien");
+            ((BottombarActivity) getActivity()).setSubTitleText();
+//            ((AppCompatActivity) getActivity()).getSupportActionBar().setSubtitle("dr X");
 
             FloatingActionButton fabDetail = (FloatingActionButton) view.findViewById(R.id.fabDetail);
                 View.OnClickListener listener = new View.OnClickListener() {

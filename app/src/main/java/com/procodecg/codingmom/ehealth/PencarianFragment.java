@@ -35,6 +35,7 @@ public class PencarianFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ((BottombarActivity) getActivity()).setTitleText("Pencarian");
+        ((BottombarActivity) getActivity()).setSubTitleText();
         return inflater.inflate(R.layout.fragment_pencarian, container, false);
     }
 }

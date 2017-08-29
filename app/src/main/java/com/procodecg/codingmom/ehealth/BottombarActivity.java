@@ -49,17 +49,20 @@ public class BottombarActivity extends AppCompatActivity {
 //    }
     private Toolbar toolbar;
     private TextView txtTitle;
+    private TextView txtSubTitle;
     public static BottombarActivity instance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottombar);
+
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
         instance = this;
 
         txtTitle = (TextView) findViewById(R.id.txt_title);
+        txtSubTitle = (TextView) findViewById(R.id.txt_subtitle);
         //utk title custom action bar
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -106,4 +109,18 @@ public class BottombarActivity extends AppCompatActivity {
             txtTitle.setText(title);
         }
     }
+
+//    public void setSubTitleText(String title){
+//        txtSubTitle.setText("dr X");
+//    }
+
+    public void setSubTitleText() {
+        txtSubTitle.setText("dr Xxx");
+    }
+
+
+//    public void setSubTitleText(String title){
+//            txtSubTitle.setText(title);
+//        }
+
 }

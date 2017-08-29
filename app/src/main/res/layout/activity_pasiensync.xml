@@ -17,7 +17,7 @@
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Halo, dr. X"
+        android:text="Halo, dr. Xxx"
         android:gravity="center"
         android:paddingBottom="0dp"
         android:textSize="30sp"

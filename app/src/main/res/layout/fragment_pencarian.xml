@@ -13,7 +13,7 @@
         android:id="@+id/text_cari"
         android:layout_marginTop="100dp"
         android:text="Masukkan kata kunci"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/input_cari"
@@ -22,7 +22,6 @@
         android:layout_below="@id/text_cari"
         android:inputType="text"
         android:layout_centerHorizontal="true"
-        android:layout_alignBottom="@+id/textView1"
         android:layout_marginTop="10dp"
         android:background="@color/light_grey"/>
 
