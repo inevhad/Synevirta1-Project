@@ -24,6 +24,8 @@
         <activity android:name=".KeluargaActivity"
             android:theme="@style/AppTheme.CustomTheme"/>
         <activity android:name=".Pin2Activity"></activity>
+        <activity android:name=".RekmedlamaActivity"></activity>
+        <activity android:name=".RekmedbaruActivity"></activity>
         <activity android:name=".IsirekammedisActivity"></activity>
     </application>
 

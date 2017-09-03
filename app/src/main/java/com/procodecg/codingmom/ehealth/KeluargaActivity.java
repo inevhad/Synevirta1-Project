@@ -35,7 +35,7 @@ public class KeluargaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        toolbar.setNavigationIcon(R.drawable.backwhite);
+        toolbar.setNavigationIcon(R.drawable.xgreen);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

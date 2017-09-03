@@ -297,6 +297,7 @@
                 android:onClick="goToRm2"/>
 
         </LinearLayout>
+
             <TextView
                 android:id="@+id/pemeriksaan2"
                 android:layout_width="wrap_content"

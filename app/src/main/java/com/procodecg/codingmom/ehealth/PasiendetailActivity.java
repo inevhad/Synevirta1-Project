@@ -35,7 +35,7 @@ public class PasiendetailActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        toolbar.setNavigationIcon(R.drawable.backwhite);
+        toolbar.setNavigationIcon(R.drawable.xgreen);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +51,6 @@ public class PasiendetailActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.92),(int)(height*.85));
+        getWindow().setLayout((int)(width*.92),(int)(height*.88));
     }
 }

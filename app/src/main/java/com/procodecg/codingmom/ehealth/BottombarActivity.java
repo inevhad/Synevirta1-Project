@@ -62,7 +62,7 @@ public class BottombarActivity extends AppCompatActivity {
         instance = this;
 
         txtTitle = (TextView) findViewById(R.id.txt_title);
-        txtSubTitle = (TextView) findViewById(R.id.txt_subtitle);
+        txtSubTitle = (TextView) findViewById(R.id.txt_namaDokter);
         //utk title custom action bar
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -79,12 +79,18 @@ public class BottombarActivity extends AppCompatActivity {
                             case R.id.profil:
                                 selectedFragment = ProfilpasienFragment.newInstance();
                                 break;
-                            case R.id.rekammedis:
-                                selectedFragment = RekammedisFragment.newInstance();
+//                            case R.id.rekammedis:
+//                                selectedFragment = RekammedisFragment.newInstance();
+//                                break;
+                            case R.id.rekmeddinamis:
+                                selectedFragment = RekmedDinamisFragment.newInstance();
                                 break;
-                            case R.id.pencarian:
-                                selectedFragment = PencarianFragment.newInstance();
+                            case R.id.rekmedstatis:
+                                selectedFragment = RekmedStatisFragment.newInstance();
                                 break;
+//                            case R.id.pencarian:
+//                                selectedFragment = PencarianFragment.newInstance();
+//                                break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_layout, selectedFragment);
@@ -114,6 +120,7 @@ public class BottombarActivity extends AppCompatActivity {
 //        txtSubTitle.setText("dr X");
 //    }
 
+    //nama dokter
     public void setSubTitleText() {
         txtSubTitle.setText("dr Xxx");
     }

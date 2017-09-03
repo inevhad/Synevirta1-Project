@@ -8,13 +8,25 @@
         android:title="Profil Pasien" />
 
     <item
-        android:id="@+id/rekammedis"
-        android:icon="@drawable/folder"
-        android:title="@string/rekammedis" />
+        android:id="@+id/rekmeddinamis"
+        android:icon="@drawable/folderdinamis"
+        android:title="RM Dinamis" />
 
     <item
-        android:id="@+id/pencarian"
-        android:icon="@drawable/search"
-        android:title="@string/pencarian" />
+        android:id="@+id/rekmedstatis"
+        android:icon="@drawable/folderstatis"
+        android:title="RM Statis" />
+
+
+
+    <!--<item-->
+        <!--android:id="@+id/rekammedis"-->
+        <!--android:icon="@drawable/folder"-->
+        <!--android:title="Rekam Medis" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/pencarian"-->
+        <!--android:icon="@drawable/search"-->
+        <!--android:title="@string/pencarian" />-->
 
 </menu>

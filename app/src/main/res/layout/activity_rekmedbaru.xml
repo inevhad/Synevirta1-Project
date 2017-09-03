@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.procodecg.codingmom.ehealth.Dinamis_edit">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Pemeriksaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PEMERIKSAAN FISIK"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tinggi (cm)"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Berat (kg)"
+                    android:layout_below="@id/Pemeriksaan"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Suhu (C)"
+                    android:layout_below="@id/Pemeriksaan" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nadi"
+                    android:layout_below="@id/Pemeriksaan" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/tinggi"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="5dp"/>
+
+
+                <EditText
+                    android:id="@+id/berat"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="30dp"/>
+
+
+                <EditText
+                    android:id="@+id/suhu"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="35dp" />
+
+
+                <EditText
+                    android:id="@+id/nadi"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="45dp" />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sistole"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Diastole"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kesadaran"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Respirasi"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="15dp">
+
+                <EditText
+                    android:id="@+id/sistole"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="#fff"
+                    android:inputType="number" />
+
+
+                <EditText
+                    android:id="@+id/diastole"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="30dp"/>
+
+
+                <EditText
+                    android:id="@+id/kesadaran"
+                    android:layout_width="22dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="40dp" />
+
+                <Spinner
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kesadaran_spinner">
+                </Spinner>
+
+                <EditText
+                    android:id="@+id/repirasi"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number"
+                    android:layout_marginLeft="27dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:text="Anemesa:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:text="Prognosa:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17dp"
+                android:text="Diagnosa:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp">
+
+            <TextView
+                android:id="@+id/RwytPenyDulu"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Riwayat Penyakit Dulu"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/RwytPenyKel"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Riwayat Penyakit Keluarga"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/LabExFlag"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Lab Execute Flag"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/CatLab"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Catatan Lab"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ExpLab"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Expertise Lab/Radio"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Terapi"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Terapi"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Resep"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Resep"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ExResep"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Eksekusi Resep Flag"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/RepResep"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Repitisi Resep"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/CatResep"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Catatan Resep"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Prognosa"
+                android:layout_margin="10dp"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="Prognosa"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Status ICD" />
+
+            <Spinner
+                android:id="@+id/icd_status_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
