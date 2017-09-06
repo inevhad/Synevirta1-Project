@@ -5,7 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.procodecg.codingmom.ehealth.Dinamis_edit">
+    tools:context="com.procodecg.codingmom.ehealth.RekmedlamaActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        app:popupTheme="@style/AppTheme.AppBarOverlay">
+
+    <!--android:background="?attr/colorPrimary"-->
+    <!--android:layout_height="?attr/actionBarSize"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_title"
+            android:textSize="20dp"
+            android:textColor="@color/dark_grey"/>
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"

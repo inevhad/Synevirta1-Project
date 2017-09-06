@@ -5,8 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.procodecg.codingmom.ehealth.Dinamis_edit">
+    tools:context="com.procodecg.codingmom.ehealth.RekmedbaruActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        app:popupTheme="@style/AppTheme.AppBarOverlay">
+
+        <!--android:background="?attr/colorPrimary"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_title"
+                android:textSize="20dp"
+                android:textColor="@color/dark_grey"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,218 +41,239 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/Pemeriksaan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PEMERIKSAAN FISIK"
-            android:textSize="18dp"
-            android:textColor="@android:color/black"
-            tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="0dp"
-            android:layout_marginBottom="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="ID Puskesmas" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="Poli Tujuan" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="Sumber Rujukan" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Tinggi (cm)"
-                    />
+                    android:orientation="vertical">
 
-                <TextView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Tinggi (cm)" />
+
+                    <EditText
+                        android:id="@+id/tinggi"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:inputType="number"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Sistole"
+                        />
+
+                    <EditText
+                        android:id="@+id/sistole"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="#fff"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Berat (kg)"
-                    android:layout_below="@id/Pemeriksaan"/>
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="0dp"
+                    <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Suhu (C)"
-                    android:layout_below="@id/Pemeriksaan" />
+                        android:text="Berat (kg)"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"/>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Nadi"
-                    android:layout_below="@id/Pemeriksaan" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp">
-
-                <EditText
-                    android:id="@+id/tinggi"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="5dp"/>
-
-
-                <EditText
+                    <EditText
                     android:id="@+id/berat"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="30dp"/>
-
-
-                <EditText
-                    android:id="@+id/suhu"
-                    android:layout_width="45dp"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="35dp" />
-
-
-                <EditText
-                    android:id="@+id/nadi"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="45dp" />
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="10dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Sistole"
-                    />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Diastole"
-                    />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Kesadaran"
-                    />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Respirasi"
-                    />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginBottom="15dp">
-
-                <EditText
-                    android:id="@+id/sistole"
-                    android:layout_width="60dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="#fff"
                     android:inputType="number" />
 
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Diastole" />
 
-                <EditText
+                    <EditText
                     android:id="@+id/diastole"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="30dp"/>
+                    android:inputType="number" />
 
+                </LinearLayout>
 
-                <EditText
-                    android:id="@+id/kesadaran"
-                    android:layout_width="22dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Suhu (C)" />
+
+                    <EditText
+                    android:id="@+id/suhu"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="40dp" />
+                    android:inputType="number" />
 
-                <Spinner
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Kesadaran" />
+
+                    <!--<EditText-->
+                    <!--android:id="@+id/kesadaran"-->
+                    <!--android:layout_width="22dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="#fff"-->
+                    <!--android:inputType="number" />-->
+
+                    <Spinner
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/kesadaran_spinner">
-                </Spinner>
+                    </Spinner>
 
-                <EditText
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Nadi" />
+
+                    <EditText
+                    android:id="@+id/nadi"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:inputType="number" />
+
+                    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="Respirasi" />
+
+                    <EditText
                     android:id="@+id/repirasi"
                     android:layout_width="60dp"
                     android:layout_height="wrap_content"
                     android:background="#fff"
-                    android:inputType="number"
-                    android:layout_marginLeft="27dp" />
+                    android:inputType="number" />
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:text="Anemesa:" />
+                </LinearLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:text="Prognosa:" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Keluhan Utama" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:text="Diagnosa:" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Anamnesa" />
 
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-            </LinearLayout>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text="Prognosa" />
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

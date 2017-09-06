@@ -4,9 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+
 
 /**
  * Created by macbookpro on 8/29/17.
@@ -17,6 +22,20 @@ public class RekmedDinamisFragment extends Fragment {
         RekmedDinamisFragment fragment = new RekmedDinamisFragment();
         return fragment;
     }
+
+    private RecycleListAdapter rAdapter;
+
+    private ArrayList<String> listTanggal;
+    private ArrayList<String> listNamaDokter;
+
+
+    public static int icons[] = {
+            R.drawable.folder3,
+            R.drawable.folder3,
+//            R.drawable.tips3,
+//            R.drawable.tips4,
+//            R.drawable.tips5,
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,7 +65,34 @@ public class RekmedDinamisFragment extends Fragment {
 //
 //        });
 
-        FloatingActionButton fabDetail = (FloatingActionButton) view.findViewById(R.id.fabMedrecBaru);
+
+        RecyclerView rView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        rView.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        rView.setLayoutManager(llm);
+
+
+
+        listTanggal = new ArrayList<>();
+        listTanggal.add("25-08-2017");
+        listTanggal.add("6-02-2017");
+
+        listNamaDokter = new ArrayList<>();
+        listNamaDokter.add("dr Adrian");
+        listNamaDokter.add("dr Susan");
+
+        rAdapter=new RecycleListAdapter(getActivity(),listTanggal, listNamaDokter, icons);
+        rView.setAdapter(rAdapter);
+//        rAdapter.setOnCardClickListener(this);
+//
+//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.users_list);
+//        UsersAdapter adapter = new UsersAdapter(users, this);
+//        recyclerView.setAdapter(adapter);
+//        adapter.setOnCardClickListner(this);
+
+        //Floating Action Button
+        FloatingActionButton fabRekmedBaru = (FloatingActionButton) view.findViewById(R.id.fabRekmedBaru);
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,7 +102,7 @@ public class RekmedDinamisFragment extends Fragment {
 
             }
         };
-        fabDetail.setOnClickListener(listener);
+        fabRekmedBaru.setOnClickListener(listener);
 
 //        Button btnRm1 = (Button)view.findViewById(R.id.btnRm1);
 //        btnRm1.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +113,7 @@ public class RekmedDinamisFragment extends Fragment {
 //            }
 //
 //        });
+
 
         return view;
 

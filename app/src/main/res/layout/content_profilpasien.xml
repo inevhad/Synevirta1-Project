@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Xxx Yyyy Zzz"
-        android:textSize="18sp"
+        android:textSize="16dp"
         android:layout_marginBottom="9dp"
         android:layout_marginLeft="20dp"/>
 
@@ -37,7 +37,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tanggal Lahir (Umur)"
+        android:text="Tanggal Lahir"
         android:textSize="14sp"
         android:textColor="@color/colorPrimary"
         android:layout_marginLeft="20dp"
@@ -46,8 +46,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1 Januari 2000   (17)"
-        android:textSize="18sp"
+        android:text="1 Januari 2000"
+        android:textSize="16dp"
         android:layout_marginBottom="9dp"
         android:layout_marginLeft="20dp"/>
 
@@ -55,6 +55,28 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usia"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17 tahun 8 bulan"
+            android:textSize="16dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Laki-laki"
-        android:textSize="18sp"
+        android:textSize="16dp"
         android:layout_marginBottom="9dp"
         android:layout_marginLeft="20dp"/>
 
@@ -77,6 +99,28 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Golongan Darah"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="9dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AB"
+            android:textSize="16dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -91,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1234567890"
-        android:textSize="18sp"
+        android:textSize="16dp"
         android:layout_marginBottom="9dp"
         android:layout_marginLeft="20dp"/>
 
@@ -113,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kelas 3"
-        android:textSize="18sp"
+        android:textSize="16dp"
         android:layout_marginBottom="9dp"
         android:layout_marginLeft="20dp"/>
 
