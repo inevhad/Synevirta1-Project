@@ -11,7 +11,17 @@
     <string name="dialog_title_pin">Anda sudah 3 kali salah memasukkan PIN</string>
     <string name="dialog_msg_pin">Silahkan masukkan kartu kembali</string>>
 
-    <string-array name="icd_status">
+    <string-array name="kesadaran">
+        <item>Pilih</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="skala_nyeri">
+        <item>Pilih</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -24,12 +34,20 @@
         <item>10</item>
     </string-array>
 
-    <string-array name="kesadaran">
+    <string-array name="icd_status">
+        <item>Pilih</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
     </string-array>
+
+
 
 </resources>
