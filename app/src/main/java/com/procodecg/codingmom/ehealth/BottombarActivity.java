@@ -1,5 +1,6 @@
 package com.procodecg.codingmom.ehealth;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -65,7 +66,10 @@ public class BottombarActivity extends AppCompatActivity {
         searchViewAndroidActionBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                searchViewAndroidActionBar.clearFocus();
+                //searchViewAndroidActionBar.clearFocus();
+                Intent intent = new Intent(getApplicationContext(), AutoComplete.class);
+                intent.putExtra("hasil", query);
+                startActivity(intent);
                 return true;
             }
 

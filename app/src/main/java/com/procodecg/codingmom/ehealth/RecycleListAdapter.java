@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,12 +35,14 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
         private TextView mTextView1;
         private TextView mTextView2;
         private ImageView mImage;
+        private RelativeLayout rootLayout;
 
         public ViewHolder(View v) {
             super(v);
             mTextView1=(TextView)v.findViewById(R.id.txt_tanggal);
             mTextView2=(TextView)v.findViewById(R.id.txt_namaDokter);
             mImage=(ImageView)v.findViewById(R.id.img_card);
+            rootLayout=(RelativeLayout)v.findViewById(R.id.rootLayout);
         }
     }
 
@@ -65,18 +69,28 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.mTextView1.setText(listTanggal.get(position));
         holder.mTextView2.setText(listNamaDokter.get(position));
         Bitmap icon = BitmapFactory.decodeResource(activity.getResources(),ic[position]);
         holder.mImage.setImageBitmap(icon);
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
+        holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(activity, "Test",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(activity, RekmedlamaActivity.class);
-//                intent.putExtra("",);
-                activity.startActivity(intent);
+
+                switch (position){
+                    case 0:
+                        Toast.makeText(activity, "Posisi 1 Ke Class A", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    case 1:
+                        Toast.makeText(activity, "Posisi 2 Ke Class B", Toast.LENGTH_SHORT).show();
+                        break;
+                }
+                /*Intent intent = new Intent(activity, RekmedlamaActivity.class);
+                intent.putExtra("dokter", listNamaDokter.get(position));
+                activity.startActivity(intent);*/
             }
 
         });

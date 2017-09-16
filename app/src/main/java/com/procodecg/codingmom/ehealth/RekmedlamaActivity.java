@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by macbookpro on 8/30/17.
@@ -42,6 +43,8 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
             }
         });
+
+        Toast.makeText(this, getIntent().getStringExtra("dokter"), Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -31,6 +31,7 @@
         <activity android:name=".RekmedlamaActivity"></activity>
         <activity android:name=".RekmedbaruActivity"></activity>
         <activity android:name=".IsirekammedisActivity"></activity>
+        <activity android:name=".AutoComplete"/>
     </application>
 
 </manifest>

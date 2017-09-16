@@ -5,6 +5,7 @@ package com.procodecg.codingmom.ehealth.data;
  */
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
@@ -33,7 +34,8 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
      *
      * @param context of the app
      */
-    public EhealthDbHelper(Context context) {super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    public EhealthDbHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     /**
@@ -111,6 +113,33 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
         // Execute the SQL statement
         //db.execSQL(SQL_CREATE_REKAMMEDIS_TABLE);
+
+        String SQL_CREATE_TABEL_DIAGNOSA = "CREATE TABLE " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + " TEXT PRIMARY KEY, "
+                + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + " TEXT);";
+        db.execSQL(SQL_CREATE_TABEL_DIAGNOSA);
+
+        String INSERT_DIAGNOSA = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01', 'Fever')";
+        String INSERT_DIAGNOSA1 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A02', 'Ass')";
+        String INSERT_DIAGNOSA2 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A03', 'BOBOBO')";
+        String INSERT_DIAGNOSA3 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A04', 'Gogogo')";
+        String INSERT_DIAGNOSA4 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A05', 'Lololo')";
+
+        db.execSQL(INSERT_DIAGNOSA);
+        db.execSQL(INSERT_DIAGNOSA1);
+        db.execSQL(INSERT_DIAGNOSA2);
+        db.execSQL(INSERT_DIAGNOSA3);
+        db.execSQL(INSERT_DIAGNOSA4);
     }
 
     /**
@@ -119,11 +148,48 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // The database is still at version 1, so there's nothing to do be done here.
+        db.execSQL("DROP TABLE IF EXISTS " + EhealthContract.DiagnosaEntry.TABLE_NAME);
+        onCreate(db);
     }
 
     public void deleteAll(){
         if (db == null || !db.isOpen())
             db = getWritableDatabase();
         db.execSQL("DELETE FROM " + KartuEntry.TABLE_NAME);
+    }
+
+    public void openDB(){
+        db = getWritableDatabase();
+    }
+
+    public void closeDB(){
+        if(db != null && db.isOpen()){
+            db.close();
+        }
+    }
+
+    public String[] getAllDiagnosa(){
+        Cursor cursor = db.query(
+                EhealthContract.DiagnosaEntry.TABLE_NAME,
+                new String[] {EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA},
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        if(cursor.getCount() >0) {
+            String[] str = new String[cursor.getCount()];
+            int i = 0;
+
+            while (cursor.moveToNext()) {
+                str[i] = cursor.getString(cursor.getColumnIndex(EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA));
+                i++;
+            }
+            return str;
+        }else {
+            return new String[] {};
+        }
     }
 }
