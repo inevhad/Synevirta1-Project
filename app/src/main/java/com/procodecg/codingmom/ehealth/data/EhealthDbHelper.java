@@ -46,54 +46,54 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
         // Create a String that contains the SQL statement to create the table
         String SQL_CREATE_REKAMMEDIS_TABLE =  "CREATE TABLE " + RekamMedisEntry.TABLE_NAME + " ("
                 + RekamMedisEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + RekamMedisEntry.COLUMN_TANGGAL_PERIKSA + " DATE, "
-                + RekamMedisEntry.COLUMN_KELUHAN_UTAMA + " TEXT, "
+                + RekamMedisEntry.COLUMN_TGL_PERIKSA + " DATE, "
+                + RekamMedisEntry.COLUMN_KELUHANUTAMA + " TEXT, "
                 + RekamMedisEntry.COLUMN_ANAMNESA + " TEXT, "
-                + RekamMedisEntry.COLUMN_RIWAYAT_PENYAKIT_DULU + " TEXT, "
-                + RekamMedisEntry.COLUMN_RIWAYAT_PENYAKIT_KELUARGA + " TEXT, "
-                + RekamMedisEntry.COLUMN_PEMERIKSAAN_FISIK + " TEXT, "
+                + RekamMedisEntry.COLUMN_PENYAKIT_DULU + " TEXT, "
+                + RekamMedisEntry.COLUMN_PENYAKIT_KEL + " TEXT, "
+                + RekamMedisEntry.COLUMN_FISIK + " TEXT, "
                 + RekamMedisEntry.COLUMN_TINGGI + " INTEGER, "
-                + RekamMedisEntry.COLUMN_BERAT_BADAN + " INTEGER, "
+                + RekamMedisEntry.COLUMN_BERAT + " INTEGER, "
                 + RekamMedisEntry.COLUMN_SYSTOLE+ " INTEGER, "
                 + RekamMedisEntry.COLUMN_DIASTOLE + " INTEGER, "
                 + RekamMedisEntry.COLUMN_NADI + " INTEGER, "
                 + RekamMedisEntry.COLUMN_KESADARAN + " INTEGER, "
                 + RekamMedisEntry.COLUMN_SUHU + " FLOAT, "
                 + RekamMedisEntry.COLUMN_RESPIRASI + " INTEGER, "
-                + RekamMedisEntry.COLUMN_LAIN_LAIN + " TEXT, "
-                + RekamMedisEntry.COLUMN_LAB_EXECUTE_FLAG + " INTEGER, "
-                + RekamMedisEntry.COLUMN_EXPERTISE_LAB_RADIO + " TEXT, "
-                + RekamMedisEntry.COLUMN_CATATAN_LAB + " TEXT, "
+                + RekamMedisEntry.COLUMN_LAINLAIN + " TEXT, "
+                + RekamMedisEntry.COLUMN_LABFLAG + " INTEGER, "
+                + RekamMedisEntry.COLUMN_LABRADIO + " TEXT, "
+                + RekamMedisEntry.COLUMN_CATTLAB + " TEXT, "
                 + RekamMedisEntry.COLUMN_TERAPI + " TEXT, "
                 + RekamMedisEntry.COLUMN_RESEP + " TEXT, "
-                + RekamMedisEntry.COLUMN_CATATAN_RESEP + " TEXT, "
-                + RekamMedisEntry.COLUMN_EKSEKUSI_RESEP_FLAG + " INTEGER, "
-                + RekamMedisEntry.COLUMN_REPETISI_RESEP + " INTEGER, "
+                + RekamMedisEntry.COLUMN_CATTRESEP + " TEXT, "
+                + RekamMedisEntry.COLUMN_EKSEKUSIRESEP + " INTEGER, "
+                + RekamMedisEntry.COLUMN_REPETISIRESEP + " INTEGER, "
                 + RekamMedisEntry.COLUMN_PROGNOSA + " INTEGER, "
-                + RekamMedisEntry.COLUMN_KELUHAN_UTAMA + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KELUHANUTAMA + " TEXT, "
                 + RekamMedisEntry.COLUMN_ANAMNESA + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_1 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_2 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_3 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_4 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_5 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_6 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_7 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_8 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_9 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_10 + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_1_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_2_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_3_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_4_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_5_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_6_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_7_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_8_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_9_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_10_STATUS + " TEXT, "
-                + RekamMedisEntry.COLUMN_POLI_DITUJU + " TEXT, "
-                + RekamMedisEntry.COLUMN_RUJUKAN_PENDERITA + " TEXT, "
+                + RekamMedisEntry.COLUMN_KODE_PENYAKIT + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_2 + " TEXT, "
+                //+ RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_3 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_4 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_5 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_6 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_7 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_8 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_9 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_10 + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_1_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_2_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_3_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_4_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_5_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_6_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_7_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_8_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_9_STATUS + " TEXT, "
+               // + RekamMedisEntry.COLUMN_KODE_PENYAKIT_ICD_10_STATUS + " TEXT, "
+                + RekamMedisEntry.COLUMN_POLI + " TEXT, "
+                + RekamMedisEntry.COLUMN_RUJUKAN + " TEXT, "
                 + RekamMedisEntry.COLUMN_ID_PUSKESMAS + " TEXT);";
 /*
         String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + KartuEntry.TABLE_NAME + " ("
@@ -104,9 +104,11 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
                 + KartuEntry.COLUMN_NAMA_PASIEN + " TEXT);";
 **/
         String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + KartuEntry.TABLE_NAME + " ("
-                + KartuEntry.COLUMN_HPC_NUMBER + " TEXT NOT NULL, "
-                + KartuEntry.COLUMN_PIN_HPC + " TEXT NOT NULL, "
-                + KartuEntry.COLUMN_NAMA_DOKTER + " TEXT NOT NULL);";
+                + KartuEntry.COLUMN_HPCNUMBER + " TEXT NOT NULL, "
+                + KartuEntry.COLUMN_PINHPC + " TEXT NOT NULL, "
+                + KartuEntry.COLUMN_DOKTER + " TEXT NOT NULL, "
+                + KartuEntry.COLUMN_PDCNUMBER + "TEXT NOT NULL, "
+                + KartuEntry.COLUMN_NAMAPASIEN + "TEXT NOT NULL);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_KARTU_TABLE);
@@ -121,25 +123,78 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
         String INSERT_DIAGNOSA = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
                 + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
-                + "VALUES ('A01', 'Fever')";
+                + "VALUES ('A00', 'Cholera')";
         String INSERT_DIAGNOSA1 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
                 + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
-                + "VALUES ('A02', 'Ass')";
+                + "VALUES ('A01', 'Typhoid and paratyphoid fevers')";
         String INSERT_DIAGNOSA2 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
                 + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
-                + "VALUES ('A03', 'BOBOBO')";
+                + "VALUES ('A02', 'Other salmonella infections')";
         String INSERT_DIAGNOSA3 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
                 + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
-                + "VALUES ('A04', 'Gogogo')";
+                + "VALUES ('A03', 'Shigellosis')";
         String INSERT_DIAGNOSA4 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
                 + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
-                + "VALUES ('A05', 'Lololo')";
+                + "VALUES ('A04', 'Other bacterial intestinal infections')";
+        String INSERT_DIAGNOSA5 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A05', 'Other bacterial foodborne intoxications, not elsewhere classified')";
+        String INSERT_DIAGNOSA6 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A06', 'Amoebiasis')";
+        String INSERT_DIAGNOSA7 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A07', 'Other protozoal intestinal diseases')";
+        String INSERT_DIAGNOSA8 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A08', 'Viral and other specified intestinal infections')";
+        String INSERT_DIAGNOSA9 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A09', 'Other gastroenteritis and colitis of infectious and unspecified origin')";
+        String INSERT_DIAGNOSA10 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A00.0', 'Cholera due to Vibrio cholerae 01, biovar cholerae')";
+        String INSERT_DIAGNOSA11 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A00.1', 'Cholera due to Vibrio cholerae 01, biovar eltor')";
+        String INSERT_DIAGNOSA12 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A00.9', 'Cholera, unspecified')";
+        String INSERT_DIAGNOSA13 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01.0', 'Typhoid fever')";
+        String INSERT_DIAGNOSA14 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01.1', 'Paratyphoid fever A')";
+        String INSERT_DIAGNOSA15 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01.2', 'Paratyphoid fever B')";
+        String INSERT_DIAGNOSA16 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01.3', 'Paratyphoid fever C')";
+        String INSERT_DIAGNOSA17 = "INSERT INTO " + EhealthContract.DiagnosaEntry.TABLE_NAME + " ( "
+                + EhealthContract.DiagnosaEntry._ID + ", " + EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA + ") "
+                + "VALUES ('A01.4', 'Paratyphoid fever, unspecified')";
 
         db.execSQL(INSERT_DIAGNOSA);
         db.execSQL(INSERT_DIAGNOSA1);
         db.execSQL(INSERT_DIAGNOSA2);
         db.execSQL(INSERT_DIAGNOSA3);
         db.execSQL(INSERT_DIAGNOSA4);
+        db.execSQL(INSERT_DIAGNOSA5);
+        db.execSQL(INSERT_DIAGNOSA6);
+        db.execSQL(INSERT_DIAGNOSA7);
+        db.execSQL(INSERT_DIAGNOSA8);
+        db.execSQL(INSERT_DIAGNOSA9);
+        db.execSQL(INSERT_DIAGNOSA10);
+        db.execSQL(INSERT_DIAGNOSA11);
+        db.execSQL(INSERT_DIAGNOSA12);
+        db.execSQL(INSERT_DIAGNOSA13);
+        db.execSQL(INSERT_DIAGNOSA14);
+        db.execSQL(INSERT_DIAGNOSA15);
+        db.execSQL(INSERT_DIAGNOSA16);
+        db.execSQL(INSERT_DIAGNOSA17);
+
     }
 
     /**

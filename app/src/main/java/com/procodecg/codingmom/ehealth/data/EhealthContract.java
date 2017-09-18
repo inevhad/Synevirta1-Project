@@ -57,35 +57,35 @@ public final class EhealthContract {
          *
          * Type: TEXT
          */
-        public final static String COLUMN_HPC_NUMBER ="HPC_number";
+        public final static String COLUMN_HPCNUMBER ="hpc_number";
 
         /**
          * PIN_HPC
          *
          * Type: NUMERIC
          */
-        public final static String COLUMN_PIN_HPC = "PIN_HPC";
+        public final static String COLUMN_PINHPC = "pin_hpc";
 
         /**
          * nama_dokter.
          *
          * Type: TEXT
          */
-        public final static String COLUMN_NAMA_DOKTER = "nama_dokter";
+        public final static String COLUMN_DOKTER = "nama_dokter";
 
         /**
          * PHC number.
          *
          * Type: TEXT
          */
-        public final static String COLUMN_PHC_NUMBER = "PHC_number";
+        public final static String COLUMN_PDCNUMBER = "pdc_number";
 
         /**
          * nama pasien.
          *
          * Type: TEXT
          */
-        public final static String COLUMN_NAMA_PASIEN = "nama_pasien";
+        public final static String COLUMN_NAMAPASIEN = "nama_pasien";
 
     }
 
@@ -111,14 +111,14 @@ public final class EhealthContract {
          *
          * Type: DATE (4)
          */
-        public final static String COLUMN_TANGGAL_PERIKSA ="tanggal periksa";
+        public final static String COLUMN_TGL_PERIKSA ="tgl_periksa";
 
         /**
          * Keluhan utama.
          *
          * Type: TEXT (50)
          */
-        public final static String COLUMN_KELUHAN_UTAMA = "keluhan utama";
+        public final static String COLUMN_KELUHANUTAMA = "keluhan_utama";
 
         /**
          * Anamnesa.
@@ -132,21 +132,21 @@ public final class EhealthContract {
          *
          * Type: TEXT (100)
          */
-        public final static String COLUMN_RIWAYAT_PENYAKIT_DULU = "riwayat penyakit dahulu";
+        public final static String COLUMN_PENYAKIT_DULU = "rpenyakitdulu";
 
         /**
          * Riwayat penyakit keluarga.
          *
          * Type: TEXT (100)
          */
-        public final static String COLUMN_RIWAYAT_PENYAKIT_KELUARGA = "riwayat penyakit keluarga";
+        public final static String COLUMN_PENYAKIT_KEL = "rpenyakitkel";
 
         /**
          * Pemeriksaan fisik.
          *
          * Type: TEXT (100)
          */
-        public final static String COLUMN_PEMERIKSAAN_FISIK = "pemeriksaan fisik";
+        public final static String COLUMN_FISIK = "pemeriksaan_fisik";
 
         /**
          * Tinggi.
@@ -160,7 +160,7 @@ public final class EhealthContract {
          *
          * Type: NUM (4)
          */
-        public final static String COLUMN_BERAT_BADAN = "berat badan";
+        public final static String COLUMN_BERAT = "berat";
 
         /**
          * Systole.
@@ -209,7 +209,7 @@ public final class EhealthContract {
          *
          * Type: TEXT (250)
          */
-        public final static String COLUMN_LAIN_LAIN = "lain_lain";
+        public final static String COLUMN_LAINLAIN = "lain_lain";
 
         /**
          * Lab execute flag.
@@ -219,7 +219,7 @@ public final class EhealthContract {
          *
          * Type: INTEGER (1)
          */
-        public final static String COLUMN_LAB_EXECUTE_FLAG = "lab execute flag";
+        public final static String COLUMN_LABFLAG = "labflag";
         public static final int LAB_DILAYANI_PENUH = 0;
         public static final int LAB_TIDAK_DILAYANI = 1;
         public static final int LAB_DILAYANI_SEBAGIAN = 2;
@@ -229,14 +229,14 @@ public final class EhealthContract {
          *
          * Type: TEXT (512)
          */
-        public final static String COLUMN_EXPERTISE_LAB_RADIO = "expertise lab radio";
+        public final static String COLUMN_LABRADIO = "labradio";
 
         /**
          * Catatan lab.
          *
          * Type: TEXT (50)
          */
-        public final static String COLUMN_CATATAN_LAB = "catatan lab";
+        public final static String COLUMN_CATTLAB = "catt_lab";
 
         /**
          * Terapi.
@@ -257,7 +257,7 @@ public final class EhealthContract {
          *
          * Type: TEXT (50)
          */
-        public final static String COLUMN_CATATAN_RESEP = "catatan resep";
+        public final static String COLUMN_CATTRESEP = "cattresep";
 
         /**
          * Eksekusi resep flag.
@@ -266,7 +266,7 @@ public final class EhealthContract {
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_EKSEKUSI_RESEP_FLAG = "eksekusi resep flag";
+        public final static String COLUMN_EKSEKUSIRESEP = "eksekusi_resep";
         public static final int RESEP_DILAYANI_PENUH = 0;
         public static final int RESEP_TIDAK_DILAYANI = 1;
         public static final int RESEP_DILAYANI_SEBAGIAN = 2;
@@ -277,7 +277,7 @@ public final class EhealthContract {
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_REPETISI_RESEP = "repetisi resep";
+        public final static String COLUMN_REPETISIRESEP = "repetisi_resep";
 
         /**
          * Prognosa.
@@ -291,70 +291,70 @@ public final class EhealthContract {
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_1 = "kode penyakit ICD 1";
+        public final static String COLUMN_KODE_PENYAKIT = "kode_penyakit";
 
         /**
          * Kode penyakit ICD 2.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_2 = "kode penyakit ICD 2";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_2 = "kode penyakit ICD 2";
 
         /**
          * Kode penyakit ICD 3.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_3 = "kode penyakit ICD 3";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_3 = "kode penyakit ICD 3";
 
         /**
          * Kode penyakit ICD 4.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_4 = "kode penyakit ICD 4";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_4 = "kode penyakit ICD 4";
 
         /**
          * Kode penyakit ICD 5.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_5 = "kode penyakit ICD 5";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_5 = "kode penyakit ICD 5";
 
         /**
          * Kode penyakit ICD 6.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_6 = "kode penyakit ICD 6";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_6 = "kode penyakit ICD 6";
 
         /**
          * Kode penyakit ICD 7.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_7 = "kode penyakit ICD 7";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_7 = "kode penyakit ICD 7";
 
         /**
          * Kode penyakit ICD 8.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_8 = "kode penyakit ICD 8";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_8 = "kode penyakit ICD 8";
 
         /**
          * Kode penyakit ICD 9.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_9 = "kode penyakit ICD 9";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_9 = "kode penyakit ICD 9";
 
         /**
          * Kode penyakit ICD 10.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_10 = "kode penyakit ICD 10";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_10 = "kode penyakit ICD 10";
         /**
          *The only possible values are {@link #DIAGNOSA_BANDING}, {@link #DIAGNOSA_KERJA},
          * or {@link #DIAGNOSA_BANDING_KERJA}.
@@ -367,91 +367,91 @@ public final class EhealthContract {
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_1_STATUS = "kode penyakit ICD 1 status diagnosa";
+        public final static String COLUMN_STATUS = "status_diagnosa";
 
         /**
          * Kode penyakit ICD 2 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_2_STATUS = "kode penyakit ICD 2 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_2_STATUS = "kode penyakit ICD 2 status diagnosa";
 
         /**
          * Kode penyakit ICD 3 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_3_STATUS = "kode penyakit ICD 3 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_3_STATUS = "kode penyakit ICD 3 status diagnosa";
 
         /**
          * Kode penyakit ICD 4 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_4_STATUS = "kode penyakit ICD 4 status diagnosa";
+     //   public final static String COLUMN_KODE_PENYAKIT_ICD_4_STATUS = "kode penyakit ICD 4 status diagnosa";
 
         /**
          * Kode penyakit ICD 5 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_5_STATUS = "kode penyakit ICD 5 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_5_STATUS = "kode penyakit ICD 5 status diagnosa";
 
         /**
          * Kode penyakit ICD 6 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_6_STATUS = "kode penyakit ICD 6 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_6_STATUS = "kode penyakit ICD 6 status diagnosa";
 
         /**
          * Kode penyakit ICD 7 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_7_STATUS = "kode penyakit ICD 7 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_7_STATUS = "kode penyakit ICD 7 status diagnosa";
 
         /**
          * Kode penyakit ICD 8 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_8_STATUS = "kode penyakit ICD 8 status diagnosa";
+       // public final static String COLUMN_KODE_PENYAKIT_ICD_8_STATUS = "kode penyakit ICD 8 status diagnosa";
 
         /**
          * Kode penyakit ICD 9 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_9_STATUS = "kode penyakit ICD 9 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_9_STATUS = "kode penyakit ICD 9 status diagnosa";
 
         /**
          * Kode penyakit ICD 10 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_KODE_PENYAKIT_ICD_10_STATUS = "kode penyakit ICD 10 status diagnosa";
+      //  public final static String COLUMN_KODE_PENYAKIT_ICD_10_STATUS = "kode penyakit ICD 10 status diagnosa";
 
         /**
          * Poli yang dituju.
          *
          * Type: TEXT (50)
          */
-        public final static String COLUMN_POLI_DITUJU = "poli yang dituju";
+       public final static String COLUMN_POLI = "poli_tujuan";
 
         /**
          * Rujukan/Pengirim penderita.
          *
          * Type: TEXT (30)
          */
-        public final static String COLUMN_RUJUKAN_PENDERITA = "rujukan/pengirim penderita";
+        public final static String COLUMN_RUJUKAN = "rujukan_penderita";
 
         /**
          * ID Puskesmas.
          *
          * Type: TEXT (12)
          */
-        public final static String COLUMN_ID_PUSKESMAS = "ID puskesmas";
+        public final static String COLUMN_ID_PUSKESMAS = "ID_puskesmas";
     }
 
     public static final class DiagnosaEntry implements BaseColumns{
