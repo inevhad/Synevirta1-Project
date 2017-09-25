@@ -122,19 +122,19 @@ public class RekmedbaruActivity extends AppCompatActivity {
             }
         });
 
-        //spinner skala nyeri
-        Spinner spinnerNyeri = (Spinner) findViewById(R.id.nyeri_spinner);
-        ArrayAdapter<CharSequence> adapterNyeri = ArrayAdapter.createFromResource(this,
-                R.array.skala_nyeri, android.R.layout.simple_spinner_item);
-        adapterNyeri.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerNyeri.setAdapter(adapterNyeri);
-
         //spinner kesadaran
         Spinner spinnerKesadaran = (Spinner) findViewById(R.id.kesadaran_spinner);
         ArrayAdapter<CharSequence> adapterKesadaran = ArrayAdapter.createFromResource(this,
                 R.array.kesadaran, android.R.layout.simple_spinner_item);
         adapterKesadaran.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerKesadaran.setAdapter(adapterKesadaran);
+
+        //spinner status Laboratorium Radiologi
+        Spinner spinnerLabRadio = (Spinner) findViewById(R.id.statusLabRadio);
+        ArrayAdapter<CharSequence> adapterLabRadio = ArrayAdapter.createFromResource(this,
+                R.array.status_labradio, android.R.layout.simple_spinner_item);
+        adapterLabRadio.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerLabRadio.setAdapter(adapterLabRadio);
 
         //spinner icd
         Spinner spinnerIcd = (Spinner) findViewById(R.id.icd_spinner);
@@ -143,9 +143,35 @@ public class RekmedbaruActivity extends AppCompatActivity {
         adapterIcd.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerIcd.setAdapter(adapterIcd);
 
+        //spinner status resep
+        Spinner spinnerResep = (Spinner) findViewById(R.id.statusResep);
+        ArrayAdapter<CharSequence> adapterResep = ArrayAdapter.createFromResource(this,
+                R.array.status_resep, android.R.layout.simple_spinner_item);
+        adapterResep.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerResep.setAdapter(adapterResep);
 
+        //spinner status prognosis ad vitam
+        Spinner spinnerAdVitam = (Spinner) findViewById(R.id.adVitam);
+        ArrayAdapter<CharSequence> adapterAdVitam = ArrayAdapter.createFromResource(this,
+                R.array.ad_vitam, android.R.layout.simple_spinner_item);
+        adapterAdVitam.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAdVitam.setAdapter(adapterAdVitam);
 
-    //PIN SALAH
+        //spinner status prognosis ad functionam
+        Spinner spinnerAdFunctionam = (Spinner) findViewById(R.id.adFunctionam);
+        ArrayAdapter<CharSequence> adapterAdFunctionam = ArrayAdapter.createFromResource(this,
+                R.array.ad_functionam, android.R.layout.simple_spinner_item);
+        adapterAdFunctionam.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAdFunctionam.setAdapter(adapterAdFunctionam);
+
+        //spinner status prognosis ad functionam
+        Spinner spinnerAdSanationam = (Spinner) findViewById(R.id.adSanationam);
+        ArrayAdapter<CharSequence> adapterAdSanationam = ArrayAdapter.createFromResource(this,
+                R.array.ad_sanationam, android.R.layout.simple_spinner_item);
+        adapterAdSanationam.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerAdSanationam.setAdapter(adapterAdSanationam);
+
+    //BUTTON SAVE
     Button mShowDialog = (Button) findViewById(R.id.btnShowDialog);
         mShowDialog.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -153,7 +179,6 @@ public class RekmedbaruActivity extends AppCompatActivity {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(RekmedbaruActivity.this);
         mBuilder.setIcon(R.drawable.logo2);
         mBuilder.setTitle("Data yang Anda masukkan tidak dapat dirubah lagi");
-//        mBuilder.setMessage("Silahkan coba lagi");
         mBuilder.setMessage("Apakah Anda akan menyimpan data sekarang?");
         mBuilder.setCancelable(false);
         mBuilder.setPositiveButton("Tidak", new DialogInterface.OnClickListener() {

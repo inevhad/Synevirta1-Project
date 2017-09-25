@@ -23,7 +23,8 @@
         android:inputType="text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="@color/light_grey"/>
+        android:padding="10dp"
+        android:background="@color/white"/>
 
     <Button
         android:id="@+id/button"

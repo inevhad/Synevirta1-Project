@@ -29,16 +29,17 @@
                 android:id="@+id/fabDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:backgroundTint="#42b665"
+                app:backgroundTint="@color/blue"
                 android:clickable="true"
                 android:layout_marginRight="10dp"
                 android:src="@drawable/infodetail" />
+            <!--app:backgroundTint="#42b665"-->
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fabKeluarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:backgroundTint="#42b665"
+                app:backgroundTint="@color/blue"
                 android:clickable="true"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"

@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -28,15 +26,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="17-10-2016  Alergi Cipro dan turunan nya"
-            />
+            android:text="Alergi Cipro dan turunan nya"
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addAlergi"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 
@@ -50,7 +48,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -62,14 +60,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="10-11-2015  Operasi appendix"
-            />
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addRwytOperasi"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 
@@ -83,7 +81,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -94,14 +92,15 @@
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10-11-2015  Operasi appendix"/>
+            android:text="10-11-2015  Operasi appendix"
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addRwytRS"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 
@@ -115,7 +114,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -127,14 +126,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15-10-2015  Infeksi Appendix"
-            />
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addRwytPenyKronis"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 
@@ -148,7 +147,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -160,14 +159,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NA"
-            />
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addPenyBawaan"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 
@@ -181,7 +180,7 @@
 
         <TextView
             android:layout_marginLeft="10dp"
-            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16dp"
@@ -193,14 +192,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NA"
-            />
+            android:paddingBottom="8dp"/>
 
-        <!--<Button-->
-            <!--android:id="@+id/addFaktorRisiko"-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="end"-->
-            <!--android:drawableEnd="@drawable/ic_playlist_add_black_24dp"/>-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
 
     </LinearLayout>
 

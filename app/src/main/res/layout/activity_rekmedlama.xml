@@ -167,12 +167,15 @@
                         android:text="Tinggi(cm)"
                         />
 
-                    <EditText
-                        android:id="@+id/tinggi"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="155"
+                        android:textSize="13sp" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -181,12 +184,14 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"/>
 
-                    <EditText
-                        android:id="@+id/berat"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="50"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
@@ -204,10 +209,14 @@
                         android:text="Nyeri"
                         />
 
-                    <Spinner
-                        android:id="@+id/nyeri_spinner"
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="7"
+                        android:textSize="13sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -216,10 +225,14 @@
                         android:layout_marginBottom="5dp"
                         android:text="Kesadaran" />
 
-                    <Spinner
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/kesadaran_spinner"/>
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="1"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
@@ -255,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -265,13 +278,14 @@
                         android:text="TD(mm/Hg)"
                         />
 
-                    <EditText
-                        android:id="@+id/tekananDarah"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="120/90"
+                        android:textSize="13sp" />
+
 
                 </LinearLayout>
 
@@ -280,7 +294,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -289,12 +303,14 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="5dp"/>
 
-                    <EditText
-                        android:id="@+id/suhu"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="38,5"
+                        android:textSize="13sp" />
+
 
                 </LinearLayout>
 
@@ -303,7 +319,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -312,12 +328,14 @@
                         android:layout_marginBottom="5dp"
                         android:text="Nadi(x/mnt)" />
 
-                    <EditText
-                        android:id="@+id/nadi"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="55"
+                        android:textSize="13sp" />
+
 
                 </LinearLayout>
 
@@ -326,7 +344,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center_horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -335,12 +353,13 @@
                         android:layout_marginBottom="5dp"
                         android:text="RR(x/mnt)" />
 
-                    <EditText
-                        android:id="@+id/repirasi"
-                        android:layout_width="60dp"
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:inputType="number" />
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/grey"
+                        android:text="26"
+                        android:textSize="13sp" />
 
                 </LinearLayout>
 
@@ -468,30 +487,15 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="Thorax Abdomen etc"
+                android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/pemeriksaanFIsik"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
-
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
-
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -518,30 +522,15 @@
                 android:text="Laboratorium"
                 android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="-"
+                android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/laboratorium"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
-
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -551,32 +540,17 @@
                 android:text="Radiologi"
                 android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
-
-                <EditText
-                    android:id="@+id/radiologi"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/grey"
+                    android:text="-"
+                    android:textSize="13sp" />
 
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
 
-            </LinearLayout>
-
-            <View
+                <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginLeft="10dp"
@@ -593,30 +567,15 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="Asthmatis"
+                android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/statusDiagnosis"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
-
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -634,10 +593,15 @@
                     android:text="ICD 10"
                     android:textSize="16sp" />
 
-                <Spinner
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/icd_spinner" />
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/grey"
+                    android:text="5"
+                    android:textSize="13sp" />
+
 
             </LinearLayout>
 
@@ -666,30 +630,15 @@
                 android:text="Pengobatan"
                 android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="Tremenza; Fentolin"
+                android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/pengobatan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
-
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
-
-            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -699,30 +648,15 @@
                 android:text="Tindakan"
                 android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder">
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="-"
+                android:textSize="13sp" />
 
-                <EditText
-                    android:id="@+id/tindakan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/noborder"
-                    android:padding="5dp" />
-
-                <!--<Button-->
-                <!--android:id="@+id/button_clear"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:padding="5dp"-->
-                <!--android:layout_marginRight="5dp"-->
-                <!--android:background="@drawable/xdelete" />-->
-
-            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -741,28 +675,15 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <RadioGroup
-                android:id="@+id/radio_prognosis"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp">
-                <RadioButton
-                    android:id="@+id/dubiaAdBonam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Dubia Ad Bonam"
-                    android:textSize="14sp"
-                    android:textColor="@color/separator" />
-                <RadioButton
-                    android:id="@+id/dubiaAdMalam"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false"
-                    android:text="Dubia Ad Malam"
-                    android:textSize="14sp"
-                    android:textColor="@color/separator" />
-            </RadioGroup>
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/grey"
+                android:text="Dubia At Bonam"
+                android:textSize="13sp" />
+
 
             <View
                 android:layout_width="match_parent"
@@ -770,20 +691,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"/>
 
-            <Button
-                android:id="@+id/btnShowDialog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:layout_marginTop="20dp"
-                android:text="Selesai dan Simpan"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button1"
-                android:textColor="#fff"
-                android:textAllCaps="true"
-                android:onClick="goToRmDinamis"/>
 
         </LinearLayout>
 

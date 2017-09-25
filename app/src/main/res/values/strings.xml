@@ -13,41 +13,63 @@
 
     <string-array name="kesadaran">
         <item>Pilih</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
+        <item>Composmentis</item>
+        <item>Apatis</item>
+        <item>Delirium</item>
+        <item>Somnolen</item>
+        <item>Sopor</item>
+        <item>Semi-coma</item>
+        <item>Coma</item>
     </string-array>
 
-    <string-array name="skala_nyeri">
+    <string-array name="status_labradio">
         <item>Pilih</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+        <item>Dilayani penuh</item>
+        <item>Dilayani sebagian</item>
+        <item>Tidak dilayani sama sekali</item>
     </string-array>
 
     <string-array name="icd_status">
         <item>Pilih</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+        <item>Sakit Kepala Chronic F44.3</item>
+        <item>Sakit Kepala Migrain G43.9</item>
+        <item>Sakit Kepala Tension G44.2</item>
+        <item>Pharyngitis diphtheritic A36.0</item>
+        <item>Pharyngitis purulunt J02.9</item>
+        <item>Pharyngitis Tb 16.8</item>
     </string-array>
 
+    <string-array name="status_resep">
+        <item>Pilih</item>
+        <item>Dilayani penuh</item>
+        <item>Dilayani sebagian</item>
+        <item>Dilayani ada penggantian</item>
+        <item>Dilayani sebagian dan ada penggantian</item>
+        <item>Tidak dilayani sama sekali</item>
+    </string-array>
 
+    <string-array name="ad_vitam">
+        <item>Pilih</item>
+        <item>Ad bonam</item>
+        <item>Dubia ad bonam</item>
+        <item>Dubia ad malam</item>
+        <item>Ad malam</item>
+    </string-array>
+
+    <string-array name="ad_functionam">
+        <item>Pilih</item>
+        <item>Ad bonam</item>
+        <item>Dubia ad bonam</item>
+        <item>Dubia ad malam</item>
+        <item>Ad malam</item>
+    </string-array>
+
+    <string-array name="ad_sanationam">
+        <item>Pilih</item>
+        <item>Ad bonam</item>
+        <item>Dubia ad bonam</item>
+        <item>Dubia ad malam</item>
+        <item>Ad malam</item>
+    </string-array>
 
 </resources>

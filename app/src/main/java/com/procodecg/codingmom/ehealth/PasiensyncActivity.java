@@ -16,11 +16,8 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by macbookpro on 7/27/17.
@@ -58,6 +55,7 @@ public class PasiensyncActivity extends Activity {
         finish();
     }
 
+    //utk UPLOAD PHOTO
     public void imgClick (View v) {
         Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(i, SELECTED_PICTURE);
@@ -88,7 +86,7 @@ public class PasiensyncActivity extends Activity {
     };
 
 
-
+    //utk DISPLAY NAMA DOKTER
     private void displayNamaDokter() {
         // Create and/or open a database to read from it
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
@@ -96,7 +94,7 @@ public class PasiensyncActivity extends Activity {
 
         String[] projection = {
                 //KartuEntry.COLUMN_HPC_NUMBER,
-                KartuEntry.COLUMN_NAMA_DOKTER,
+//                KartuEntry.COLUMN_NAMA_DOKTER,
                 //KartuEntry.COLUMN_PIN_HPC,
         };
 
@@ -120,7 +118,7 @@ public class PasiensyncActivity extends Activity {
             // Figure out the index of each column
             // int idColumnIndex = cursor.getColumnIndex(KartuEntry._ID);
             //int HPCnumberColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_HPC_NUMBER);
-            int namaDokterColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_NAMA_DOKTER);
+//            int namaDokterColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_NAMA_DOKTER);
             //int pinHPCColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_PIN_HPC);
             //int weightColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_WEIGHT);
 
@@ -131,7 +129,7 @@ public class PasiensyncActivity extends Activity {
                 // at the current row the cursor is on.
                 // int currentID = cursor.getInt(idColumnIndex);
                 //String currentHPCNumber = cursor.getString(HPCnumberColumnIndex);
-                String currentNamaDokter = cursor.getString(namaDokterColumnIndex);
+//                String currentNamaDokter = cursor.getString(namaDokterColumnIndex);
                 //String currentPinHPC = cursor.getString(pinHPCColumnIndex);
                 // int currentWeight = cursor.getInt(weightColumnIndex);
                 // Display the values from each column of the current row in the cursor in the TextView
@@ -140,7 +138,7 @@ public class PasiensyncActivity extends Activity {
                         currentNamaDokter + " - " +
                         currentPinHPC));
                  **/
-                textNamaDoktertv.setText(currentNamaDokter);
+//                textNamaDoktertv.setText(currentNamaDokter);
                 textNamaDoktertv.setVisibility(View.VISIBLE);
             }
 

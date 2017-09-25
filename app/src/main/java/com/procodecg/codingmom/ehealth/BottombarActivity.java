@@ -1,17 +1,12 @@
 package com.procodecg.codingmom.ehealth;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -57,29 +52,30 @@ public class BottombarActivity extends AppCompatActivity {
     private TextView txtSubTitle;
     public static BottombarActivity instance;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_search, menu);
-        MenuItem searchViewItem = menu.findItem(R.id.action_search);
-        final SearchView searchViewAndroidActionBar = (SearchView) MenuItemCompat.getActionView(searchViewItem);
-        searchViewAndroidActionBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                //searchViewAndroidActionBar.clearFocus();
-                Intent intent = new Intent(getApplicationContext(), AutoComplete.class);
-                intent.putExtra("hasil", query);
-                startActivity(intent);
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-    }
+    //SEARCH menu
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu_search, menu);
+//        MenuItem searchViewItem = menu.findItem(R.id.action_search);
+//        final SearchView searchViewAndroidActionBar = (SearchView) MenuItemCompat.getActionView(searchViewItem);
+//        searchViewAndroidActionBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                //searchViewAndroidActionBar.clearFocus();
+//                Intent intent = new Intent(getApplicationContext(), AutoComplete.class);
+//                intent.putExtra("hasil", query);
+//                startActivity(intent);
+//                return true;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                return false;
+//            }
+//        });
+//        return super.onCreateOptionsMenu(menu);
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,18 +107,18 @@ public class BottombarActivity extends AppCompatActivity {
                             case R.id.profil:
                                 selectedFragment = ProfilpasienFragment.newInstance();
                                 break;
-//                            case R.id.rekammedis:
-//                                selectedFragment = RekammedisFragment.newInstance();
-//                                break;
-                            case R.id.rekmeddinamis:
-                                selectedFragment = RekmedDinamisFragment.newInstance();
+                            case R.id.rekammedis:
+                                selectedFragment = RekmedFragment.newInstance();
                                 break;
-                            case R.id.rekmedstatis:
-                                selectedFragment = RekmedStatisFragment.newInstance();
-                                break;
-//                            case R.id.pencarian:
-//                                selectedFragment = PencarianFragment.newInstance();
+//                            case R.id.rekmeddinamis:
+//                                selectedFragment = RekmedDinamisFragment.newInstance();
 //                                break;
+//                            case R.id.rekmedstatis:
+//                                selectedFragment = RekmedStatisFragment.newInstance();
+//                                break;
+                            case R.id.pencarian:
+                                selectedFragment = PencarianFragment.newInstance();
+                                break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                         transaction.replace(R.id.frame_layout, selectedFragment);
@@ -154,7 +150,7 @@ public class BottombarActivity extends AppCompatActivity {
 
     //nama dokter
     public void setSubTitleText() {
-        txtSubTitle.setText("dr Xxx");
+        txtSubTitle.setText("dr Sinta");
     }
 
 

@@ -14,6 +14,9 @@
     <color name="dark_grey">#585857</color>
     <color name="separator">#cccccc</color>
     <color name="grey">#999999</color>
+    <color name="blue">#389891</color>
+    <color name="black">#000000</color>
+    <color name="red">#AE254A</color>
 
 
     <!--<color name="colorPrimary">#56B900</color>-->

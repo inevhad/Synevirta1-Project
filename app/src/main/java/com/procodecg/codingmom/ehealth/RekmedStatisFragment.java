@@ -24,8 +24,10 @@ public class RekmedStatisFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ((BottombarActivity) getActivity()).setTitleText("Rekam Medis Statis");
-        ((BottombarActivity) getActivity()).setSubTitleText();
-        return inflater.inflate(R.layout.fagment_rekmedstatis, container, false);
+        //aktifkan jika TIDAK menggunakan TabLayout Dinamis-Statis
+//        ((BottombarActivity) getActivity()).setTitleText("Rekam Medis Statis");
+//        ((BottombarActivity) getActivity()).setSubTitleText();
+
+        return inflater.inflate(R.layout.fragment_rekmedstatis, container, false);
     }
 }

@@ -10,12 +10,10 @@ import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.Toast;
 
-import com.procodecg.codingmom.ehealth.data.EhealthContract;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 /**
  * Created by macbookpro on 7/25/17.
@@ -34,7 +32,7 @@ public class MainActivity extends Activity {
         //KARTU BENAR
     }
     public void goToPin(View v){
-        Intent activity = new Intent(this, PinActivity.class);
+        Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);
         finish();
     }
@@ -63,9 +61,9 @@ public class MainActivity extends Activity {
             // Create a ContentValues object where column names are the keys,
             // and pet attributes from the editor are the values.
             ContentValues values = new ContentValues();
-            values.put(KartuEntry.COLUMN_HPC_NUMBER, HPCnumberString);
-            values.put(KartuEntry.COLUMN_PIN_HPC, PIN_HPC);
-            values.put(KartuEntry.COLUMN_NAMA_DOKTER, namaDokterString);
+//            values.put(KartuEntry.COLUMN_HPC_NUMBER, HPCnumberString);
+//            values.put(KartuEntry.COLUMN_PIN_HPC, PIN_HPC);
+//            values.put(KartuEntry.COLUMN_NAMA_DOKTER, namaDokterString);
 
             // Insert a new row for pet in the database, returning the ID of that new row.
             long newRowId = db.insert(KartuEntry.TABLE_NAME, null, values);
@@ -77,9 +75,9 @@ public class MainActivity extends Activity {
              } else {
              // Otherwise, the insertion was successful and we can display a toast with the row ID.
              Toast.makeText(this, "Sinkronisasi kartu HPC BERHASIL! ", Toast.LENGTH_SHORT).show();
-                Intent activity = new Intent(this, Pin2Activity.class);
-                startActivity(activity);
-                finish();
+//                Intent activity = new Intent(this, Pin2Activity.class);
+//                startActivity(activity);
+//                finish();
              }
         } else
         {

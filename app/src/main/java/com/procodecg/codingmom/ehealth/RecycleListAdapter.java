@@ -81,11 +81,13 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
 
                 switch (position){
                     case 0:
-                        Toast.makeText(activity, "Posisi 1 Ke Class A", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(activity, "Posisi 1 Ke Class A", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(activity, RekmedlamaActivity.class);
+                activity.startActivity(intent);
                         break;
 
                     case 1:
-                        Toast.makeText(activity, "Posisi 2 Ke Class B", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Rekam Medis", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 /*Intent intent = new Intent(activity, RekmedlamaActivity.class);

@@ -47,8 +47,12 @@ public class RekmedDinamisFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_rekmeddinamis, container, false);
-        ((BottombarActivity) getActivity()).setTitleText("Rekam Medis Dinamis");
-        ((BottombarActivity) getActivity()).setSubTitleText();
+
+        //aktifkan jika TIDAK menggunakan TabLayout Dinamis-Statis
+//        ((BottombarActivity) getActivity()).setTitleText("Rekam Medis Dinamis");
+//        ((BottombarActivity) getActivity()).setSubTitleText();
+
+
 //        return inflater.inflate(R.layout.fragment_rekmeddinamis, container, false);
 
 //        Spinner spinner = (Spinner) spinner.findViewById(R.id.kesadaran_spinner);
@@ -72,8 +76,7 @@ public class RekmedDinamisFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         rView.setLayoutManager(llm);
 
-
-
+        //list tanggal folder dan nama dokter pemeriksanya
         listTanggal = new ArrayList<>();
         listTanggal.add("25-08-2017");
         listTanggal.add("6-02-2017");
