@@ -8,9 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 /**
  * Created by macbookpro on 9/4/17.
@@ -19,6 +22,8 @@ import android.widget.TextView;
 public class RekmedbaruActivity extends AppCompatActivity {
 
     private TextView txtTitle;
+    AutoCompleteTextView textView;
+    EhealthDbHelper dbHelper;
 
 //    LayoutInflater inflater = null;
 //    EditText edit_text;
@@ -197,5 +202,15 @@ public class RekmedbaruActivity extends AppCompatActivity {
         alertDialog.show();
         }
         });
+
+        // Autocomplete
+        textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
+        dbHelper = new EhealthDbHelper(getApplicationContext());
+        dbHelper.openDB();
+        String pencarian = getIntent().getStringExtra("hasil");
+        String[] diagnosa = dbHelper.getAllDiagnosa();
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, diagnosa);
+        textView.setAdapter(adapter);
+
         }
 }

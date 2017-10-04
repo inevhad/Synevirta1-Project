@@ -826,10 +826,15 @@
                     android:text="ICD 10"
                     android:textSize="16sp" />
 
-                <Spinner
+                <!--Spinner
                     android:id="@+id/icd_spinner"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content" /-->
+                <AutoCompleteTextView
+                    android:id="@+id/statusDiagnosis"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    />
 
             </LinearLayout>
 
