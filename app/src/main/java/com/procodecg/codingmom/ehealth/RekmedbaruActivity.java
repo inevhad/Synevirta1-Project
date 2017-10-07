@@ -25,79 +25,8 @@ public class RekmedbaruActivity extends AppCompatActivity {
     AutoCompleteTextView textView;
     EhealthDbHelper dbHelper;
 
-//    LayoutInflater inflater = null;
-//    EditText edit_text;
-//    Button btn_clear;
-//    public RekmedbaruActivity(Context context, AttributeSet attrs, int defStyle)
-//    {
-//        super(context, attrs, defStyle);
-//// TODO Auto-generated constructor stub
-//        initViews();
-//    }
-//    public RekmedbaruActivity(Context context, AttributeSet attrs)
-//    {
-//        super(context, attrs);
-//// TODO Auto-generated constructor stub
-//        initViews();
-//    }
-//    public RekmedbaruActivity(Context context)
-//    {
-//        super(context);
-//// TODO Auto-generated constructor stub
-//        initViews();
-//    }
-//    void initViews()
-//    {
-//        inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        inflater.inflate(R.layout.activity_rekmedbaru, this, true);
-//        edit_text = (EditText) findViewById(R.id.namaPuskesmas);
-//        btn_clear = (Button) findViewById(R.id.clearable_button_clear);
-//        btn_clear.setVisibility(RelativeLayout.INVISIBLE);
-//        clearText();
-//        showHideClearButton();
-//    }
-//    void clearText()
-//    {
-//        btn_clear.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View v)
-//            {
-//// TODO Auto-generated method stub
-//                edit_text.setText("");
-//            }
-//        });
-//    }
-//    void showHideClearButton()
-//    {
-//        edit_text.addTextChangedListener(new TextWatcher()
-//        {
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count)
-//            {
-//// TODO Auto-generated method stub
-//                if (s.length() > 0)
-//                    btn_clear.setVisibility(RelativeLayout.VISIBLE);
-//                else
-//                    btn_clear.setVisibility(RelativeLayout.INVISIBLE);
-//            }
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after)
-//            {
-//// TODO Auto-generated method stub
-//            }
-//            @Override
-//            public void afterTextChanged(Editable s)
-//            {
-//// TODO Auto-generated method stub
-//            }
-//        });
-//    }
-//    public Editable getText()
-//    {
-//        Editable text = edit_text.getText();
-//        return text;
-//    }
+//    aktivasi tombol x-clear
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +47,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        toolbar.setNavigationIcon(R.drawable.xgreen);
+        toolbar.setNavigationIcon(R.drawable.xblue);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

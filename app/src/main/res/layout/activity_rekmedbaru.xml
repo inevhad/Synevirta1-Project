@@ -65,7 +65,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:drawableRight="@drawable/xdelete"/>
 
             <View
                 android:layout_width="match_parent"
@@ -104,11 +105,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:text="Sumber Rujukan"
+                android:text="Pemberi Rujukan"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/sumberRujukan"
+                android:id="@+id/pemberiRujukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -143,7 +144,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -168,6 +169,23 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
                     android:gravity="center"
                     android:orientation="vertical">
 

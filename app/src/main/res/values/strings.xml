@@ -15,7 +15,7 @@
         <item>Pilih</item>
         <item>Composmentis</item>
         <item>Apatis</item>
-        <item>Delirium</item>
+        <item>Delirium</item>Headache
         <item>Somnolen</item>
         <item>Sopor</item>
         <item>Semi-coma</item>
@@ -31,9 +31,9 @@
 
     <string-array name="icd_status">
         <item>Pilih</item>
-        <item>Sakit Kepala Chronic F44.3</item>
-        <item>Sakit Kepala Migrain G43.9</item>
-        <item>Sakit Kepala Tension G44.2</item>
+        <item>Headache Chronic F44.3</item>
+        <item>Headache Migrain G43.9</item>
+        <item>Headache Tension G44.2</item>
         <item>Pharyngitis diphtheritic A36.0</item>
         <item>Pharyngitis purulunt J02.9</item>
         <item>Pharyngitis Tb 16.8</item>
