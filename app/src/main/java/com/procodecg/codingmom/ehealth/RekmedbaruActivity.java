@@ -70,13 +70,6 @@ public class RekmedbaruActivity extends AppCompatActivity {
         adapterLabRadio.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerLabRadio.setAdapter(adapterLabRadio);
 
-        //spinner icd
-        Spinner spinnerIcd = (Spinner) findViewById(R.id.icd_spinner);
-        ArrayAdapter<CharSequence> adapterIcd = ArrayAdapter.createFromResource(this,
-                R.array.icd_status, android.R.layout.simple_spinner_item);
-        adapterIcd.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerIcd.setAdapter(adapterIcd);
-
         //spinner status resep
         Spinner spinnerResep = (Spinner) findViewById(R.id.statusResep);
         ArrayAdapter<CharSequence> adapterResep = ArrayAdapter.createFromResource(this,
