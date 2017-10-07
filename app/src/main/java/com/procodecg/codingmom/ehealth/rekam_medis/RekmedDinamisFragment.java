@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.rekam_medis;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.fragment.RecycleListAdapter;
 
 import java.util.ArrayList;
 

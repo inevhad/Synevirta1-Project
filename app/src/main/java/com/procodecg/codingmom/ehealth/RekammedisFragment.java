@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
+
 /**
  * Created by macbookpro on 7/30/17.
  */

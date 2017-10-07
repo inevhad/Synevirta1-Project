@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.rekam_medis;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Toast;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 /**

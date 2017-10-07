@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.procodecg.codingmom.ehealth.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 

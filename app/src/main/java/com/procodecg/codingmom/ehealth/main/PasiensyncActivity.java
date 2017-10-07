@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.main;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,8 +16,10 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
+import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 
 /**
  * Created by macbookpro on 7/27/17.

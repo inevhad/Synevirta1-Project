@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
+
 /**
  * Created by macbookpro on 7/27/17.
  */

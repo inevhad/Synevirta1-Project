@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.fragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.rekam_medis.RekmedlamaActivity;
 
 import java.util.ArrayList;
 

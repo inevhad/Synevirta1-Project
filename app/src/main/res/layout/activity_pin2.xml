@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#42b665"
-    tools:context="com.procodecg.codingmom.ehealth.Pin2Activity">
+    tools:context="com.procodecg.codingmom.ehealth.main.Pin2Activity">
 
 
     <com.goodiebag.pinview.Pinview

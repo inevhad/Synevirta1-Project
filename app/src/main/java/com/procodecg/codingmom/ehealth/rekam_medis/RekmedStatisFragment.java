@@ -1,10 +1,12 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.rekam_medis;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.procodecg.codingmom.ehealth.R;
 
 /**
  * Created by macbookpro on 8/29/17.

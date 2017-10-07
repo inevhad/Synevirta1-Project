@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 
-import com.procodecg.codingmom.ehealth.MainActivity;
+import com.procodecg.codingmom.ehealth.main.MainActivity;
 
 
 public class SessionManagement extends Activity {

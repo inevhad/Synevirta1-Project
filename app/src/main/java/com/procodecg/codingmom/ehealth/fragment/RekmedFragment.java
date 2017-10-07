@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.fragment;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -9,6 +9,10 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.rekam_medis.RekmedDinamisFragment;
+import com.procodecg.codingmom.ehealth.rekam_medis.RekmedStatisFragment;
 
 import java.util.ArrayList;
 import java.util.List;

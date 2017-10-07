@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.fragment;
 
 
 import android.content.Intent;
@@ -8,6 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.procodecg.codingmom.ehealth.pasien.KeluargaActivity;
+import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
+import com.procodecg.codingmom.ehealth.R;
 
 /**
  * Created by macbookpro on 7/30/17.

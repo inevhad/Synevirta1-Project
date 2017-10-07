@@ -7,7 +7,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:orientation="vertical"
-    tools:context="com.procodecg.codingmom.ehealth.RekmedDinamisFragment">
+    tools:context="com.procodecg.codingmom.ehealth.rekam_medis.RekmedDinamisFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.rekam_medis;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,9 +10,12 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 /**
@@ -40,6 +43,9 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         txtTitle = (TextView) findViewById(R.id.txt_title);
         txtTitle.setText("Rekam Medis Baru");
+
+        ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
+        scrollView.setScrollbarFadingEnabled(false);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.main;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.goodiebag.pinview.Pinview;
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 
 public class Pin2Activity extends SessionManagement {
