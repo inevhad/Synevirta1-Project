@@ -78,6 +78,12 @@
                 android:layout_marginRight="15dp"
                 android:background="@color/separator" />
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,16 +92,22 @@
                 android:text="Poli"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/poli"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:background="@drawable/noborder"
-                android:padding="5dp" />
+            <!--<EditText-->
+                <!--android:id="@+id/poli"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/noborder"-->
+                <!--android:padding="5dp" />-->
 
+            <Spinner
+                android:id="@+id/poli_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+                
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -890,13 +902,29 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/pengobatan"
+                android:id="@+id/resep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/noborder"
                 android:padding="5dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="Catatan Resep"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/catatanResep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/noborder"
+                android:padding="5dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -11,6 +11,12 @@
     <string name="dialog_title_pin">Anda sudah 3 kali salah memasukkan PIN</string>
     <string name="dialog_msg_pin">Silahkan masukkan kartu kembali</string>>
 
+    <string-array name="poli">
+        <item>Pilih</item>
+        <item>Umum</item>
+        <item>Gigi</item>
+    </string-array>
+
     <string-array name="kesadaran">
         <item>Pilih</item>
         <item>Composmentis</item>

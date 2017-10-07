@@ -62,6 +62,13 @@ public class RekmedbaruActivity extends AppCompatActivity {
             }
         });
 
+        //spinner poli
+        Spinner spinnerPoli = (Spinner) findViewById(R.id.poli_spinner);
+        ArrayAdapter<CharSequence> adapterPoli = ArrayAdapter.createFromResource(this,
+                R.array.poli, android.R.layout.simple_spinner_item);
+        adapterPoli.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPoli.setAdapter(adapterPoli);
+
         //spinner kesadaran
         Spinner spinnerKesadaran = (Spinner) findViewById(R.id.kesadaran_spinner);
         ArrayAdapter<CharSequence> adapterKesadaran = ArrayAdapter.createFromResource(this,
