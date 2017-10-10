@@ -7,30 +7,61 @@
     android:orientation="vertical"
     tools:context="com.procodecg.codingmom.ehealth.rekam_medis.RekmedbaruActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        app:popupTheme="@style/AppTheme.AppBarOverlay">
+        style="@style/AppTheme.AppBarOverlay">
 
-        <!--android:background="?attr/colorPrimary"-->
-        <!--android:layout_height="?attr/actionBarSize"-->
-
-        <RelativeLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_grey"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            android:weightSum="1"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:padding="0dp"
+            android:layout_marginLeft="-5dp">
 
-            <TextView
-                android:id="@+id/txt_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/dark_grey"
-                android:textSize="20dp" />
+            <!--android:background="?attr/colorPrimary"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
 
-        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </android.support.v7.widget.Toolbar>
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20dp"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/logo"
+                    android:src="@drawable/logo2"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -69,7 +100,7 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/noborder"
                 android:padding="5dp"
-                android:drawableRight="@drawable/xdelete"/>
+                android:drawableRight="@drawable/ic_xclear"/>
 
             <View
                 android:layout_width="match_parent"
@@ -105,8 +136,9 @@
             <Spinner
                 android:id="@+id/poli_spinner"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-                
+                android:layout_height="wrap_content"
+                style="@style/spinner_style1" />
+
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -174,8 +206,7 @@
                         android:id="@+id/systole"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -215,8 +246,7 @@
                         android:id="@+id/diastole"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -247,7 +277,7 @@
                         android:id="@+id/suhu"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -270,7 +300,7 @@
                         android:id="@+id/nadi"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -290,10 +320,10 @@
                         android:text="Respirasi(x/mnt)" />
 
                     <EditText
-                        android:id="@+id/repirasi"
+                        android:id="@+id/respirasi"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -440,6 +470,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -453,7 +484,7 @@
                         android:id="@+id/tinggi"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
                 </LinearLayout>
 
@@ -461,6 +492,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -474,7 +506,7 @@
                         android:id="@+id/berat"
                         android:layout_width="60dp"
                         android:layout_height="wrap_content"
-                        android:background="#fff"
+                        android:background="@drawable/field_box"
                         android:inputType="number" />
 
                 </LinearLayout>
@@ -483,6 +515,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -495,7 +528,8 @@
                     <Spinner
                         android:id="@+id/kesadaran_spinner"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        style="@style/spinner_style2"/>
 
                 </LinearLayout>
 
@@ -756,9 +790,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/noborder"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -771,7 +803,8 @@
                 <Spinner
                     android:id="@+id/statusLabRadio"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    style="@style/spinner_style1"/>
 
             </LinearLayout>
 
@@ -780,7 +813,6 @@
                 android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
                 android:background="@color/separator" />
 
             <TextView
@@ -848,8 +880,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -863,7 +894,7 @@
                     android:id="@+id/statusDiagnosis"
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    />
+                    android:background="@drawable/field_box"/>
 
             </LinearLayout>
 
@@ -932,8 +963,7 @@
                 android:layout_marginLeft="30dp"
                 android:background="@drawable/noborder"
                 android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -947,7 +977,8 @@
                 <Spinner
                     android:id="@+id/statusResep"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    style="@style/spinner_style1"/>
 
             </LinearLayout>
 
@@ -1017,6 +1048,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="20dp"
                 android:background="@drawable/noborder"
                 android:padding="5dp" />
 
@@ -1057,7 +1089,8 @@
                     android:id="@+id/adVitam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="37dp" />
+                    android:layout_marginLeft="37dp"
+                    style="@style/spinner_style1"/>
 
             </LinearLayout>
 
@@ -1065,9 +1098,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:background="@drawable/noborder"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:background="@drawable/noborder">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -1081,7 +1112,8 @@
                 <Spinner
                     android:id="@+id/adFunctionam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    style="@style/spinner_style1"/>
 
             </LinearLayout>
 
@@ -1096,7 +1128,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="9dp"
                     android:layout_marginTop="5dp"
                     android:text="Ad sanationam"
                     android:textAlignment="inherit"
@@ -1106,7 +1138,8 @@
                 <Spinner
                     android:id="@+id/adSanationam"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    style="@style/spinner_style1"/>
 
             </LinearLayout>
 
@@ -1115,7 +1148,6 @@
                 android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
                 android:background="@color/separator" />
 
             <Button

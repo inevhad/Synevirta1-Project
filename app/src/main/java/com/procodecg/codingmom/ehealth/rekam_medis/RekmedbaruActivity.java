@@ -14,9 +14,9 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
+import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 
 /**
  * Created by macbookpro on 9/4/17.
@@ -53,7 +53,21 @@ public class RekmedbaruActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        toolbar.setNavigationIcon(R.drawable.xblue);
+        toolbar.setNavigationIcon(R.drawable.ic_xclose);
+//        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
+//        View logo = getLayoutInflater().inflate(R.layout.activity_rekmedbaru, null);
+//        mToolbar.addView(logo, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        toolbar.setContentInsetsAbsolute(0,0);
+//        getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        TextView txt = (TextView) findViewById(R.id.txt_title);
+//        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(txt.getLayoutParams());
+//        lp.setMargins(0, 0, 0, 0);
+//        txt.setLayoutParams(lp);
+//        toolbar.setTitleMarginStart(0);
+//        Toolbar.LayoutParams layoutParams = (Toolbar.LayoutParams) toolbar.getLayoutParams();
+//        layoutParams.setMargins(0, 0, 0, 0);
+//        toolbar.setLayoutParams(layoutParams);
+//        getResources().getDimension(R.dimen.toolbar_right);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

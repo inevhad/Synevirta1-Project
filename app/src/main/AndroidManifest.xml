@@ -32,7 +32,8 @@
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".main.Pin2Activity" />
         <activity android:name=".rekam_medis.RekmedlamaActivity" />
-        <activity android:name=".rekam_medis.RekmedbaruActivity" />
+        <activity android:name=".rekam_medis.RekmedbaruActivity"
+            android:exported="true"/>
         <activity android:name=".IsirekammedisActivity" />
         <activity android:name=".rekam_medis.AutoComplete" />
         <activity android:name=".main.WelcomeActivity">
