@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.procodecg.codingmom.ehealth.Main1Activity;
 import com.procodecg.codingmom.ehealth.R;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -31,7 +32,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 finish();
-                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                startActivity(new Intent(getApplicationContext(),Main1Activity.class));
 
             }
 
