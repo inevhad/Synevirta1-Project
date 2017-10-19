@@ -1,22 +1,20 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.main;
 
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
-import com.procodecg.codingmom.ehealth.main.MainActivity;
-import com.procodecg.codingmom.ehealth.main.Pin2Activity;
-import com.procodecg.codingmom.ehealth.main.SetConfig;
 
 import java.util.HashMap;
 

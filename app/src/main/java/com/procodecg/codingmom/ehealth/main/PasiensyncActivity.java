@@ -1,6 +1,5 @@
 package com.procodecg.codingmom.ehealth.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -11,6 +10,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
@@ -25,7 +25,7 @@ import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
  * Created by macbookpro on 7/27/17.
  */
 
-public class PasiensyncActivity extends Activity {
+public class PasiensyncActivity extends AppCompatActivity {
 
     public static final int SELECTED_PICTURE =1;
     ImageView iv;

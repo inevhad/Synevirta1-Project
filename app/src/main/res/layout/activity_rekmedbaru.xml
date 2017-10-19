@@ -73,7 +73,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginRight="12dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,15 +93,27 @@
                 android:text="ID Puskesmas"
                 android:textSize="14sp" />
 
-            <EditText
+            <!--<EditText-->
+                <!--android:id="@+id/idPuskesmas"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:background="@drawable/noborder"-->
+                <!--android:padding="5dp"-->
+                <!--android:drawableRight="@drawable/ic_xclear"/>-->
+
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/idPuskesmas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/noborder"
                 android:padding="5dp"
-                android:drawableRight="@drawable/ic_xclear"/>
+                android:background="@drawable/noborder"
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -122,16 +135,6 @@
                 android:layout_marginTop="5dp"
                 android:text="Poli"
                 android:textSize="14sp" />
-
-            <!--<EditText-->
-                <!--android:id="@+id/poli"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginLeft="20dp"-->
-                <!--android:layout_marginRight="20dp"-->
-                <!--android:layout_weight="1"-->
-                <!--android:background="@drawable/noborder"-->
-                <!--android:padding="5dp" />-->
 
             <Spinner
                 android:id="@+id/poli_spinner"
@@ -155,15 +158,17 @@
                 android:text="Pemberi Rujukan"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemberiRujukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -267,11 +272,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Suhu" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginTop="10dp"
-                        android:text="Suhu(C)" />
+                        android:text="(C)" />
 
                     <EditText
                         android:id="@+id/suhu"
@@ -292,9 +302,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
-                        android:text="Nadi(x/mnt)" />
+                        android:text="Nadi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="(x/mnt)" />
 
                     <EditText
                         android:id="@+id/nadi"
@@ -315,9 +330,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
                         android:layout_marginTop="10dp"
-                        android:text="Respirasi(x/mnt)" />
+                        android:text="Respirasi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="(x/mnt)" />
 
                     <EditText
                         android:id="@+id/respirasi"
@@ -355,16 +375,16 @@
                 android:text="Keluhan Utama"
                 android:textSize="14sp" />
 
-
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/keluhanUtama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -382,15 +402,16 @@
                 android:textColor="@color/red"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/rps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -407,15 +428,16 @@
                 android:text="Riwayat Penyakit Dahulu"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/rpd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -432,15 +454,16 @@
                 android:text="Riwayat Penyakit Keluarga"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/rpk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -559,14 +582,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanKepala"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -584,13 +609,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanLeher"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />wable/noborder"
                 android:padding="5dp" />
 
             <View
@@ -609,14 +637,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanThorax"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -634,14 +664,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanAbdomen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -659,14 +691,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanGenitalia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -684,14 +718,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanExtremitas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -709,14 +745,16 @@
                 android:textSize="14sp"
                 android:textColor="@color/red"/>
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/pemeriksaanKulit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -743,14 +781,16 @@
                 android:text="Laboratorium"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/laboratorium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -768,14 +808,16 @@
                 android:textSize="14sp" />
 
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/radiologi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -783,7 +825,6 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="@color/separator" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -832,15 +873,16 @@
                 android:text="Diagnosis Kerja"
                 android:textSize="14sp" />
 
-
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/diagnosisKerja"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -857,14 +899,16 @@
                 android:text="Diagnosis Banding"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/diagnosisBanding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -926,44 +970,63 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
                 android:text="Resep"
-                android:textColor="@color/grey"
+                android:textColor="#A7ADB2"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/resep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
                 android:text="Catatan Resep"
-                android:textColor="@color/grey"
+                android:textColor="#A7ADB2"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/catatanResep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="25dp"
                 android:background="@drawable/noborder"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -971,7 +1034,7 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:text="Status"
-                    android:textColor="@color/grey"
+                    android:textColor="#A7ADB2"
                     android:textSize="14sp" />
 
                 <Spinner
@@ -982,10 +1045,17 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="25dp"
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp">
@@ -993,10 +1063,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:text="Repetisi Resep"
-                    android:textColor="@color/grey"
+                    android:textColor="#A7ADB2"
                     android:textSize="14sp" />
 
                 <RadioGroup
@@ -1043,14 +1112,16 @@
                 android:textColor="@color/red"
                 android:textSize="14sp" />
 
-            <EditText
+            <com.cielyang.android.clearableedittext.ClearableEditText
                 android:id="@+id/tindakan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="5dp"
                 android:background="@drawable/noborder"
-                android:padding="5dp" />
+                app:clearIconDrawable="@drawable/ic_xclear"
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"

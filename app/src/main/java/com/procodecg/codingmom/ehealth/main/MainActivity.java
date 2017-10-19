@@ -1,12 +1,12 @@
 package com.procodecg.codingmom.ehealth.main;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,7 +20,7 @@ import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
  * Created by macbookpro on 7/25/17.
  */
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private EhealthDbHelper mDbHelper;
 
     @Override
@@ -72,10 +72,10 @@ public class MainActivity extends Activity {
             // Show a toast message depending on whether or not the insertion was successful
             if (newRowId == -1) {
              // If the row ID is -1, then there was an error with insertion.
-             Toast.makeText(this, "Sinkronisasi kartu HPC GAGAL!", Toast.LENGTH_SHORT).show();
+             Toast.makeText(this, "Sinkronisasi kartu HPC BERHASIL!", Toast.LENGTH_SHORT).show();
              } else {
              // Otherwise, the insertion was successful and we can display a toast with the row ID.
-             Toast.makeText(this, "Sinkronisasi kartu HPC BERHASIL! ", Toast.LENGTH_SHORT).show();
+             Toast.makeText(this, "Sinkronisasi kartu HPC GAGAL! ", Toast.LENGTH_SHORT).show();
 //                Intent activity = new Intent(this, Pin2Activity.class);
 //                startActivity(activity);
 //                finish();

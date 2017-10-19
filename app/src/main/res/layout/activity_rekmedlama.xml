@@ -7,63 +7,83 @@
     android:orientation="vertical"
     tools:context="com.procodecg.codingmom.ehealth.rekam_medis.RekmedlamaActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        app:popupTheme="@style/AppTheme.AppBarOverlay">
+        style="@style/AppTheme.AppBarOverlay">
 
-        <!--android:background="?attr/colorPrimary"-->
-        <!--android:layout_height="?attr/actionBarSize"-->
-
-        <RelativeLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_grey"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            android:weightSum="1"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:padding="0dp"
+            android:layout_marginLeft="-5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_title"
-                android:textSize="20dp"
-                android:textColor="@color/dark_grey"/>
+            <!--android:background="?attr/colorPrimary"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
 
-        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </android.support.v7.widget.Toolbar>
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_grey"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20dp"
+                    />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:id="@+id/logo"
+                    android:src="@drawable/logo2"
+                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
 
     <ScrollView
+        android:id="@+id/scrollView"
+        style="@style/scrollbar_shape_style"
+        android:fadeScrollbars="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginRight="12dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:text="Nama Puskesmas"
+                android:text="Data Puskesmas"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Puskesmas Sukajadi"
-                android:textSize="14sp" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -71,22 +91,63 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="ID Puskesmas"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
+
+            <!--<EditText-->
+            <!--android:id="@+id/idPuskesmas"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:background="@drawable/noborder"-->
+            <!--android:padding="5dp"-->
+            <!--android:drawableRight="@drawable/ic_xclear"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:text="123456"
+                android:text="P3204101201"
+                android:textColor="@color/blue"
                 android:textSize="14sp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Poli"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Umum"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:background="@color/separator" />
 
             <TextView
@@ -94,40 +155,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:text="Poli"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Umum"
+                android:text="Pemberi Rujukan"
                 android:textSize="14sp" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/separator" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:text="Sumber Rujukan"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Bides Bidan Ani"
+                android:text="-"
+                android:textColor="@color/blue"
                 android:textSize="14sp" />
 
             <View
@@ -136,115 +173,6 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/separator" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Skrining"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Tinggi(cm)"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="155"
-                        android:textSize="13sp" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Berat(kg)"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="50"
-                        android:textSize="13sp" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Nyeri"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="7"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:text="Kesadaran" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="1"
-                        android:textSize="13sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -255,37 +183,115 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Systole(mm/Hg)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="110"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Diastole(mm/Hg)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="90"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:text="Suhu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="TD(mm/Hg)"
-                        />
+                        android:text="(C)" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="120/90"
-                        android:textSize="13sp" />
-
+                        android:text="38.5"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -293,49 +299,29 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Suhu(C)"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="38,5"
-                        android:textSize="13sp" />
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:text="Nadi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="Nadi(x/mnt)" />
+                        android:text="(x/mnt)" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="55"
-                        android:textSize="13sp" />
-
+                        android:text="75"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -343,26 +329,31 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_horizontal">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
+                        android:text="Respirasi" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="RR(x/mnt)" />
+                        android:text="(x/mnt)" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/grey"
-                        android:text="26"
-                        android:textSize="13sp" />
+                        android:text="14"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -371,8 +362,8 @@
                 android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -394,30 +385,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Demam, batuk, sesak"
-                android:textSize="13sp" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:text="Demam sejak 4 hari yang lalu"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Keluhan Tambahan"
-                android:textSize="14sp" />
+                android:layout_marginRight="20dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Gatal-gatal"
-                android:textSize="13sp" />
-
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -425,16 +405,24 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Riwayat Penyakit Sekarang"
+                android:textColor="@color/red"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Asma"
-                android:textSize="13sp" />
+                android:text="Pasien merasa demam naik turun; pada saat pagi hari, terasa membaik, tetapi pada sore hingga malam hari badan mulai terasa demam. Pasien tidak merasa menggigil. Pasien sudah minum obat warung, Biogesic, sebanyak 3 kali, tetapi rasanya tidak ada perubahan."                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -447,11 +435,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="-"
-                android:textSize="13sp" />
+                android:text="Pada 3 bulan yang lalu pasien dirawat di rumah sakit karena demam berdarah."
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -464,19 +460,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="-"
-                android:textSize="13sp" />
+                android:text="Tidak ada keluarga pasien yang menderita penyakit seperti ini. Ayah pasien menderita kencing manis sejak 5 tahun yang lalu."                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -487,23 +483,285 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Thorax Abdomen etc"
-                android:textSize="13sp" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
 
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Tinggi(cm)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="170"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Berat(kg)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="65"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Kesadaran" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Somnolen"
+                        android:textColor="@color/blue"
+                        android:background="@drawable/field_box"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
+
+            <!--<EditText-->
+            <!--android:id="@+id/pemeriksaanFisik"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/noborder"-->
+            <!--android:padding="5dp" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Kepala"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Konjungtiva tidak pucat, sklera tidak ikterik. Coated tongue (+), tidak tremor Faring tidak hiperemis, tonsil normal "
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Leher"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Thorax"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Jantung: BJ I-II murni, bising (-), gallop (-). Paru: simetris dalam statis dan dinamis, sonor, vesikuler, rh -/-, wh -/-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Abdomen"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Supel, hepar dan limpa tidak teraba, terdapat nyeri tekan di sekitar umbilikus, bising usus normal."
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Genitalia"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Extremitas"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Lengan dan kaki hangat, edema -"                android:textSize="14sp"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Kulit"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -525,12 +783,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="-"
-                android:textSize="13sp" />
+                android:text="pemeriksaan hematologi rutin, urin rutin, dan tes widal"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -540,23 +805,58 @@
                 android:text="Radiologi"
                 android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/noborder"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/grey"
-                    android:text="-"
-                    android:textSize="13sp" />
+                    android:text="Status"
+                    android:textSize="14sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Dilayani"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/field_box"/>
 
-                <View
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -570,48 +870,88 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Asthmatis"
-                android:textSize="13sp" />
+                android:text="Diagnosis Kerja"
+                android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Demam ec susp. Demam tifoid"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Diagnosis Banding"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Demam Dengue ISK Rencana Penatalaksanaan"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_gravity="center_vertical">
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
                     android:text="ICD 10"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
                     android:layout_marginTop="5dp"
-                    android:textColor="@color/grey"
-                    android:text="5"
-                    android:textSize="13sp" />
-
+                    android:text="Dengue fever A90"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:background="@drawable/field_box"/>
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -635,10 +975,127 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Tremenza; Fentolin"
-                android:textSize="13sp" />
+                android:text="Resep"
+                android:textColor="#A7ADB2"
+                android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Paracetamol 3 x 500 mg Vitamin B kompleks 3 x 1 tablet"                android:textSize="14sp"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:text="Catatan Resep"
+                android:textColor="#A7ADB2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="-"
+                android:textColor="@color/blue"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/noborder"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Status"
+                    android:textColor="#A7ADB2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Dilayani"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/field_box"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/separator" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Repetisi Resep"
+                    android:textColor="#A7ADB2"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/repetisiResep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/repetisiResepTidak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Tidak"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -646,25 +1103,25 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Tindakan"
+                android:textColor="@color/red"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
                 android:text="-"
-                android:textSize="13sp" />
-
+                android:textColor="@color/blue"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                android:background="@color/separator" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -675,25 +1132,107 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/noborder"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/grey"
-                android:text="Dubia At Bonam"
-                android:textSize="13sp" />
+                android:layout_marginBottom="5dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad vitam"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad Bonam"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/noborder">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad functionam"
+                    android:textAlignment="inherit"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad Bonam"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/noborder"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad sanationam"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Ad Bonam"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="3dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@color/separator"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"/>
+                android:background="@color/separator" />
 
+            <Button
+                android:id="@+id/btnShowDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button1"
+                android:onClick="goToRmDinamis"
+                android:padding="15dp"
+                android:text="Selesai dan Simpan"
+                android:textAllCaps="true"
+                android:textColor="#fff" />
 
         </LinearLayout>
 

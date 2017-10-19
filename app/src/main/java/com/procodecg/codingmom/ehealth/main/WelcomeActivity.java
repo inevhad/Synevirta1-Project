@@ -7,7 +7,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.procodecg.codingmom.ehealth.Main1Activity;
 import com.procodecg.codingmom.ehealth.R;
 
 public class WelcomeActivity extends AppCompatActivity {

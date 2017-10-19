@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +17,7 @@
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Alergi"/>
 
         <TextView
@@ -27,6 +26,41 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Alergi Cipro dan turunan nya"
+            android:textSize="14sp"
+            android:paddingBottom="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/separator" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:id="@+id/golDarah"
+        android:layout_below="@+id/alergi">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Golongan Darah"/>
+
+        <TextView
+            android:id="@+id/isiGolDarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="A"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
@@ -44,14 +78,14 @@
         android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:id="@+id/rwytOperasi"
-        android:layout_below="@id/alergi">
+        android:layout_below="@id/golDarah">
 
         <TextView
             android:layout_marginLeft="10dp"
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Riwayat Operasi"/>
 
         <TextView
@@ -60,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="10-11-2015  Operasi appendix"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
@@ -76,7 +111,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
-        android:id="@+id/rwytRs"
+        android:id="@+id/rwytInap"
         android:layout_below="@+id/rwytOperasi">
 
         <TextView
@@ -84,7 +119,7 @@
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Riwayat Rawat Inap"/>
 
         <TextView
@@ -93,6 +128,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="10-11-2015  Operasi appendix"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
@@ -103,21 +139,21 @@
             android:background="@color/separator" />
 
     </LinearLayout>
-
+ 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
         android:id="@+id/rwytPenyKronis"
-        android:layout_below="@id/rwytRs">
+        android:layout_below="@id/rwytInap">
 
         <TextView
             android:layout_marginLeft="10dp"
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Riwayat Penyakit Kronis"/>
 
         <TextView
@@ -126,6 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15-10-2015  Infeksi Appendix"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
@@ -150,7 +187,7 @@
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Riwayat Penyakit Bawaan"/>
 
         <TextView
@@ -159,6 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NA"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
@@ -183,7 +221,7 @@
             android:textColor="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Faktor Risiko"/>
 
         <TextView
@@ -192,6 +230,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NA"
+            android:textSize="14sp"
             android:paddingBottom="8dp"/>
 
         <View
