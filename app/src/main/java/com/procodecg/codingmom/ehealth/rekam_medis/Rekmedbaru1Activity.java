@@ -29,7 +29,6 @@ import java.util.HashMap;
 public class Rekmedbaru1Activity extends AppCompatActivity {
 
     private TextView txtTitle;
-    AutoCompleteTextView textView;
 
 
     private SetConfig setconfig;
@@ -161,19 +160,20 @@ public class Rekmedbaru1Activity extends AppCompatActivity {
         });
 
         // Autocomplete
-        textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
+
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         dbHelper.openDataBase();
-        String pencarian = getIntent().getStringExtra("hasil");
+        //String pencarian = getIntent().getStringExtra("hasil");
         String[] diagnosa = dbHelper.getAllDiagnosa();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, diagnosa);
         textView.setAdapter(adapter);
 
 //menampilkan nama puskesmas
-
+/*
         HashMap<String, String> setting = setconfig.getDetail();
         idpuskes.setText(setting.get(SetConfig.KEY_IDPUSKES));
         namapuskes.setText(setting.get(SetConfig.KEY_NAMAPUSKES));
-
+*/
     }
 }

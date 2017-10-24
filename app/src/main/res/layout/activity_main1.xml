@@ -29,8 +29,8 @@
         android:id="@+id/idpuskes"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="id puskesmas"
-        android:textAllCaps="true"
+        android:hint="id puskesmas"
+        android:inputType="textCapCharacters"
         android:layout_marginTop="15dp"
         />
 
@@ -38,8 +38,8 @@
         android:id="@+id/namapuskes"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="nama Puskesmas"
-        android:textAllCaps="true"
+        android:hint="nama Puskesmas"
+        android:inputType="textCapCharacters"
         android:layout_marginTop="15dp"
         />
 

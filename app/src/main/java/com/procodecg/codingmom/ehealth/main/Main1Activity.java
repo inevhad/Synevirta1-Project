@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -69,6 +70,7 @@ public class Main1Activity extends AppCompatActivity {
     }
 
     public void copyDBEhealth(){
+
         DatabaseHelper mDBHelper = new DatabaseHelper(this);
 
         try {
@@ -82,7 +84,15 @@ public class Main1Activity extends AppCompatActivity {
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+        String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + EhealthContract.KartuEntry.TABLE_NAME + " ("
+                + EhealthContract.KartuEntry.COLUMN_HPCNUMBER + " TEXT NOT NULL, "
+                + EhealthContract.KartuEntry.COLUMN_DOKTER + " TEXT NOT NULL, "
+                + EhealthContract.KartuEntry.COLUMN_PDCNUMBER + "TEXT NOT NULL, "
+                + EhealthContract.KartuEntry.COLUMN_NAMAPASIEN + "TEXT NOT NULL);";
 
+        // Execute the SQL statement
+        SQLiteDatabase mDb = mDBHelper.getWritableDatabase();
+        mDb.execSQL(SQL_CREATE_KARTU_TABLE);
     }
 
 

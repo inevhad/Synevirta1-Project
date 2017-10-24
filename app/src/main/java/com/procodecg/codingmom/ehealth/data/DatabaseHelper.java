@@ -37,17 +37,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         copyDataBase();
 
         this.getReadableDatabase();
-        openDataBase();
-
-        String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + EhealthContract.KartuEntry.TABLE_NAME + " ("
-                + EhealthContract.KartuEntry.COLUMN_HPCNUMBER + " TEXT NOT NULL, "
-                + EhealthContract.KartuEntry.COLUMN_DOKTER + " TEXT NOT NULL, "
-                + EhealthContract.KartuEntry.COLUMN_PDCNUMBER + "TEXT NOT NULL, "
-                + EhealthContract.KartuEntry.COLUMN_NAMAPASIEN + "TEXT NOT NULL);";
-
-        // Execute the SQL statement
-        mDataBase.execSQL(SQL_CREATE_KARTU_TABLE);
-        close();
     }
 
     public void updateDataBase() throws IOException {
@@ -78,6 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 throw new Error("ErrorCopyingDatabase");
             }
         }
+
     }
 
     private void copyDBFile() throws IOException{
@@ -107,16 +97,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
+
 
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int newVersion, int oldVersion) {
+    public void onUpgrade(SQLiteDatabase db, int newVersion, int oldVersion) {
+
         if (newVersion > oldVersion)
             mNeedUpdate = true;
-
-
     }
 
 

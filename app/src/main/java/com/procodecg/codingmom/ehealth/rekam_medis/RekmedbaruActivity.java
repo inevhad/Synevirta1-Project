@@ -25,7 +25,6 @@ import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 public class RekmedbaruActivity extends AppCompatActivity {
 
     private TextView txtTitle;
-    AutoCompleteTextView textView;
 
 
 //    aktivasi tombol x-clear
@@ -153,14 +152,14 @@ public class RekmedbaruActivity extends AppCompatActivity {
         });
 
         // Autocomplete
-/*
-        textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
+
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         dbHelper.openDataBase();
-        String pencarian = getIntent().getStringExtra("hasil");
+        //String pencarian = getIntent().getStringExtra("hasil");
         String[] diagnosa = dbHelper.getAllDiagnosa();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, diagnosa);
         textView.setAdapter(adapter);
-*/
+
         }
 }
