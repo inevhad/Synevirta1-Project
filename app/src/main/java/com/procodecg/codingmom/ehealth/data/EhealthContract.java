@@ -455,8 +455,8 @@ public final class EhealthContract {
     }
 
     public static final class DiagnosaEntry implements BaseColumns{
-        public final static String TABLE_NAME = "tbl_diagnosa";
+        public final static String TABLE_NAME = "mst_icd";
 
-        public final static String COLUMN_DIAGNOSA = "diagnosa";
+        public final static String COLUMN_DIAGNOSA = "PENYAKIT";
     }
 }

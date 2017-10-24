@@ -13,15 +13,15 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 /**
  * Created by macbookpro on 7/25/17.
  */
 
 public class MainActivity extends AppCompatActivity {
-    private EhealthDbHelper mDbHelper;
+    private DatabaseHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
             //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
             // Create database helper
-            EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
-            mDbHelper.deleteAll();
+            DatabaseHelper mDbHelper = new DatabaseHelper(this);
+            //mDbHelper.deleteAll();
             // Gets the database in write mode
             SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 //            values.put(KartuEntry.COLUMN_PIN_HPC, PIN_HPC);
 //            values.put(KartuEntry.COLUMN_NAMA_DOKTER, namaDokterString);
 
-            // Insert a new row for pet in the database, returning the ID of that new row.
+            // Insert a new row in the database, returning the ID of that new row.
             long newRowId = db.insert(KartuEntry.TABLE_NAME, null, values);
 
             // Show a toast message depending on whether or not the insertion was successful

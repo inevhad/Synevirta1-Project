@@ -40,7 +40,6 @@
             android:name=".rekam_medis.RekmedbaruActivity"
             android:exported="true" />
         <activity android:name=".IsirekammedisActivity" />
-        <activity android:name=".rekam_medis.AutoComplete" />
         <activity android:name=".main.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +48,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingActivity" />
-        <activity android:name=".rekam_medis.Rekmedbaru1Activity"></activity>
+        <activity android:name=".rekam_medis.Rekmedbaru1Activity"
+            android:exported="true"/>
     </application>
 
 </manifest>

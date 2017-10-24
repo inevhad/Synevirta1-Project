@@ -93,7 +93,7 @@ public class Pin2Activity extends SessionManagement {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
-                                Intent activity = new Intent(Pin2Activity.this, MainActivity.class);
+                                Intent activity = new Intent(Pin2Activity.this, Main1Activity.class);
                                 startActivity(activity);
                                 finish();
                             }
