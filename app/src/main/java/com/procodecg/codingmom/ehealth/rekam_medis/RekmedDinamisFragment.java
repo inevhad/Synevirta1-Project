@@ -103,7 +103,7 @@ public class RekmedDinamisFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent activity = new Intent(getActivity(), Rekmedbaru1Activity.class);
+                Intent activity = new Intent(getActivity(), RekmedbaruActivity.class);
                 startActivity(activity);
 
             }

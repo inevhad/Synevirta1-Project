@@ -31,7 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 finish();
-                startActivity(new Intent(getApplicationContext(),Main1Activity.class));
+                startActivity(new Intent(getApplicationContext(),MainVer1Activity.class));
 
             }
 

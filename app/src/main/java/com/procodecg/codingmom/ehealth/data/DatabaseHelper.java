@@ -41,7 +41,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
-            File dbFile = new File(DATABASE_PATH + DATABASE_NAME);
+            File dbFile = new File(DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION);
             if (dbFile.exists())
                 dbFile.delete();
 
@@ -52,7 +52,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private boolean checkDataBase() {
-        File dbFile = new File(DATABASE_PATH + DATABASE_NAME);
+        File dbFile = new File(DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION);
         return dbFile.exists();
     }
 

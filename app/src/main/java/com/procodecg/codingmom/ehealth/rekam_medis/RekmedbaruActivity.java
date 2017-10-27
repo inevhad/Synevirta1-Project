@@ -117,7 +117,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
         adapterAdFunctionam.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerAdFunctionam.setAdapter(adapterAdFunctionam);
 
-        //spinner status prognosis ad functionam
+        //spinner status prognosis ad sanationam
         Spinner spinnerAdSanationam = (Spinner) findViewById(R.id.adSanationam);
         ArrayAdapter<CharSequence> adapterAdSanationam = ArrayAdapter.createFromResource(this,
                 R.array.ad_sanationam, android.R.layout.simple_spinner_item);
@@ -153,6 +153,14 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         // Autocomplete
 
+//        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
+//        DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+//        dbHelper.openDataBase();
+//        //String pencarian = getIntent().getStringExtra("hasil");
+//        String[] diagnosa = dbHelper.getAllDiagnosa();
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, diagnosa);
+//        textView.setAdapter(adapter);
+
         AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         dbHelper.openDataBase();
@@ -161,5 +169,11 @@ public class RekmedbaruActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, diagnosa);
         textView.setAdapter(adapter);
 
+//menampilkan nama puskesmas
+/*
+        HashMap<String, String> setting = setconfig.getDetail();
+        idpuskes.setText(setting.get(SetConfig.KEY_IDPUSKES));
+        namapuskes.setText(setting.get(SetConfig.KEY_NAMAPUSKES));
+*/
         }
 }

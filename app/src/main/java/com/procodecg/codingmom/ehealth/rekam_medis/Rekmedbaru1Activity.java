@@ -20,8 +20,6 @@ import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 import com.procodecg.codingmom.ehealth.main.SetConfig;
 
-import java.util.HashMap;
-
 /**
  * Created by macbookpro on 9/4/17.
  */
@@ -125,7 +123,7 @@ public class Rekmedbaru1Activity extends AppCompatActivity {
         adapterAdFunctionam.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerAdFunctionam.setAdapter(adapterAdFunctionam);
 
-        //spinner status prognosis ad functionam
+        //spinner status prognosis ad sanationam
         Spinner spinnerAdSanationam = (Spinner) findViewById(R.id.adSanationam);
         ArrayAdapter<CharSequence> adapterAdSanationam = ArrayAdapter.createFromResource(this,
                 R.array.ad_sanationam, android.R.layout.simple_spinner_item);
