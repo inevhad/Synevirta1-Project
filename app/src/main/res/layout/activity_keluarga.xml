@@ -388,24 +388,6 @@
                 android:layout_marginStart="10dp"
                 android:background="@android:color/darker_gray" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="No HP"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="@color/colorPrimary"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="9dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
-                android:textSize="18sp"
-                android:layout_marginBottom="9dp"
-                android:layout_marginLeft="20dp"/>
-
         </LinearLayout>
         </ScrollView>
     </LinearLayout>
