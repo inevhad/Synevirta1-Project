@@ -28,8 +28,11 @@ import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 public class PasiensyncActivity extends AppCompatActivity {
 
     public static final int SELECTED_PICTURE =1;
-    ImageView iv;
+    //rivate static String currentNamaDokter;
 
+    ImageView iv;
+    private static String currentHPCNumber;
+    public static String currentNamaDokter;
 
 
     @Override
@@ -44,7 +47,7 @@ public class PasiensyncActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-//        displayNamaDokter();
+        displayNamaDokter();
     }
 
     public void goToProfil(View v){
@@ -83,7 +86,58 @@ public class PasiensyncActivity extends AppCompatActivity {
         }
     };
 
+    //utk DISPLAY NAMA DOKTER
+    private void displayNamaDokter() {
+        // Create and/or open a database to read from it
+        DatabaseHelper mDbHelper = new DatabaseHelper(this);
+        SQLiteDatabase db = mDbHelper.getReadableDatabase();
+        final TextView textNamaDoktertv = (TextView) findViewById(R.id.textNamaDokter);
 
+        String[] projection = {
+                KartuEntry.COLUMN_HPCNUMBER,
+                KartuEntry.COLUMN_DOKTER,
+        //KartuEntry.COLUMN_PIN_HPC,
+        };
+
+        Cursor cursor = db.query(KartuEntry.TABLE_NAME,projection,null,null,null,null,null);
+        // TextView displayView = (TextView) findViewById(R.id.text_view_kartu);
+        // Perform this raw SQL query "SELECT * FROM pets"
+        // to get a Cursor that contains all rows from the pets table.
+        // Cursor cursor = db.rawQuery("SELECT * FROM " + KartuEntry.TABLE_NAME, null);
+
+        try {
+
+            // Figure out the index of each column
+            // int idColumnIndex = cursor.getColumnIndex(KartuEntry._ID);
+            int HPCnumberColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_HPCNUMBER);
+            int namaDokterColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_DOKTER);
+            //int pinHPCColumnIndex = cursor.getColumnIndex(KartuEntry.COLUMN_PIN_HPC);
+            //int weightColumnIndex = cursor.getColumnIndex(PetEntry.COLUMN_PET_WEIGHT);
+
+            // Iterate through all the returned rows in the cursor
+
+            while (cursor.moveToNext()) {
+                // Use that index to extract the String or Int value of the word
+                // at the current row the cursor is on.
+                // int currentID = cursor.getInt(idColumnIndex);
+                currentHPCNumber = cursor.getString(HPCnumberColumnIndex);
+                currentNamaDokter = cursor.getString(namaDokterColumnIndex);
+                //String currentPinHPC = cursor.getString(pinHPCColumnIndex);
+//              Menampilkan nama dokter
+                textNamaDoktertv.setText(currentNamaDokter);
+                textNamaDoktertv.setVisibility(View.VISIBLE);
+            }
+
+        } finally {
+            // Always close the cursor when you're done reading from it. This releases all its
+            // resources and makes it invalid.
+            cursor.close();
+        }
+    }
+
+    public static String getNamaDokter(){
+            return currentNamaDokter;
+    }
 
 }
 

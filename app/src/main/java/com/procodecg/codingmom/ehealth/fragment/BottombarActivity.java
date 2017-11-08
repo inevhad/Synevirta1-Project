@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
 
 /**
  * Created by macbookpro on 7/31/17.
@@ -152,7 +153,7 @@ public class BottombarActivity extends AppCompatActivity {
 
     //nama dokter
     public void setSubTitleText() {
-        txtSubTitle.setText("dr Sinta");
+        txtSubTitle.setText(PasiensyncActivity.getNamaDokter());
     }
 
 
