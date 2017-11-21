@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">eHealth</string>
-
     <string name="profil">Profil Pasien</string>
     <string name="rekammedis">Rekam Medis</string>
     <string name="rekmeddinamis">Rekam Medis Dinamis</string>
@@ -9,16 +8,15 @@
     <string name="dialog_title">Kartu yang Anda masukkan salah</string>
     <string name="dialog_msg">Silahkan coba lagi atau masukkan kartu lain</string>
     <string name="dialog_title_pin">Anda sudah 3 kali salah memasukkan PIN</string>
-    <string name="dialog_msg_pin">Silahkan masukkan kartu kembali</string>>
+    <string name="dialog_msg_pin">Silahkan masukkan kartu kembali</string>
+
 
     <string-array name="poli">
-        <item>Pilih</item>
         <item>Umum</item>
         <item>Gigi</item>
     </string-array>
 
     <string-array name="kesadaran">
-        <item>Pilih</item>
         <item>Composmentis</item>
         <item>Apatis</item>
         <item>Delirium</item>Headache
@@ -29,14 +27,12 @@
     </string-array>
 
     <string-array name="status_labradio">
-        <item>Pilih</item>
         <item>Dilayani penuh</item>
         <item>Dilayani sebagian</item>
         <item>Tidak dilayani sama sekali</item>
     </string-array>
 
     <string-array name="icd_status">
-        <item>Pilih</item>
         <item>Headache Chronic F44.3</item>
         <item>Headache Migrain G43.9</item>
         <item>Headache Tension G44.2</item>
@@ -46,7 +42,6 @@
     </string-array>
 
     <string-array name="status_resep">
-        <item>Pilih</item>
         <item>Dilayani penuh</item>
         <item>Dilayani sebagian</item>
         <item>Dilayani ada penggantian</item>
@@ -55,7 +50,6 @@
     </string-array>
 
     <string-array name="ad_vitam">
-        <item>Pilih</item>
         <item>Ad bonam</item>
         <item>Dubia ad bonam</item>
         <item>Dubia ad malam</item>
@@ -63,7 +57,6 @@
     </string-array>
 
     <string-array name="ad_functionam">
-        <item>Pilih</item>
         <item>Ad bonam</item>
         <item>Dubia ad bonam</item>
         <item>Dubia ad malam</item>
@@ -71,7 +64,6 @@
     </string-array>
 
     <string-array name="ad_sanationam">
-        <item>Pilih</item>
         <item>Ad bonam</item>
         <item>Dubia ad bonam</item>
         <item>Dubia ad malam</item>

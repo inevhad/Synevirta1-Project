@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
+import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
 
 import java.io.IOException;
@@ -74,7 +74,7 @@ public class Main1Activity extends AppCompatActivity {
 
     public void copyDBEhealth(){
 
-        DatabaseHelper mDBHelper = new DatabaseHelper(this);
+        CopyDBHelper mDBHelper = new CopyDBHelper(this);
 
         try {
             mDBHelper.updateDataBase();
@@ -114,7 +114,7 @@ public class Main1Activity extends AppCompatActivity {
 
             //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
             // Create database helper
-            DatabaseHelper mDbHelper = new DatabaseHelper(this);
+            CopyDBHelper mDbHelper = new CopyDBHelper(this);
             //mDbHelper.deleteAll();
             // Gets the database in write mode
             SQLiteDatabase db = mDbHelper.getWritableDatabase();

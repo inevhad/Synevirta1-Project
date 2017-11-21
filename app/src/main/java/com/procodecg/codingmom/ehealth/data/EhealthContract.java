@@ -45,12 +45,14 @@ public final class EhealthContract {
 
     public static final class KartuEntry implements BaseColumns {
 
-
         /** The content URI to access the pet data in the provider */
         public static final Uri CONTENT_URI = Uri.withAppendedPath(BASE_CONTENT_URI, PATH_EHEALTH);
 
         /** Name of database table */
         public final static String TABLE_NAME = "kartu";
+
+        public final static String _ID = BaseColumns._ID;
+
 
         /**
          * HPC_number.
@@ -111,56 +113,30 @@ public final class EhealthContract {
          *
          * Type: DATE (4)
          */
-        public final static String COLUMN_TGL_PERIKSA ="tgl_periksa";
+        public final static String COLUMN_TGL_PERIKSA = "tgl_periksa";
 
         /**
-         * Keluhan utama.
+         * ID Puskesmas.
          *
-         * Type: TEXT (50)
+         * Type: TEXT (12)
          */
-        public final static String COLUMN_KELUHANUTAMA = "keluhan_utama";
+        public final static String COLUMN_ID_PUSKESMAS = "ID_puskesmas";
 
         /**
-         * Anamnesa.
+         * Poli yang dituju.
          *
-         * Type: TEXT (200)
+         * Type: INTEGER (1)
          */
-        public final static String COLUMN_ANAMNESA = "anamnesa";
+        public final static String COLUMN_POLI = "poli_tujuan";
+        public final static int POLI_UMUM = 0;
+        public final static int POLI_GIGI = 1;
 
         /**
-         * Riwayat penyakit dahulu.
+         * Pemberi Rujukan.
          *
-         * Type: TEXT (100)
+         * Type: TEXT (30)
          */
-        public final static String COLUMN_PENYAKIT_DULU = "rpenyakitdulu";
-
-        /**
-         * Riwayat penyakit keluarga.
-         *
-         * Type: TEXT (100)
-         */
-        public final static String COLUMN_PENYAKIT_KEL = "rpenyakitkel";
-
-        /**
-         * Pemeriksaan fisik.
-         *
-         * Type: TEXT (100)
-         */
-        public final static String COLUMN_FISIK = "pemeriksaan_fisik";
-
-        /**
-         * Tinggi.
-         *
-         * Type: NUM (4)
-         */
-        public final static String COLUMN_TINGGI = "tinggi";
-
-        /**
-         * Berat badan.
-         *
-         * Type: NUM (4)
-         */
-        public final static String COLUMN_BERAT = "berat";
+        public final static String COLUMN_RUJUKAN = "pemberi_rujukan";
 
         /**
          * Systole.
@@ -177,25 +153,18 @@ public final class EhealthContract {
         public final static String COLUMN_DIASTOLE = "diastole";
 
         /**
-         * Nadi.
-         *
-         * Type: NUM (3)
-         */
-        public final static String COLUMN_NADI = "nadi";
-
-        /**
-         * Kesadaran.
-         *
-         * Type: NUM (1)
-         */
-        public final static String COLUMN_KESADARAN = "kesadaran";
-
-        /**
          * Suhu.
          *
          * Type: FLOAT (4)
          */
         public final static String COLUMN_SUHU = "suhu";
+
+        /**
+         * Nadi.
+         *
+         * Type: NUM (3)
+         */
+        public final static String COLUMN_NADI = "nadi";
 
         /**
          * Respirasi.
@@ -205,45 +174,154 @@ public final class EhealthContract {
         public final static String COLUMN_RESPIRASI = "respirasi";
 
         /**
-         * Lain-lain.
-         *
-         * Type: TEXT (250)
-         */
-        public final static String COLUMN_LAINLAIN = "lain_lain";
-
-        /**
-         * Lab execute flag.
-         *
-         * The only possible values are {@link #LAB_DILAYANI_PENUH}, {@link #LAB_TIDAK_DILAYANI},
-         * or {@link #LAB_DILAYANI_SEBAGIAN}.
-         *
-         * Type: INTEGER (1)
-         */
-        public final static String COLUMN_LABFLAG = "labflag";
-        public static final int LAB_DILAYANI_PENUH = 0;
-        public static final int LAB_TIDAK_DILAYANI = 1;
-        public static final int LAB_DILAYANI_SEBAGIAN = 2;
-
-        /**
-         * Expertise Lab Radio.
-         *
-         * Type: TEXT (512)
-         */
-        public final static String COLUMN_LABRADIO = "labradio";
-
-        /**
-         * Catatan lab.
+         * Keluhan utama.
          *
          * Type: TEXT (50)
          */
-        public final static String COLUMN_CATTLAB = "catt_lab";
+        public final static String COLUMN_KELUHANUTAMA = "keluhan_utama";
 
         /**
-         * Terapi.
+         * Riwayat penyakit sekarang.
          *
-         * Type: TEXT (512)
+         * Type: TEXT (200)
          */
-        public final static String COLUMN_TERAPI = "terapi";
+        public final static String COLUMN_PENYAKIT_SEKARANG = "rpenyakitsekarang";
+
+        /**
+         * Riwayat penyakit dahulu.
+         *
+         * Type: TEXT (100)
+         */
+        public final static String COLUMN_PENYAKIT_DULU = "rpenyakitdulu";
+
+        /**
+         * Riwayat penyakit keluarga.
+         *
+         * Type: TEXT (100)
+         */
+        public final static String COLUMN_PENYAKIT_KEL = "rpenyakitkel";
+
+        /**
+         * Tinggi.
+         *
+         * Type: NUM (4)
+         */
+        public final static String COLUMN_TINGGI = "tinggi";
+
+        /**
+         * Berat badan.
+         *
+         * Type: NUM (4)
+         */
+        public final static String COLUMN_BERAT = "berat";
+
+        /**
+         * Kesadaran.
+         *
+         * Type: NUM (1)
+         */
+        public final static String COLUMN_KESADARAN = "kesadaran";
+        public final static int KESADARAN_COMPOSMENTIS = 0;
+        public final static int KESADARAN_APATIS = 1;
+        public final static int KESADARAN_DELIRIUM = 2;
+        public final static int KESADARAN_SOMNOLEN = 3;
+        public final static int KESADARAN_SOPOR = 4;
+        public final static int KESADARAN_SEMICOMA = 5;
+        public final static int KESADARAN_COMA = 6;
+
+        /**
+         * Kepala.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_KEPALA = "kepala";
+
+        /**
+         * Thorax.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_THORAX = "thorax";
+
+        /**
+         * Abdomen.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_ABDOMEN = "abdomen";
+
+        /**
+         * Genitalia.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_GENITALIA = "genitalia";
+
+        /**
+         * Extremitas.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_EXTREMITAS = "extremitas";
+
+        /**
+         * Kulit.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_KULIT = "kulit";
+
+        /**
+         * Neurologi.
+         *
+         * Type: TEXT (50)
+         */
+        public final static String COLUMN_NEUROLOGI = "neurologi";
+
+        /**
+         * Laboratorium.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_LABORATORIUM = "laboratorium";
+
+        /**
+         * Radiologi.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_RADIOLOGI = "radiologi";
+
+        /**
+         * Status laboratorium radiologi.
+         *
+         * Type: NUM (1)
+         */
+        public final static String COLUMN_STATUS_LABRADIO = "status_labradio";
+        public final static int LABRADIO_DILAYANIPENUH = 0;
+        public final static int LABRADIO_DILAYANISEBAGIAN = 1;
+        public final static int LABRADIO_TIDAKDILAYANI = 2;
+
+        /**
+         * Diagnosis kerja.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_DIAGNOSIS_KERJA = "diagnosis_kerja";
+
+        /**
+         * Diagnosis banding.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_DIAGNOSIS_BANDING = "diagnosis_banding";
+
+        /**
+         * ICD 10 Diagnosa.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_ICD10_DIAGNOSA = "icd10_diagnosa";
 
         /**
          * Resep.
@@ -266,32 +344,125 @@ public final class EhealthContract {
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_EKSEKUSIRESEP = "eksekusi_resep";
+        public final static String COLUMN_STATUSRESEP = "status_resep";
         public static final int RESEP_DILAYANI_PENUH = 0;
         public static final int RESEP_TIDAK_DILAYANI = 1;
         public static final int RESEP_DILAYANI_SEBAGIAN = 2;
         public static final int RESEP_DILAYANI_PENGGANTIAN = 3;
         public static final int RESEP_DILAYANI_SEBAGIAN_PENGGANTIAN = 4;
+
         /**
          * Repetisi resep.
          *
          * Type: NUM (1)
          */
         public final static String COLUMN_REPETISIRESEP = "repetisi_resep";
+        public static final int RESEP_REPETISI_TIDAK = 0;
+        public static final int RESEP_REPETISI_YA = 1;
+
+        /**
+         * Tindakan.
+         *
+         * Type: TEXT (200)
+         */
+        public final static String COLUMN_TINDAKAN = "tindakan";
+
+        /**
+         * Ad Vitam.
+         *
+         * Type: NUM (1)
+         */
+        public final static String COLUMN_AD_VITAM = "ad_vitam";
+        public static final int VITAM_ADBONAM = 0;
+        public static final int VITAM_DUBIAADBONAM = 1;
+        public static final int VITAM_DUBIAADMALAM = 2;
+        public static final int VITAM_ADMALAM = 3;
+
+        /**
+         * Ad Functionam.
+         *
+         * Type: NUM (1)
+         */
+        public final static String COLUMN_AD_FUNCTIONAM = "ad_functionam";
+        public static final int FUNCTIONAM_ADBONAM = 0;
+        public static final int FUNCTIONAM_DUBIAADBONAM = 1;
+        public static final int FUNCTIONAM_DUBIAADMALAM = 2;
+        public static final int FUNCTIONAM_ADMALAM = 3;
+
+        /**
+         * Ad Sanationam.
+         *
+         * Type: NUM (1)
+         */
+        public final static String COLUMN_AD_SANATIONAM = "ad_sanationam";
+        public static final int SANATIONAM_ADBONAM = 0;
+        public static final int SANATIONAM_DUBIAADBONAM = 1;
+        public static final int SANATIONAM_DUBIAADMALAM = 2;
+        public static final int SANATIONAM_ADMALAM = 3;
+
+//--------------------------------------------------------------------------//
+        /**
+         * Pemeriksaan fisik.
+         *
+         * Type: TEXT (100)
+         */
+        //public final static String COLUMN_FISIK = "pemeriksaan_fisik";
+
+        /**
+         * Lain-lain.
+         *
+         * Type: TEXT (250)
+         */
+        //public final static String COLUMN_LAINLAIN = "lain_lain";
+
+        /**
+         * Lab execute flag.
+         *
+         * The only possible values are {@link #LAB_DILAYANI_PENUH}, {@link #LAB_TIDAK_DILAYANI},
+         * or {@link #LAB_DILAYANI_SEBAGIAN}.
+         *
+         * Type: INTEGER (1)
+         */
+        /*
+        public final static String COLUMN_LABFLAG = "labflag";
+        public static final int LAB_DILAYANI_PENUH = 0;
+        public static final int LAB_TIDAK_DILAYANI = 1;
+        public static final int LAB_DILAYANI_SEBAGIAN = 2;
+        */
+        /**
+         * Expertise Lab Radio.
+         *
+         * Type: TEXT (512)
+         */
+        //public final static String COLUMN_LABRADIO = "labradio";
+
+        /**
+         * Catatan lab.
+         *
+         * Type: TEXT (50)
+         */
+        //public final static String COLUMN_CATTLAB = "catt_lab";
+
+        /**
+         * Terapi.
+         *
+         * Type: TEXT (512)
+         */
+        //public final static String COLUMN_TERAPI = "terapi";
 
         /**
          * Prognosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_PROGNOSA = "prognosa";
+        //public final static String COLUMN_PROGNOSA = "prognosa";
 
         /**
          * Kode penyakit ICD 1.
          *
          * Type: TEXT (10)
          */
-        public final static String COLUMN_KODE_PENYAKIT = "kode_penyakit";
+        //public final static String COLUMN_KODE_PENYAKIT = "kode_penyakit";
 
         /**
          * Kode penyakit ICD 2.
@@ -359,15 +530,17 @@ public final class EhealthContract {
          *The only possible values are {@link #DIAGNOSA_BANDING}, {@link #DIAGNOSA_KERJA},
          * or {@link #DIAGNOSA_BANDING_KERJA}.
          */
+        /*
         public static final int DIAGNOSA_BANDING = 0;
         public static final int DIAGNOSA_KERJA = 1;
         public static final int DIAGNOSA_BANDING_KERJA = 2;
+        */
         /**
          * Kode penyakit ICD 1 status diagnosa.
          *
          * Type: NUM (1)
          */
-        public final static String COLUMN_STATUS = "status_diagnosa";
+        //public final static String COLUMN_STATUS = "status_diagnosa";
 
         /**
          * Kode penyakit ICD 2 status diagnosa.
@@ -432,26 +605,6 @@ public final class EhealthContract {
          */
       //  public final static String COLUMN_KODE_PENYAKIT_ICD_10_STATUS = "kode penyakit ICD 10 status diagnosa";
 
-        /**
-         * Poli yang dituju.
-         *
-         * Type: TEXT (50)
-         */
-       public final static String COLUMN_POLI = "poli_tujuan";
-
-        /**
-         * Rujukan/Pengirim penderita.
-         *
-         * Type: TEXT (30)
-         */
-        public final static String COLUMN_RUJUKAN = "rujukan_penderita";
-
-        /**
-         * ID Puskesmas.
-         *
-         * Type: TEXT (12)
-         */
-        public final static String COLUMN_ID_PUSKESMAS = "ID_puskesmas";
     }
 
     public static final class DiagnosaEntry implements BaseColumns{

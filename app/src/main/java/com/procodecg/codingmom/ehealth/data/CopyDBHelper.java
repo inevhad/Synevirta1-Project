@@ -12,11 +12,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
 /**
  * Created by neo on 10/10/17.
  */
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class CopyDBHelper extends SQLiteOpenHelper {
 
     private static String DATABASE_NAME = "ehealth.db";
     private static String DATABASE_PATH = "";
@@ -26,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private final Context mContext;
     private boolean mNeedUpdate = false;
 
-    public DatabaseHelper(Context context) {
+    public CopyDBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         if (android.os.Build.VERSION.SDK_INT >= 17)
             DATABASE_PATH = context.getApplicationInfo().dataDir + "/databases/";
@@ -41,7 +42,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void updateDataBase() throws IOException {
         if (mNeedUpdate) {
-            File dbFile = new File(DATABASE_PATH + DATABASE_NAME);
+            File dbFile = new File(DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION);
             if (dbFile.exists())
                 dbFile.delete();
 
@@ -52,7 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private boolean checkDataBase() {
-        File dbFile = new File(DATABASE_PATH + DATABASE_NAME);
+        File dbFile = new File(DATABASE_PATH + DATABASE_NAME + DATABASE_VERSION);
         return dbFile.exists();
     }
 
@@ -111,29 +112,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public String[] getAllDiagnosa(){
-        Cursor cursor = mDataBase.query(
-                EhealthContract.DiagnosaEntry.TABLE_NAME,
-                new String[] {EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA},
-                null,
-                null,
-                null,
-                null,
-                null
-        );
 
-        if(cursor.getCount() >0) {
-            String[] str = new String[cursor.getCount()];
-            int i = 0;
-
-            while (cursor.moveToNext()) {
-                str[i] = cursor.getString(cursor.getColumnIndex(EhealthContract.DiagnosaEntry.COLUMN_DIAGNOSA));
-                i++;
-            }
-            return str;
-        }else {
-            return new String[] {};
-        }
-    }
 
 }

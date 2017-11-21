@@ -17,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 
@@ -89,7 +89,7 @@ public class PasiensyncActivity extends AppCompatActivity {
     //utk DISPLAY NAMA DOKTER
     private void displayNamaDokter() {
         // Create and/or open a database to read from it
-        DatabaseHelper mDbHelper = new DatabaseHelper(this);
+        EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         final TextView textNamaDoktertv = (TextView) findViewById(R.id.textNamaDokter);
 

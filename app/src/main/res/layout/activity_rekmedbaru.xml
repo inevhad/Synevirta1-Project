@@ -1076,7 +1076,6 @@
                         android:id="@+id/repetisiResepYa"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:checked="true"
                         android:text="Ya"
                         android:textColor="@color/grey"
                         android:textSize="13sp" />
@@ -1085,7 +1084,6 @@
                         android:id="@+id/repetisiResepTidak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:checked="false"
                         android:text="Tidak"
                         android:textColor="@color/grey"
                         android:textSize="13sp" />

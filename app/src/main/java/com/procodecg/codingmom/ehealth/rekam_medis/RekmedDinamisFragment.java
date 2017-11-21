@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.fragment.RecycleListAdapter;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 import java.util.ArrayList;
 
@@ -50,6 +51,7 @@ public class RekmedDinamisFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         final View view = inflater.inflate(R.layout.fragment_rekmeddinamis, container, false);
+
 
         //aktifkan jika TIDAK menggunakan TabLayout Dinamis-Statis
 //        ((BottombarActivity) getActivity()).setTitleText("Rekam Medis Dinamis");
@@ -105,6 +107,7 @@ public class RekmedDinamisFragment extends Fragment {
 
                 Intent activity = new Intent(getActivity(), RekmedbaruActivity.class);
                 startActivity(activity);
+
 
             }
         };

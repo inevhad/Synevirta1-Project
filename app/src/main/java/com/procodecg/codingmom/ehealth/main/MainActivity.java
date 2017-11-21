@@ -13,7 +13,8 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
+import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
+
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
 
 /**
@@ -21,7 +22,7 @@ import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
  */
 
 public class MainActivity extends AppCompatActivity {
-    private DatabaseHelper mDbHelper;
+    private CopyDBHelper mDbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
             // Create database helper
-            DatabaseHelper mDbHelper = new DatabaseHelper(this);
+            CopyDBHelper mDbHelper = new CopyDBHelper(this);
             //mDbHelper.deleteAll();
             // Gets the database in write mode
             SQLiteDatabase db = mDbHelper.getWritableDatabase();

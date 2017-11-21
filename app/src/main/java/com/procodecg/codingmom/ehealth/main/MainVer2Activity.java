@@ -18,8 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.DatabaseHelper;
+import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
 import java.io.IOException;
 
@@ -171,7 +172,7 @@ public class MainVer2Activity extends AppCompatActivity {
 
     public void copyDBEhealth(){
 
-        DatabaseHelper mDBHelper = new DatabaseHelper(this);
+        CopyDBHelper mDBHelper = new CopyDBHelper(this);
 
         try {
             mDBHelper.updateDataBase();
@@ -184,15 +185,7 @@ public class MainVer2Activity extends AppCompatActivity {
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
-        String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + EhealthContract.KartuEntry.TABLE_NAME + " ("
-                + EhealthContract.KartuEntry.COLUMN_HPCNUMBER + " TEXT, "
-                + EhealthContract.KartuEntry.COLUMN_DOKTER + " TEXT, "
-                + EhealthContract.KartuEntry.COLUMN_PDCNUMBER + " TEXT, "
-                + EhealthContract.KartuEntry.COLUMN_NAMAPASIEN + " TEXT);";
-
-        // Execute the SQL statement
-        SQLiteDatabase mDb = mDBHelper.getWritableDatabase();
-        mDb.execSQL(SQL_CREATE_KARTU_TABLE);
+        //mDBHelper.createTableKartu();
         mDBHelper.close();
     }
 
@@ -212,11 +205,14 @@ public class MainVer2Activity extends AppCompatActivity {
 
             //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
             // Create database helper
-            DatabaseHelper mDbHelper = new DatabaseHelper(getApplicationContext());
-            mDbHelper.openDataBase();
+            //EhealthDBHelper mDbHelper = new EhealthDBHelper(getApplicationContext());
+            EhealthDbHelper db = new EhealthDbHelper(getApplicationContext());
+            db.openDB();
+            db.createTableKartu();
+            //db.createTableRekMed();
             //mDbHelper.deleteAll();
             // Gets the database in write mode
-            SQLiteDatabase db = mDbHelper.getWritableDatabase();
+            SQLiteDatabase mDbHelper = db.getWritableDatabase();
 
             // Create a ContentValues object where column names are the keys
             ContentValues values = new ContentValues();
@@ -225,7 +221,7 @@ public class MainVer2Activity extends AppCompatActivity {
             values.put(EhealthContract.KartuEntry.COLUMN_DOKTER, namaDokterString);
 
             // Insert a new row in the database, returning the ID of that new row.
-            long newRowId = db.insert(EhealthContract.KartuEntry.TABLE_NAME, null, values);
+            long newRowId = mDbHelper.insert(EhealthContract.KartuEntry.TABLE_NAME, null, values);
             mDbHelper.close();
             // Show a toast message depending on whether or not the insertion was successful
             if (newRowId == -1) {
