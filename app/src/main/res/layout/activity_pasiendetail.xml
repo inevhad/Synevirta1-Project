@@ -208,7 +208,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xxx Yyyy Zzz"
+                android:text="Lukman Hakim"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -257,7 +257,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="Jalan Kuningan 10"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -282,7 +282,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="05/02"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -307,7 +307,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="Kebon Jeruk"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -332,7 +332,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="Andir"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -357,7 +357,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="Bandung"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -382,7 +382,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="Jawa Barat"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -407,7 +407,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABCDEFGH"
+                android:text="40123"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -479,7 +479,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="022xxxxxxxxx"
+                android:text="0226502522"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -503,7 +503,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0852xxxxxxxx"
+                android:text="0852123456"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -647,7 +647,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="mukidi@gmail.com"
+                android:text="m.hakim@gmail.com"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
@@ -695,7 +695,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SMA"
+                android:text="Indonesia"
                 android:textSize="18sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
