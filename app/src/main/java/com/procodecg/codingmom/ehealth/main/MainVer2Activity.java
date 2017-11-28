@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -48,7 +47,7 @@ public class MainVer2Activity extends AppCompatActivity {
         getHPCdata();
 
         DialogPuskesmas = (ImageButton) findViewById(R.id.btnSetting);
-        Show = (Button) findViewById(R.id.btnShow);
+//*        Show = (Button) findViewById(R.id.btnShow);
         IDPuskesmas = (TextView) findViewById(R.id.idPuskesmas);
         NamaPuskesmas = (TextView) findViewById(R.id.namaPuskesmas);
 
@@ -69,8 +68,8 @@ public class MainVer2Activity extends AppCompatActivity {
                 Simpan.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v){
-                        SharedPrefesSimpan(WriteId.getText().toString());
-                        SharedPrefesSimpan(WriteNama.getText().toString());
+//*                        SharedPrefesSimpan(WriteId.getText().toString());
+//*                        SharedPrefesSimpan(WriteNama.getText().toString());
                         ThisDialog.cancel();
 
                         Toast.makeText(MainVer2Activity.this, "Data berhasil disimpan",Toast.LENGTH_SHORT).show();
@@ -146,24 +145,26 @@ public class MainVer2Activity extends AppCompatActivity {
         //getHPCdata();
 //    }
 
-        Show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences SimpanID = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
-                IDPuskesmas.setText(SimpanID.getString("IDPuskesmas", null));
-
-
-            }
-        });
+        //*SHOW ID DAN NAMA PUSKESMAS
+//        Show.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                SharedPreferences SimpanID = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
+//                IDPuskesmas.setText(SimpanID.getString("IDPuskesmas", null));
+//
+//
+//            }
+//        });
+        //*
     }
-
-    public void SharedPrefesSimpan(String IdPuskesmas){
-        SharedPreferences prefs = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
-        SharedPreferences.Editor prefEDIT = prefs.edit();
-        prefEDIT.putString("IDPuskesmas", IdPuskesmas);
-        prefEDIT.commit();
-    }
-
+//*
+//    public void SharedPrefesSimpan(String IdPuskesmas){
+//        SharedPreferences prefs = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
+//        SharedPreferences.Editor prefEDIT = prefs.edit();
+//        prefEDIT.putString("IDPuskesmas", IdPuskesmas);
+//        prefEDIT.commit();
+//    }
+//*
     public void goToPin(View v){
         Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);

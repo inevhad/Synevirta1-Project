@@ -1224,7 +1224,6 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/button1"
-                android:onClick="goToRmDinamis"
                 android:padding="15dp"
                 android:text="Selesai dan Simpan"
                 android:textAllCaps="true"

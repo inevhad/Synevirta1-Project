@@ -49,22 +49,6 @@
                 android:id="@+id/txt_idPuskesmas"
                 android:textSize="16sp" />
 
-            <!--<EditText-->
-                <!--android:id="@+id/idPuskesmas"-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:inputType="textCapCharacters" />-->
-
-            <!--<com.cielyang.android.clearableedittext.ClearableEditText-->
-                <!--android:id="@+id/idPuskesmas"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:padding="5dp"-->
-                <!--app:clearIconDrawable="@drawable/ic_xclear1"-->
-                <!--android:textSize="18sp"/>-->
-
-
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -79,15 +63,6 @@
                 android:id="@+id/txt_namaPuskesmas"
                 android:textSize="16sp" />
 
-            <!--<com.cielyang.android.clearableedittext.ClearableEditText-->
-                <!--android:id="@+id/namaPuskesmas"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:padding="5dp"-->
-                <!--app:clearIconDrawable="@drawable/ic_xclear1"-->
-                <!--android:textSize="18sp"/>-->
-
-
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -95,16 +70,6 @@
                 android:src="@drawable/ic_setting"
                 android:background="@null"
                 android:layout_marginTop="10dp"/>
-
-        <Button
-            android:id="@+id/btnShow"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="show"
-            android:background="@drawable/button1"
-            android:textColor="#fff"
-            android:textAllCaps="true"
-            android:onClick="goToPin"/>
 
     </LinearLayout>
 
