@@ -1,8 +1,11 @@
 package com.procodecg.codingmom.ehealth.rekam_medis;
 
+import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
@@ -21,12 +25,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cielyang.android.clearableedittext.ClearableEditText;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
+import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
 import com.procodecg.codingmom.ehealth.utils.NothingSelectedSpinnerAdapter;
 
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import static android.support.constraint.R.id.parent;
@@ -48,6 +56,18 @@ public class RekmedbaruActivity extends AppCompatActivity {
     private int mAdVitam = RekamMedisEntry.VITAM_ADBONAM;
     private int mAdFunctionam = RekamMedisEntry.FUNCTIONAM_ADBONAM;
     private int mAdSanationam = RekamMedisEntry.SANATIONAM_ADBONAM;
+
+    private EditText mIDPuskesmas; private Spinner mPoliSpinner; private EditText mPemberiRujukan;
+    private EditText mSystole; private EditText mDiastole; private EditText mSuhu; private EditText mNadi; private EditText mRespirasi;
+    private EditText mKeluhanUtama; private EditText mRiwayatPenyakitSkr; private EditText mRiwayatPenyakitDulu; private EditText mRiwayatPenyakitKel;
+    private EditText mTinggi; private EditText mBerat; private Spinner mKesadaranSpinner;
+    private EditText mKepala; private EditText mThorax; private EditText mAbdomen;private EditText mGenitalia; private EditText mExtremitas; private EditText mKulit; private EditText mNeurologi;
+    private EditText mLaboratorium; private EditText mRadiologi; private Spinner mStatusLabRadioSpinner;
+    private EditText mDiagnosisKerja; private EditText mDiagnosisBanding; private AutoCompleteTextView mICD10;
+    private EditText mResep; private EditText mCatatanResep; private Spinner mStatusResepSpinner; private RadioGroup mRepetisiResepBtn; private ClearableEditText mTindakan;
+    private Spinner mAdVitamSpinner; private Spinner mAdFunctionamSpinner; private Spinner mAdSanationamSpinner;
+
+    Activity mActivity;
 
 //    aktivasi tombol x-clear
 
@@ -96,11 +116,60 @@ public class RekmedbaruActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
             }
         });
+
+        // Find all relevant views that we will need to read user input from
+        mIDPuskesmas = (EditText) findViewById(R.id.idPuskesmas);
+        mPoliSpinner = (Spinner) findViewById(R.id.poli_spinner);
+        mPemberiRujukan = (EditText) findViewById(R.id.pemberiRujukan);
+        mSystole = (EditText) findViewById(R.id.systole);
+        mDiastole = (EditText) findViewById(R.id.diastole);
+        mSuhu = (EditText) findViewById(R.id.suhu);
+        mNadi = (EditText) findViewById(R.id.nadi);
+        mRespirasi = (EditText) findViewById(R.id.respirasi);
+        mKeluhanUtama = (EditText) findViewById(R.id.keluhanUtama);
+        mRiwayatPenyakitSkr = (EditText) findViewById(R.id.rps);
+        mRiwayatPenyakitDulu = (EditText) findViewById(R.id.rpd);
+        mRiwayatPenyakitKel = (EditText) findViewById(R.id.rpk);
+        mTinggi = (EditText) findViewById(R.id.tinggi);
+        mBerat = (EditText) findViewById(R.id.berat);
+        mKesadaranSpinner = (Spinner) findViewById(R.id.kesadaran_spinner);
+        mKepala = (EditText) findViewById(R.id.pemeriksaanKepala);
+        mThorax = (EditText) findViewById(R.id.pemeriksaanThorax);
+        mAbdomen = (EditText) findViewById(R.id.pemeriksaanAbdomen);
+        mGenitalia = (EditText) findViewById(R.id.pemeriksaanGenitalia);
+        mExtremitas = (EditText) findViewById(R.id.pemeriksaanExtremitas);
+        mKulit = (EditText) findViewById(R.id.pemeriksaanKulit);
+        mNeurologi = (EditText) findViewById(R.id.pemeriksaanNeuro);
+        mLaboratorium = (EditText) findViewById(R.id.laboratorium);
+        mRadiologi = (EditText) findViewById(R.id.radiologi);
+        mStatusLabRadioSpinner = (Spinner) findViewById(R.id.statusLabRadio);
+        mDiagnosisKerja = (EditText) findViewById(R.id.diagnosisKerja);
+        mDiagnosisBanding = (EditText) findViewById(R.id.diagnosisBanding);
+        mICD10 = (AutoCompleteTextView) findViewById(R.id.statusDiagnosis);
+        mResep = (EditText) findViewById(R.id.resep);
+        mCatatanResep = (EditText) findViewById(R.id.catatanResep);
+        mStatusResepSpinner = (Spinner) findViewById(R.id.statusResep);
+        mRepetisiResepBtn = (RadioGroup) findViewById(R.id.repetisiResep);
+        mTindakan = (ClearableEditText) findViewById(R.id.tindakan);
+        mAdVitamSpinner = (Spinner) findViewById(R.id.adVitam);
+        mAdFunctionamSpinner = (Spinner) findViewById(R.id.adFunctionam);
+        mAdSanationamSpinner = (Spinner) findViewById(R.id.adSanationam);
+
+        /*
+        mBreedEditText = (EditText) findViewById(R.id.edit_pet_breed);
+        mWeightEditText = (EditText) findViewById(R.id.edit_pet_weight);
+        mGenderSpinner = (Spinner) findViewById(R.id.spinner_gender);
+        **/
+
+        // membuat tabel Rekam medis dinamis
         EhealthDbHelper db = new EhealthDbHelper(this);
         db.openDB();
-        //db.createTableKartu();
         db.createTableRekMed();
+
+        // setup spinner
         setupSpinner();
+
+        //setup autocomplete
         setupAutoComplete();
 
 
@@ -124,8 +193,10 @@ public class RekmedbaruActivity extends AppCompatActivity {
         mBuilder.setNegativeButton("Ya", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
                 simpanData();
+                dialogInterface.dismiss();
+                Intent intent = new Intent(mActivity, RekmedDinamisFragment.class);
+                mActivity.startActivity(intent);
             }
         });
         AlertDialog alertDialog = mBuilder.create();
@@ -203,7 +274,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
                             mKesadaran = RekamMedisEntry.KESADARAN_SOPOR;
                         } else if (selection.equals("Semi-coma")){
                             mKesadaran = RekamMedisEntry.KESADARAN_SEMICOMA;
-                        } else if (selection.equalsIgnoreCase("Coma")){
+                        } else if (selection.equals("Coma")){
                             mKesadaran = RekamMedisEntry.KESADARAN_COMA;
                         } else {
                             mPoli = RekamMedisEntry.KESADARAN_COMPOSMENTIS;
@@ -420,16 +491,111 @@ public class RekmedbaruActivity extends AppCompatActivity {
         }
 
         private void simpanData(){
-            // DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-            // membuat tabel rekam medis
-            // dbHelper.createTableRekMed();
 
             // Read from input fields
             // Use trim to eliminate leading or trailing white space
-            //String nameString = mNameEditText.getText().toString().trim();
-            //String breedString = mBreedEditText.getText().toString().trim();
-            //String weightString = mWeightEditText.getText().toString().trim();
-            //int weight = Integer.parseInt(weightString);
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            String mTanggalPeriksa = sdf.format(new java.util.Date());
+
+
+            String mIDPuskesmasString = mIDPuskesmas.getText().toString().trim();
+            //  PoliSpinner
+            String mPemberiRujukanString = mPemberiRujukan.getText().toString().trim();
+            String mSystoleString = mSystole.getText().toString().trim();
+            String mDiastoleString = mDiastole.getText().toString().trim();
+            String mSuhuString = mSuhu.getText().toString().trim();
+            String mNadiString = mNadi.getText().toString().trim();
+            String mRespirasiString = mRespirasi.getText().toString().trim();
+            String mKeluhanUtamaString = mKeluhanUtama.getText().toString().trim();
+            String mRiwayatPenyakitSkrString = mRiwayatPenyakitSkr.getText().toString().trim();
+            String mRiwayatPenyakitDuluString = mRiwayatPenyakitDulu.getText().toString().trim();
+            String mRiwayatPenyakitKelString = mRiwayatPenyakitKel.getText().toString().trim();
+            String mTinggiString = mTinggi.getText().toString().trim();
+            String mBeratString = mBerat.getText().toString().trim();
+            // KesadaranSpinner
+            String mKepalaString = mKepala.getText().toString().trim();
+            String mThoraxString = mThorax.getText().toString().trim();
+            String mAbdomenString = mAbdomen.getText().toString().trim();
+            String mGenitaliaString = mGenitalia.getText().toString().trim();
+            String mExtremitasString = mExtremitas.getText().toString().trim();
+            String mKulitString = mKulit.getText().toString().trim();
+            String mNeurologiString = mNeurologi.getText().toString().trim();
+            String mLaboratoriumString = mLaboratorium.getText().toString().trim();
+            String mRadiologiString = mRadiologi.getText().toString().trim();
+            // StatusLabRadioSpinner
+            String mDiagnosisKerjaString = mDiagnosisKerja.getText().toString().trim();
+            String mDiagnosisBandingString = mDiagnosisBanding.getText().toString().trim();
+            String mICD10String = mICD10.getText().toString().trim();
+            String mResepString = mResep.getText().toString().trim();
+            String mCatatanResepString = mCatatanResep.getText().toString().trim();
+            // StatusResepSpinner
+            String mTindakanString = mTindakan.getText().toString().trim();
+            // AdVitamSpinner
+            // AdFunctionamSpinner
+            // AdSanationamSpinner
+
+
+            // Create database helper
+            EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
+
+            // Gets the database in write mode
+            SQLiteDatabase db = mDbHelper.getWritableDatabase();
+
+            // Create a ContentValues object where column names are the keys,
+            // and pet attributes from the editor are the values.
+            ContentValues values = new ContentValues();
+            values.put(RekamMedisEntry.COLUMN_TGL_PERIKSA, mTanggalPeriksa);
+
+            values.put(RekamMedisEntry.COLUMN_ID_PUSKESMAS, mIDPuskesmasString);
+            values.put(RekamMedisEntry.COLUMN_POLI, mPoli);
+            values.put(RekamMedisEntry.COLUMN_RUJUKAN, mPemberiRujukanString);
+            values.put(RekamMedisEntry.COLUMN_SYSTOLE, mSystoleString);
+            values.put(RekamMedisEntry.COLUMN_DIASTOLE, mDiastoleString);
+            values.put(RekamMedisEntry.COLUMN_SUHU, mSuhuString);
+            values.put(RekamMedisEntry.COLUMN_NADI, mNadiString);
+            values.put(RekamMedisEntry.COLUMN_RESPIRASI, mRespirasiString);
+            values.put(RekamMedisEntry.COLUMN_KELUHANUTAMA, mKeluhanUtamaString);
+            values.put(RekamMedisEntry.COLUMN_PENYAKIT_SEKARANG, mRiwayatPenyakitSkrString);
+            values.put(RekamMedisEntry.COLUMN_PENYAKIT_DULU, mRiwayatPenyakitDuluString);
+            values.put(RekamMedisEntry.COLUMN_PENYAKIT_KEL, mRiwayatPenyakitKelString);
+            values.put(RekamMedisEntry.COLUMN_TINGGI, mTinggiString);
+            values.put(RekamMedisEntry.COLUMN_BERAT, mBeratString);
+            values.put(RekamMedisEntry.COLUMN_KESADARAN, mKesadaran);
+            values.put(RekamMedisEntry.COLUMN_KEPALA, mKepalaString);
+            values.put(RekamMedisEntry.COLUMN_THORAX, mThoraxString);
+            values.put(RekamMedisEntry.COLUMN_ABDOMEN, mAbdomenString);
+            values.put(RekamMedisEntry.COLUMN_GENITALIA, mGenitaliaString);
+            values.put(RekamMedisEntry.COLUMN_EXTREMITAS, mExtremitasString);
+            values.put(RekamMedisEntry.COLUMN_KULIT, mKulitString);
+            values.put(RekamMedisEntry.COLUMN_NEUROLOGI, mNeurologiString);
+            values.put(RekamMedisEntry.COLUMN_LABORATORIUM, mLaboratoriumString);
+            values.put(RekamMedisEntry.COLUMN_RADIOLOGI, mRadiologiString);
+            values.put(RekamMedisEntry.COLUMN_STATUS_LABRADIO, mStatusLabRadio);
+            values.put(RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA, mDiagnosisKerjaString);
+            values.put(RekamMedisEntry.COLUMN_DIAGNOSIS_BANDING, mDiagnosisBandingString);
+            values.put(RekamMedisEntry.COLUMN_ICD10_DIAGNOSA, mICD10String);
+            values.put(RekamMedisEntry.COLUMN_RESEP, mResepString);
+            values.put(RekamMedisEntry.COLUMN_CATTRESEP, mCatatanResepString);
+            values.put(RekamMedisEntry.COLUMN_STATUSRESEP, mStatusResep);
+            values.put(RekamMedisEntry.COLUMN_REPETISIRESEP, mRepetisiResep);
+            values.put(RekamMedisEntry.COLUMN_TINDAKAN, mTindakanString);
+            values.put(RekamMedisEntry.COLUMN_AD_VITAM, mAdVitam);
+            values.put(RekamMedisEntry.COLUMN_AD_FUNCTIONAM, mAdFunctionam);
+            values.put(RekamMedisEntry.COLUMN_AD_SANATIONAM, mAdSanationam);
+
+
+
+            // Insert a new row for pet in the database, returning the ID of that new row.
+            long newRowId = db.insert(RekamMedisEntry.TABLE_NAME, null, values);
+
+            // Show a toast message depending on whether or not the insertion was successful
+            if (newRowId == -1) {
+                // If the row ID is -1, then there was an error with insertion.
+                Toast.makeText(this, "Error with saving data", Toast.LENGTH_SHORT).show();
+            } else {
+                // Otherwise, the insertion was successful and we can display a toast with the row ID.
+                Toast.makeText(this, "Data saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
+            }
         }
 
 }

@@ -34,9 +34,6 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        db.execSQL("DROP TABLE IF EXISTS" + EhealthContract.RekamMedisEntry.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS" + EhealthContract.KartuEntry.TABLE_NAME);
-        onCreate(db);
     }
 
     public void openDB(){

@@ -272,7 +272,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:textAllCaps="true"
-                android:onClick="goToTambah"/>
+                />
 
             <Button
                 android:id="@+id/button1"
@@ -283,7 +283,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:textAllCaps="true"
-                android:onClick="goToRm1"/>
+                />
 
             <Button
                 android:id="@+id/button2"
@@ -294,7 +294,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
                 android:textAllCaps="true"
-                android:onClick="goToRm2"/>
+                />
 
         </LinearLayout>
 
