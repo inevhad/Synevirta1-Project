@@ -27,7 +27,6 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        createTableRekMed();
         createTableKartu();
 
     }
@@ -39,6 +38,8 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
     public void openDB(){
         db = getWritableDatabase();
     }
+
+    //public void check
 
     public void closeDB(){
         if(db != null && db.isOpen()){
@@ -73,9 +74,10 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
     public void createTableRekMed(){
 
-        String SQL_CREATE_REKMED_TABLE =  "CREATE TABLE " + EhealthContract.RekamMedisEntry.TABLE_NAME + " ("
+        String SQL_CREATE_REKMED_TABLE =  "CREATE TABLE IF NOT EXISTS " + EhealthContract.RekamMedisEntry.TABLE_NAME + " ("
                 + EhealthContract.RekamMedisEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA + " TEXT, "
+                + EhealthContract.RekamMedisEntry.COLUMN_NAMA_DOKTER + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_POLI + " INTEGER, "
                 + EhealthContract.RekamMedisEntry.COLUMN_RUJUKAN + " TEXT, "
@@ -118,7 +120,7 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
     }
 
     public void createTableKartu(){
-        String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE " + EhealthContract.KartuEntry.TABLE_NAME + " ("
+        String SQL_CREATE_KARTU_TABLE =  "CREATE TABLE IF NOT EXISTS " + EhealthContract.KartuEntry.TABLE_NAME + " ("
                 + EhealthContract.KartuEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + EhealthContract.KartuEntry.COLUMN_HPCNUMBER + " TEXT, "
                 + EhealthContract.KartuEntry.COLUMN_DOKTER + " TEXT, "
@@ -127,5 +129,29 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_KARTU_TABLE);
+    }
+
+
+    public boolean isTableExists(String tableName, boolean openDb) {
+        if(openDb) {
+            if(db == null || !db.isOpen()) {
+                db = getReadableDatabase();
+            }
+
+            if(!db.isReadOnly()) {
+                db.close();
+                db = getReadableDatabase();
+            }
+        }
+
+        Cursor cursor = db.rawQuery("select DISTINCT tbl_name from sqlite_master where tbl_name = '"+tableName+"'", null);
+        if(cursor!=null) {
+            if(cursor.getCount()>0) {
+                cursor.close();
+                return true;
+            }
+            cursor.close();
+        }
+        return false;
     }
 }

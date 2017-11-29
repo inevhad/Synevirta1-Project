@@ -116,6 +116,14 @@ public final class EhealthContract {
         public final static String COLUMN_TGL_PERIKSA = "tgl_periksa";
 
         /**
+         * Nama Dokter.
+         *
+         * Type: TEXT
+         */
+        public final static String COLUMN_NAMA_DOKTER = "nama_dokter";
+
+
+        /**
          * ID Puskesmas.
          *
          * Type: TEXT (12)

@@ -7,12 +7,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
-import android.view.ViewGroup;
+
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -27,17 +28,14 @@ import android.widget.Toast;
 
 import com.cielyang.android.clearableedittext.ClearableEditText;
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
 import com.procodecg.codingmom.ehealth.utils.NothingSelectedSpinnerAdapter;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.List;
-
-import static android.support.constraint.R.id.parent;
 
 
 /**
@@ -113,7 +111,9 @@ public class RekmedbaruActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
+
             }
         });
 
@@ -155,16 +155,6 @@ public class RekmedbaruActivity extends AppCompatActivity {
         mAdFunctionamSpinner = (Spinner) findViewById(R.id.adFunctionam);
         mAdSanationamSpinner = (Spinner) findViewById(R.id.adSanationam);
 
-        /*
-        mBreedEditText = (EditText) findViewById(R.id.edit_pet_breed);
-        mWeightEditText = (EditText) findViewById(R.id.edit_pet_weight);
-        mGenderSpinner = (Spinner) findViewById(R.id.spinner_gender);
-        **/
-
-        // membuat tabel Rekam medis dinamis
-        EhealthDbHelper db = new EhealthDbHelper(this);
-        db.openDB();
-        db.createTableRekMed();
 
         // setup spinner
         setupSpinner();
@@ -178,7 +168,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
     Button mShowDialog = (Button) findViewById(R.id.btnShowDialog);
         mShowDialog.setOnClickListener(new View.OnClickListener() {
     @Override
-        public void onClick(View view) {
+        public void onClick(final View view) {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(RekmedbaruActivity.this);
         mBuilder.setIcon(R.drawable.logo2);
         mBuilder.setTitle("Data yang Anda masukkan tidak dapat dirubah lagi");
@@ -195,8 +185,8 @@ public class RekmedbaruActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 simpanData();
                 dialogInterface.dismiss();
-                Intent intent = new Intent(mActivity, RekmedDinamisFragment.class);
-                mActivity.startActivity(intent);
+                startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
+                //finish();
             }
         });
         AlertDialog alertDialog = mBuilder.create();
@@ -492,13 +482,17 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         private void simpanData(){
 
+            // membuat tabel Rekam medis dinamis
+            EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
+            mDbHelper.openDB();
+            mDbHelper.createTableRekMed();
+
             // Read from input fields
             // Use trim to eliminate leading or trailing white space
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
             String mTanggalPeriksa = sdf.format(new java.util.Date());
-
-
             String mIDPuskesmasString = mIDPuskesmas.getText().toString().trim();
+            String mNamaDokterString = PasiensyncActivity.getNamaDokter();
             //  PoliSpinner
             String mPemberiRujukanString = mPemberiRujukan.getText().toString().trim();
             String mSystoleString = mSystole.getText().toString().trim();
@@ -534,10 +528,6 @@ public class RekmedbaruActivity extends AppCompatActivity {
             // AdFunctionamSpinner
             // AdSanationamSpinner
 
-
-            // Create database helper
-            EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
-
             // Gets the database in write mode
             SQLiteDatabase db = mDbHelper.getWritableDatabase();
 
@@ -545,7 +535,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
             // and pet attributes from the editor are the values.
             ContentValues values = new ContentValues();
             values.put(RekamMedisEntry.COLUMN_TGL_PERIKSA, mTanggalPeriksa);
-
+            values.put(RekamMedisEntry.COLUMN_NAMA_DOKTER, mNamaDokterString);
             values.put(RekamMedisEntry.COLUMN_ID_PUSKESMAS, mIDPuskesmasString);
             values.put(RekamMedisEntry.COLUMN_POLI, mPoli);
             values.put(RekamMedisEntry.COLUMN_RUJUKAN, mPemberiRujukanString);
@@ -584,18 +574,19 @@ public class RekmedbaruActivity extends AppCompatActivity {
             values.put(RekamMedisEntry.COLUMN_AD_SANATIONAM, mAdSanationam);
 
 
-
             // Insert a new row for pet in the database, returning the ID of that new row.
             long newRowId = db.insert(RekamMedisEntry.TABLE_NAME, null, values);
 
             // Show a toast message depending on whether or not the insertion was successful
             if (newRowId == -1) {
                 // If the row ID is -1, then there was an error with insertion.
-                Toast.makeText(this, "Error with saving data", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Error with saving data", Toast.LENGTH_SHORT).show();
             } else {
                 // Otherwise, the insertion was successful and we can display a toast with the row ID.
-                Toast.makeText(this, "Data saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Data saved with row id: " + newRowId, Toast.LENGTH_SHORT).show();
             }
+            mDbHelper.closeDB();
         }
+
 
 }

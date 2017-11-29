@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.goodiebag.pinview.Pinview;
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 
 public class Pin2Activity extends SessionManagement {
@@ -54,6 +56,7 @@ public class Pin2Activity extends SessionManagement {
         final TextView attemptslefttv = (TextView) findViewById(R.id.attemptsLeftTV);
         final TextView numberOfRemainingLoginAttemptstv = (TextView) findViewById(R.id.numberOfRemainingLoginAttemptsTV);
         final TextView textviewkali = (TextView) findViewById(R.id.textViewKali);
+
 
         Pinview pinview = (Pinview) findViewById(R.id.pinView);
         pinview.setPinViewEventListener(new Pinview.PinViewEventListener() {

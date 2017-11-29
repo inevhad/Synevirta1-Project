@@ -1,7 +1,10 @@
 package com.procodecg.codingmom.ehealth.fragment;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
@@ -14,9 +17,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.rekam_medis.RekmedlamaActivity;
 
 import java.util.ArrayList;
+
+import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry._ID;
 
 /**
  * Created by macbookpro on 9/4/17.
@@ -26,7 +33,10 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
     private ArrayList<String> listTanggal;
     private ArrayList<String> listNamaDokter;
     private Activity activity;
+    public static String currentPosition;
+
     private int[] ic;
+
 
 //    public void setOnCardClickListener(RekmedDinamisFragment onCardClickListener) {
 //        this.onCardClickListener = onCardClickListener;
@@ -80,24 +90,40 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
         holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(activity, "Test",Toast.LENGTH_SHORT).show();
+                currentPosition = String.valueOf(position+1);
+                Toast.makeText(activity, currentPosition, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity, RekmedlamaActivity.class);
+                activity.startActivity(intent);
 
+
+
+                /*
                 switch (position){
                     case 0:
-//                        Toast.makeText(activity, "Posisi 1 Ke Class A", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Posisi 1", Toast.LENGTH_SHORT).show();
+
                         Intent intent = new Intent(activity, RekmedlamaActivity.class);
                 activity.startActivity(intent);
+
                         break;
 
                     case 1:
-                        Toast.makeText(activity, "Rekam Medis", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(activity, "Posisi 2", Toast.LENGTH_SHORT).show();
                         break;
                 }
-                /*Intent intent = new Intent(activity, RekmedlamaActivity.class);
+                */
+                /*
+                Intent intent = new Intent(activity, RekmedlamaActivity.class);
                 intent.putExtra("dokter", listNamaDokter.get(position));
                 activity.startActivity(intent);*/
+
+
             }
 
         });
+    }
+
+    public static String getCurrentPosition(){
+        return currentPosition;
     }
 }
