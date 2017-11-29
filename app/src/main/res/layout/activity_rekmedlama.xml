@@ -405,7 +405,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Riwayat Penyakit Sekarang"
-                android:textColor="@color/red"
                 android:textSize="14sp" />
 
             <TextView
@@ -507,10 +506,10 @@
                         android:text="Tinggi(cm)" />
 
                     <TextView
+                        android:id="@+id/showTinggi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="170"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -531,10 +530,10 @@
                         android:text="Berat(kg)" />
 
                     <TextView
+                        android:id="@+id/showBerat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="65"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -556,10 +555,10 @@
                         android:text="Kesadaran" />
 
                     <TextView
+                        android:id="@+id/showKesadaran"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Somnolen"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -589,44 +588,18 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Kepala"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showKepala"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Konjungtiva tidak pucat, sklera tidak ikterik. Coated tongue (+), tidak tremor Faring tidak hiperemis, tonsil normal "
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"/>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/separator" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:text="Leher"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="-"
-                android:textColor="@color/blue"
-                android:textSize="14sp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -641,14 +614,13 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Thorax"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp"/>
 
             <TextView
+                android:id="@+id/showThorax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Jantung: BJ I-II murni, bising (-), gallop (-). Paru: simetris dalam statis dan dinamis, sonor, vesikuler, rh -/-, wh -/-"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
@@ -667,10 +639,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Abdomen"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp"/>
 
             <TextView
+                android:id="@+id/showAbdomen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -693,8 +665,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Genitalia"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -719,8 +690,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Extremitas"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -744,14 +714,37 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Kulit"
-                android:textSize="14sp"
-                android:textColor="@color/red"/>
+                android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="-"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/separator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Neurologi"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/showNeurologi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
@@ -1105,7 +1098,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
                 android:text="Tindakan"
-                android:textColor="@color/red"
                 android:textSize="14sp" />
 
             <TextView
@@ -1202,7 +1194,6 @@
                     android:layout_marginTop="5dp"
                     android:text="Ad sanationam"
                     android:textAlignment="inherit"
-                    android:textColor="@color/red"
                     android:textSize="14sp" />
 
                 <TextView
@@ -1230,7 +1221,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button1"
-                android:onClick="goToRmDinamis"
                 android:padding="15dp"
                 android:text="Selesai dan Simpan"
                 android:textAllCaps="true"
