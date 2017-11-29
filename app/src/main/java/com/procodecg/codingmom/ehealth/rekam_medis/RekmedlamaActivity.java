@@ -53,11 +53,32 @@ public class RekmedlamaActivity extends AppCompatActivity {
             }
         });
         final TextView textIDPuskesmas = (TextView) findViewById(R.id.showIDPuskesmas);
+        final TextView textPoli = (TextView) findViewById(R.id.showPoli);
+        final TextView textPemberiRujukan = (TextView) findViewById(R.id.showPemberiRujukan);
+        final TextView textSystole = (TextView) findViewById(R.id.showSystole);
+        final TextView textDiastole = (TextView) findViewById(R.id.showDiastole);
+        final TextView textSuhu = (TextView) findViewById(R.id.showSuhu);
+        final TextView textNadi = (TextView) findViewById(R.id.showNadi);
+        final TextView textRespirasi = (TextView) findViewById(R.id.showRespirasi);
+        final TextView textKeluhanUtama = (TextView) findViewById(R.id.showKeluhan);
+        final TextView textRiwayatPenyakitSkr = (TextView) findViewById(R.id.showRiwayatPenyakitSkr);
+        final TextView textRiwayatPenyakitDulu= (TextView) findViewById(R.id.showRiwayatPenyakitDulu);
+        final TextView textRiwayatPenyakitKel= (TextView) findViewById(R.id.showRiwayatPenyakitKel);
+
+
         mDbHelper = new EhealthDbHelper(this);
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
         String[] projection = {
                 EhealthContract.RekamMedisEntry._ID,
-                EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS
+                EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS,
+                EhealthContract.RekamMedisEntry.COLUMN_POLI,
+                EhealthContract.RekamMedisEntry.COLUMN_RUJUKAN,
+                EhealthContract.RekamMedisEntry.COLUMN_SYSTOLE,
+                EhealthContract.RekamMedisEntry.COLUMN_DIASTOLE,
+                EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA,
+                EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_SEKARANG,
+                EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_DULU,
+                EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_KEL
         };
 
         String whereClause = EhealthContract.RekamMedisEntry._ID + " = ? ";
@@ -68,11 +89,57 @@ public class RekmedlamaActivity extends AppCompatActivity {
         try{
             int idColumnIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry._ID);
             int idPuskesmasIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS);
+            int idPoliIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_POLI);
+            int idRujukanIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_RUJUKAN);
+            int idSystoleIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_SYSTOLE);
+            int idDiastoleIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_DIASTOLE);
+            int idSuhuIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_SUHU);
+            int idNadiIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_NADI);
+            int idRespirasiIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_RESPIRASI);
+            int idKeluhanIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA);
+            int idPenyakitSkrIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_SEKARANG);
+            int idPenyakitDuluIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_DULU);
+            int idPenyakitKelIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_PENYAKIT_KEL);
+
 
             while (cursor.moveToNext()){
                 int currentID = cursor.getInt(idColumnIndex);
+
                 String currentName = cursor.getString(idPuskesmasIndex);
                 textIDPuskesmas.setText(currentName);
+
+                int currentPoli = cursor.getInt(idPoliIndex);
+                textPoli.setText(getPoliString(currentPoli));
+
+                String currentRujukan = cursor.getString(idRujukanIndex);
+                textPemberiRujukan.setText(currentRujukan);
+
+                String currentSystole = cursor.getString(idSystoleIndex);
+                textSystole.setText(currentSystole);
+
+                String currentDiastole = cursor.getString(idDiastoleIndex);
+                textDiastole.setText(currentDiastole);
+
+                String currentSuhu = cursor.getString(idSuhuIndex);
+                textSuhu.setText(currentSuhu);
+
+                String currentNadi = cursor.getString(idNadiIndex);
+                textNadi.setText(currentNadi);
+
+                String currentRespirasi = cursor.getString(idRespirasiIndex);
+                textRespirasi.setText(currentRespirasi);
+
+                String currentKeluhan = cursor.getString(idKeluhanIndex);
+                textKeluhanUtama.setText(currentKeluhan);
+
+                String currentPenyakitSkr = cursor.getString(idPenyakitSkrIndex);
+                textRiwayatPenyakitSkr.setText(currentPenyakitSkr);
+
+                String currentPenyakitDulu = cursor.getString(idPenyakitDuluIndex);
+                textRiwayatPenyakitDulu.setText(currentPenyakitDulu);
+
+                String currentPenyakitKel = cursor.getString(idPenyakitKelIndex);
+                textRiwayatPenyakitKel.setText(currentPenyakitKel);
             }
         } finally {
             cursor.close();
@@ -81,6 +148,17 @@ public class RekmedlamaActivity extends AppCompatActivity {
         //TextView displayView = (TextView) findViewById(R.id.text_view_pet);
         Toast.makeText(this, RecycleListAdapter.getCurrentPosition(), Toast.LENGTH_SHORT).show();
         //Toast.makeText(this, getIntent().getStringExtra("dokter"), Toast.LENGTH_SHORT).show();
+    }
+
+    public String getPoliString (int currentPoli){
+        String Poli = "";
+
+        if (currentPoli == 0) {
+             Poli = "Umum";
+        } else {
+            Poli = "Gigi";
+        }
+        return Poli;
     }
 
 }

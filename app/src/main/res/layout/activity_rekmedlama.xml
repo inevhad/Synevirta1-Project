@@ -134,11 +134,11 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showPoli"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="25dp"
                     android:layout_marginTop="5dp"
-                    android:text="Umum"
                     android:textColor="@color/blue"
                     android:textSize="14sp" />
 
@@ -159,11 +159,11 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showPemberiRujukan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="5dp"
-                android:text="-"
                 android:textColor="@color/blue"
                 android:textSize="14sp" />
 
@@ -205,10 +205,10 @@
                         android:text="Systole(mm/Hg)" />
 
                     <TextView
+                        android:id="@+id/showSystole"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="110"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -247,10 +247,10 @@
                         android:text="Diastole(mm/Hg)" />
 
                     <TextView
+                        android:id="@+id/showDiastole"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="90"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -285,10 +285,10 @@
                         android:text="(C)" />
 
                     <TextView
+                        android:id="@+id/showSuhu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="38.5"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -315,10 +315,10 @@
                         android:text="(x/mnt)" />
 
                     <TextView
+                        android:id="@+id/showNadi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="75"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -345,10 +345,10 @@
                         android:text="(x/mnt)" />
 
                     <TextView
+                        android:id="@+id/showRespirasi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="14"
                         android:textColor="@color/blue"
                         android:background="@drawable/field_box"
                         android:textSize="14sp" />
@@ -383,10 +383,10 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showKeluhan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Demam sejak 4 hari yang lalu"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
@@ -409,10 +409,11 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showRiwayatPenyakitSkr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Pasien merasa demam naik turun; pada saat pagi hari, terasa membaik, tetapi pada sore hingga malam hari badan mulai terasa demam. Pasien tidak merasa menggigil. Pasien sudah minum obat warung, Biogesic, sebanyak 3 kali, tetapi rasanya tidak ada perubahan."                android:textColor="@color/blue"
+                android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"/>
@@ -433,10 +434,10 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showRiwayatPenyakitDulu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Pada 3 bulan yang lalu pasien dirawat di rumah sakit karena demam berdarah."
                 android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
@@ -458,10 +459,11 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showRiwayatPenyakitKel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Tidak ada keluarga pasien yang menderita penyakit seperti ini. Ayah pasien menderita kencing manis sejak 5 tahun yang lalu."                android:textColor="@color/blue"
+                android:textColor="@color/blue"
                 android:textSize="14sp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"/>
