@@ -74,6 +74,20 @@ public class RekmedlamaActivity extends AppCompatActivity {
         final TextView textGenitalia = (TextView) findViewById(R.id.showGenitalia);
         final TextView textExtremitas= (TextView) findViewById(R.id.showExtremitas);
         final TextView textKulit= (TextView) findViewById(R.id.showKulit);
+        final TextView textNeurologi= (TextView) findViewById(R.id.showNeurologi);
+        final TextView textLab = (TextView) findViewById(R.id.showLaboratorium);
+        final TextView textRadio= (TextView) findViewById(R.id.showRadiologi);
+        final TextView textStatusLabRadio= (TextView) findViewById(R.id.showStatusLabRadio);
+        final TextView textDiagnosaKerja = (TextView) findViewById(R.id.showDiagnosaKerja);
+        final TextView textDiagnosaBanding= (TextView) findViewById(R.id.showDiagnosaBanding);
+        final TextView textICD10= (TextView) findViewById(R.id.showICD10);
+        final TextView textResep= (TextView) findViewById(R.id.showResep);
+        final TextView textCatResep = (TextView) findViewById(R.id.showCatResep);
+        final TextView textStatusResep= (TextView) findViewById(R.id.showStatusResep);
+        final TextView textTindakan= (TextView) findViewById(R.id.showTindakan);
+        final TextView textAdVitam = (TextView) findViewById(R.id.showAdVitam);
+        final TextView textAdFunctionam= (TextView) findViewById(R.id.showAdFunctionam);
+        final TextView textAdSanationam= (TextView) findViewById(R.id.showAdSanationam);
 
 
         mDbHelper = new EhealthDbHelper(this);
@@ -100,7 +114,22 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 EhealthContract.RekamMedisEntry.COLUMN_ABDOMEN,
                 EhealthContract.RekamMedisEntry.COLUMN_GENITALIA,
                 EhealthContract.RekamMedisEntry.COLUMN_EXTREMITAS,
-                EhealthContract.RekamMedisEntry.COLUMN_KULIT
+                EhealthContract.RekamMedisEntry.COLUMN_KULIT,
+                EhealthContract.RekamMedisEntry.COLUMN_NEUROLOGI,
+                EhealthContract.RekamMedisEntry.COLUMN_LABORATORIUM,
+                EhealthContract.RekamMedisEntry.COLUMN_RADIOLOGI,
+                EhealthContract.RekamMedisEntry.COLUMN_STATUS_LABRADIO,
+                EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA,
+                EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_BANDING,
+                EhealthContract.RekamMedisEntry.COLUMN_ICD10_DIAGNOSA,
+                EhealthContract.RekamMedisEntry.COLUMN_RESEP,
+                EhealthContract.RekamMedisEntry.COLUMN_CATTRESEP,
+                EhealthContract.RekamMedisEntry.COLUMN_STATUSRESEP,
+                EhealthContract.RekamMedisEntry.COLUMN_TINDAKAN,
+                EhealthContract.RekamMedisEntry.COLUMN_AD_VITAM,
+                EhealthContract.RekamMedisEntry.COLUMN_AD_FUNCTIONAM,
+                EhealthContract.RekamMedisEntry.COLUMN_AD_SANATIONAM
+
 
         };
 
@@ -132,6 +161,23 @@ public class RekmedlamaActivity extends AppCompatActivity {
             int idGenitaliaIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_GENITALIA);
             int idExtremitasIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_EXTREMITAS);
             int idKulitIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_KULIT);
+            int idNeurologiIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_NEUROLOGI);
+            int idLabIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_LABORATORIUM);
+            int idRadioIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_RADIOLOGI);
+            int idStatusLabRadioIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_STATUS_LABRADIO);
+            int idDiagKerjaIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA);
+            int idDiagBandingIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_BANDING);
+            int idICD10Index = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_ICD10_DIAGNOSA);
+            int idResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_RESEP);
+            int idCatResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_CATTRESEP);
+            int idStatusResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_STATUSRESEP);
+            int idTindakanIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_TINDAKAN);
+            int idAdVitamIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_AD_VITAM);
+            int idAdFunctionamIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_AD_FUNCTIONAM);
+            int idAdSanationamIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_AD_SANATIONAM);
+
+
+
 
 
 
@@ -201,6 +247,47 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 String currentKulit = cursor.getString(idKulitIndex);
                 textKulit.setText(currentKulit);
 
+                String currentNeurologi = cursor.getString(idNeurologiIndex);
+                textNeurologi.setText(currentNeurologi);
+
+                String currentLab = cursor.getString(idLabIndex);
+                textLab.setText(currentLab);
+
+                String currentRadio = cursor.getString(idRadioIndex);
+                textRadio.setText(currentRadio);
+
+                int currentStatusLabRadio = cursor.getInt(idStatusLabRadioIndex);
+                textStatusLabRadio.setText(getStatusLabRadio(currentStatusLabRadio));
+
+                String currentDiagKerja = cursor.getString(idDiagKerjaIndex);
+                textDiagnosaKerja.setText(currentDiagKerja);
+
+                String currentDiagBanding = cursor.getString(idDiagBandingIndex);
+                textDiagnosaBanding.setText(currentDiagBanding);
+
+                String currentICD10 = cursor.getString(idICD10Index);
+                textICD10.setText(currentICD10);
+
+                String currentResep = cursor.getString(idResepIndex);
+                textResep.setText(currentResep);
+
+                String currentCatResep = cursor.getString(idCatResepIndex);
+                textCatResep.setText(currentCatResep);
+
+                int currentStatusResep = cursor.getInt(idStatusResepIndex);
+                textStatusResep.setText(getStatusResep(currentStatusResep));
+
+                String currentTindakan = cursor.getString(idTindakanIndex);
+                textTindakan.setText(currentTindakan);
+
+                int currentAdVitam = cursor.getInt(idAdVitamIndex);
+                textAdVitam.setText(getAd(currentAdVitam));
+
+                int currentAdFunctionam = cursor.getInt(idAdFunctionamIndex);
+                textAdFunctionam.setText(getAd(currentAdFunctionam));
+
+                int currentAdSanationam = cursor.getInt(idAdSanationamIndex);
+                textAdSanationam.setText(getAd(currentAdSanationam));
 
             }
         } finally {
@@ -242,6 +329,50 @@ public class RekmedlamaActivity extends AppCompatActivity {
             Kesadaran = "Coma";
         }
         return Kesadaran;
+    }
+
+    public String getStatusLabRadio (int currentStatusLabRadio){
+        String StatusLabRadio = "";
+
+        if (currentStatusLabRadio == 0) {
+            StatusLabRadio = "Dilayani penuh";
+        } else if (currentStatusLabRadio == 1) {
+            StatusLabRadio = "Dilayani sebagian";
+        } else {
+            StatusLabRadio = "Tidak dilayani";
+        }
+        return StatusLabRadio;
+    }
+    public String getStatusResep (int currentStatusResep){
+        String statusResep = "";
+
+        if (currentStatusResep == 0) {
+            statusResep = "Resep dilayani penuh";
+        } else if (currentStatusResep == 1) {
+            statusResep = "Resep tidak dilayani";
+        } else if (currentStatusResep == 2) {
+            statusResep = "Resep dilayani sebagian";
+        } else if (currentStatusResep == 3) {
+            statusResep = "Resep dilayani penggantian";
+        } else {
+            statusResep = "Resep dilayani sebagian penggantian";
+        }
+        return statusResep;
+    }
+
+    public String getAd (int currentStatusAd){
+        String statusAd = "";
+
+        if (currentStatusAd == 0) {
+            statusAd = "Ad Bonam";
+        } else if (currentStatusAd == 1) {
+            statusAd = "Dubia Ad Bonam";
+        } else if (currentStatusAd == 2) {
+            statusAd = "Dubia Ad Malam";
+        } else {
+            statusAd = "Ad Malam";
+        }
+        return statusAd;
     }
 
 }

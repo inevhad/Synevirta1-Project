@@ -779,6 +779,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showLaboratorium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -804,6 +805,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showRadiologi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -836,6 +838,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showStatusLabRadio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -874,6 +877,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showDiagnosaKerja"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -899,6 +903,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showDiagnosaBanding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -933,6 +938,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/showICD10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -978,6 +984,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showResep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -1003,6 +1010,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showCatResep"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -1035,6 +1043,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showStatusResep"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -1077,7 +1086,7 @@
                     android:layout_marginLeft="20dp"
                     android:orientation="horizontal">
                     <RadioButton
-                        android:id="@+id/repetisiResepTidak"
+                        android:id="@+id/showrepetisiResepTidak"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="false"
@@ -1104,6 +1113,7 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/showTindakan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -1146,6 +1156,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showAdVitam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -1172,6 +1183,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showAdFunctionam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -1200,6 +1212,7 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/showAdSanationam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
