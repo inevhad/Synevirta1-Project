@@ -18,6 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="ID Puskesmas"
+        android:maxLength="10"
+        android:inputType="textCapCharacters"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="20dp"
@@ -29,21 +31,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="Nama Puskesmas"
+        android:maxLength="30"
+        android:inputType="textCapCharacters"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/field_box"/>
 
-    <Button
-        android:id="@+id/btnSimpan"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="simpan"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/button1"
-        android:textColor="#fff"
-        android:textAllCaps="true"
-        android:layout_gravity="center_horizontal"
-        />
+    <!--<Button-->
+        <!--android:id="@+id/btnSimpan"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:text="simpan"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:background="@drawable/button1"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textAllCaps="true"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--/>-->
 
 </LinearLayout>
