@@ -71,6 +71,9 @@ public class RekmedlamaActivity extends AppCompatActivity {
         final TextView textKepala = (TextView) findViewById(R.id.showKepala);
         final TextView textThorax= (TextView) findViewById(R.id.showThorax);
         final TextView textAbdomen= (TextView) findViewById(R.id.showAbdomen);
+        final TextView textGenitalia = (TextView) findViewById(R.id.showGenitalia);
+        final TextView textExtremitas= (TextView) findViewById(R.id.showExtremitas);
+        final TextView textKulit= (TextView) findViewById(R.id.showKulit);
 
 
         mDbHelper = new EhealthDbHelper(this);
@@ -94,7 +97,10 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 EhealthContract.RekamMedisEntry.COLUMN_KESADARAN,
                 EhealthContract.RekamMedisEntry.COLUMN_KEPALA,
                 EhealthContract.RekamMedisEntry.COLUMN_THORAX,
-                EhealthContract.RekamMedisEntry.COLUMN_ABDOMEN
+                EhealthContract.RekamMedisEntry.COLUMN_ABDOMEN,
+                EhealthContract.RekamMedisEntry.COLUMN_GENITALIA,
+                EhealthContract.RekamMedisEntry.COLUMN_EXTREMITAS,
+                EhealthContract.RekamMedisEntry.COLUMN_KULIT
 
         };
 
@@ -123,6 +129,9 @@ public class RekmedlamaActivity extends AppCompatActivity {
             int idKepalaIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_KEPALA);
             int idThoraxIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_THORAX);
             int idAbdomenIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_ABDOMEN);
+            int idGenitaliaIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_GENITALIA);
+            int idExtremitasIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_EXTREMITAS);
+            int idKulitIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_KULIT);
 
 
 
@@ -182,6 +191,15 @@ public class RekmedlamaActivity extends AppCompatActivity {
 
                 String currentAbdomen = cursor.getString(idAbdomenIndex);
                 textAbdomen.setText(currentAbdomen);
+
+                String currentGenitalia = cursor.getString(idGenitaliaIndex);
+                textGenitalia.setText(currentGenitalia);
+
+                String currentExtremitas = cursor.getString(idExtremitasIndex);
+                textExtremitas.setText(currentExtremitas);
+
+                String currentKulit = cursor.getString(idKulitIndex);
+                textKulit.setText(currentKulit);
 
 
             }
