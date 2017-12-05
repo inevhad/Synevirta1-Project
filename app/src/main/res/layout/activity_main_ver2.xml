@@ -69,7 +69,8 @@
                 android:id="@+id/btnSetting"
                 android:src="@drawable/ic_setting"
                 android:background="@null"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:onClick="showEdit"/>
 
     </LinearLayout>
 
@@ -91,6 +92,6 @@
         android:background="@drawable/button1"
         android:textColor="#fff"
         android:textAllCaps="true"
-        android:onClick="goToPin"/>
+        android:onClick="goToPin" />
 
 </LinearLayout>

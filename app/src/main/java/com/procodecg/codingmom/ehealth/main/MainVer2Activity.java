@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.procodecg.codingmom.ehealth.Edit;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
@@ -25,10 +27,6 @@ import java.io.IOException;
 
 public class MainVer2Activity extends AppCompatActivity {
 
-    ImageButton btnSetting, Simpan;
-    TextView txt_idPuskesmas;
-    TextView txt_namaPuskesmas;
-    Dialog ThisDialog;
 
 
     @Override
@@ -37,192 +35,29 @@ public class MainVer2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main_ver2);
 
 
+        //deklarasi KEY untuk SP
+        SharedPreferences prefs = getSharedPreferences("DATAPUSKES", MODE_PRIVATE);
+        //default values
+        String idpuskes = prefs.getString("IDPUSKES", "Kode Puskesmas");
+        String namapuskes = prefs.getString("NAMAPUSKES", "Nama Puskesmas");
 
-        btnSetting = (ImageButton) findViewById(R.id.btnSetting);
-        txt_idPuskesmas = (TextView) findViewById(R.id.txt_idPuskesmas);
-        txt_namaPuskesmas = (TextView) findViewById(R.id.txt_namaPuskesmas);
+        //set values
+        ((TextView) findViewById(R.id.txt_idPuskesmas)).setText(idpuskes);
+        ((TextView) findViewById(R.id.txt_namaPuskesmas)).setText(namapuskes);
+    }
+
+      public void showEdit(View view) {
+      startActivity(new Intent(getApplicationContext(),Edit.class));
 
 
-        btnSetting.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnSetting();
-            }
-        });
 
-        copyDBEhealth();
+
+
+    copyDBEhealth();
         getHPCdata();
 
     }
 
-    private void btnSetting() {
-        LayoutInflater inflater = LayoutInflater.from(MainVer2Activity.this);
-        View subView = inflater.inflate(R.layout.dialog_puskesmas, null);
-        final EditText subEditText = (EditText) subView.findViewById(R.id.idPuskesmas);
-        final EditText subEditText1 = (EditText) subView.findViewById(R.id.namaPuskesmas);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(subView);
-        AlertDialog alertDialog = builder.create();
-
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                txt_idPuskesmas.setText(subEditText.getText().toString());
-                txt_namaPuskesmas.setText(subEditText1.getText().toString());
-            }
-        });
-
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(MainVer2Activity.this, "Cancel", Toast.LENGTH_LONG).show();
-            }
-
-        });
-        builder.show();
-    }
-
-//ver2 old
-//    private SetConfigVer2 setConfig;
-////    private EditText idPuskesmas,namaPuskesmas;
-////    private Button simpan, hapus;
-////    private TextView txtIdPuskesmas;
-////    private TextView txtNamaPuskesmas;
-//    ImageButton DialogPuskesmas;
-//    Button Show;
-//    TextView IDPuskesmas, NamaPuskesmas;
-//    Dialog ThisDialog;
-//
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main_ver2);
-//
-//        copyDBEhealth();
-//        getHPCdata();
-//
-//        DialogPuskesmas = (ImageButton) findViewById(R.id.btnSetting);
-////*        Show = (Button) findViewById(R.id.btnShow);
-//        IDPuskesmas = (TextView) findViewById(R.id.idPuskesmas);
-//        NamaPuskesmas = (TextView) findViewById(R.id.namaPuskesmas);
-//
-//        DialogPuskesmas.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                ThisDialog = new Dialog(MainVer2Activity.this);
-//                ThisDialog.setContentView(R.layout.dialog_puskesmas);
-//
-//                final EditText WriteId = (EditText)ThisDialog.findViewById(R.id.idPuskesmas);
-//                final EditText WriteNama = (EditText)ThisDialog.findViewById(R.id.namaPuskesmas);
-//                Button Simpan = (Button)ThisDialog.findViewById(R.id.btnSimpan);
-//
-//                WriteId.setEnabled(true);
-//                WriteNama.setEnabled(true);
-//                Simpan.setEnabled(true);
-//
-//                Simpan.setOnClickListener(new View.OnClickListener(){
-//                    @Override
-//                    public void onClick(View v){
-////*                        SharedPrefesSimpan(WriteId.getText().toString());
-////*                        SharedPrefesSimpan(WriteNama.getText().toString());
-//                        ThisDialog.cancel();
-//
-//                        Toast.makeText(MainVer2Activity.this, "Data berhasil disimpan",Toast.LENGTH_SHORT).show();
-//
-//
-//                    }
-//                });
-//
-//
-////        txtIdPuskesmas = (TextView) findViewById(R.id.txt_idPuskesmas);
-////        txtIdPuskesmas.setText("12121121");
-////
-////        txtNamaPuskesmas = (TextView) findViewById(R.id.txt_namaPuskesmas);
-////        txtNamaPuskesmas.setText("Sarijadi");
-//
-////        ImageButton settingButton = (ImageButton) findViewById(R.id.btnSetting);
-////        settingButton.setOnClickListener(new View.OnClickListener(){
-////            @Override
-////            public void onClick(View view) {
-////                AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainVer2Activity.this);
-////                View mView = getLayoutInflater().inflate(R.layout.dialog_puskesmas,null);
-////
-////                setConfig = new SetConfigVer2(getApplicationContext() );
-////                idPuskesmas = (EditText) findViewById(R.id.idPuskesmas);
-////                namaPuskesmas= (EditText) findViewById(R.id.namaPuskesmas);
-////                simpan = (Button) mView.findViewById(R.id.btnSimpan);
-////
-////                HashMap<String, String> setTexting = setConfig.getDetail();
-////                idPuskesmas.setText(setTexting.get(setConfig.KEY_IDPUSKES));
-////                namaPuskesmas.setText(setTexting.get(setConfig.KEY_NAMAPUSKES));
-////
-////                simpan.setOnClickListener(new View.OnClickListener() {
-////                    @Override
-////                    public void onClick(View view){
-//////                        setConfig.createSetConfig(
-//////                                idPuskesmas.getText().toString(),
-//////                                namaPuskesmas.getText().toString()
-//////                        );
-////
-////                        Toast.makeText(MainVer2Activity.this, "Data berhasil disimpan",Toast.LENGTH_SHORT).show();
-////
-//////                        finish();
-//////                        return;
-////                    }
-////                });
-////
-////                mBuilder.setView(mView);
-////                AlertDialog dialog = mBuilder.create();
-////                dialog.show();
-//                ThisDialog.show();
-//
-//            }
-//        });
-//
-////        if (setting.get(SetConfig.KEY_IDPUSKES) !=null){
-////            simpan.setText("UPDATE");
-////        }
-////        else{
-////            simpan.setText("SIMPAN");
-////        }
-////
-////        simpan.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View view) {
-////                setConfig.createSetConfig(
-////                idPuskesmas.getText().toString(),
-////                namaPuskesmas.getText().toString());
-////
-////                Toast.makeText(MainVer2Activity.this, "Data Berhasil Disimpan!", Toast.LENGTH_SHORT).show();
-////            }
-////        });
-//
-//        //getHPCdata();
-////    }
-//
-//        //*SHOW ID DAN NAMA PUSKESMAS
-////        Show.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                SharedPreferences SimpanID = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
-////                IDPuskesmas.setText(SimpanID.getString("IDPuskesmas", null));
-////
-////
-////            }
-////        });
-//        //*
-//    }
-////*
-////    public void SharedPrefesSimpan(String IdPuskesmas){
-////        SharedPreferences prefs = getApplicationContext().getSharedPreferences("IDPUSKESMAS", 0);
-////        SharedPreferences.Editor prefEDIT = prefs.edit();
-////        prefEDIT.putString("IDPuskesmas", IdPuskesmas);
-////        prefEDIT.commit();
-////    }
-////*
     public void goToPin(View v){
         Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);
