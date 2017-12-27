@@ -1,12 +1,8 @@
 package com.procodecg.codingmom.ehealth.fragment;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,13 +13,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.EhealthContract;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.rekam_medis.RekmedlamaActivity;
 
 import java.util.ArrayList;
-
-import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry._ID;
 
 /**
  * Created by macbookpro on 9/4/17.
@@ -37,6 +29,7 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
 
     private int[] ic;
 
+    Typeface font;
 
 //    public void setOnCardClickListener(RekmedDinamisFragment onCardClickListener) {
 //        this.onCardClickListener = onCardClickListener;
@@ -68,8 +61,9 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
 
     @Override
     public int getItemCount() {
-        listTanggal.size();
-        return listNamaDokter.size();
+        //ini line 63-64 koreksi dari kang Irfan
+        //listTanggal.size();
+        return (null != listNamaDokter ? listNamaDokter.size():null);
     }
 
     @Override
@@ -83,10 +77,18 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+
+        //font
+        font = Typeface.createFromAsset(activity.getAssets(),"font1.ttf");
+        holder.mTextView1.setTypeface(font);
+
         holder.mTextView1.setText(listTanggal.get(position));
         holder.mTextView2.setText(listNamaDokter.get(position));
-        Bitmap icon = BitmapFactory.decodeResource(activity.getResources(),ic[position]);
-        holder.mImage.setImageBitmap(icon);
+
+        //ini dikomen yg bikin error 3 record
+        //Bitmap icon = BitmapFactory.decodeResource(activity.getResources(),ic[position]);
+        //holder.mImage.setImageBitmap(icon);
+
         holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

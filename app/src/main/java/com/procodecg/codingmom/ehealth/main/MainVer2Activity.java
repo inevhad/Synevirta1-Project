@@ -1,19 +1,16 @@
 package com.procodecg.codingmom.ehealth.main;
 
-import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +24,7 @@ import java.io.IOException;
 
 public class MainVer2Activity extends AppCompatActivity {
 
-
+    Typeface font;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +35,16 @@ public class MainVer2Activity extends AppCompatActivity {
         //deklarasi KEY untuk SP
         SharedPreferences prefs = getSharedPreferences("DATAPUSKES", MODE_PRIVATE);
         //default values
-        String idpuskes = prefs.getString("IDPUSKES", "Kode Puskesmas");
-        String namapuskes = prefs.getString("NAMAPUSKES", "Nama Puskesmas");
+        String idpuskes = prefs.getString("IDPUSKES", "[kosong]");
+        String namapuskes = prefs.getString("NAMAPUSKES", "[kosong]");
 
         //set values
         ((TextView) findViewById(R.id.txt_idPuskesmas)).setText(idpuskes);
         ((TextView) findViewById(R.id.txt_namaPuskesmas)).setText(namapuskes);
+
+        font = Typeface.createFromAsset(getAssets(), "font1.ttf");
+        TextView tv1 = (TextView) findViewById(R.id.textView1);
+        tv1.setTypeface(font);
     }
 
       public void showEdit(View view) {
@@ -52,8 +53,8 @@ public class MainVer2Activity extends AppCompatActivity {
 
 
 
-
-    copyDBEhealth();
+// dikomen k irfan
+    //copyDBEhealth();
         getHPCdata();
 
     }

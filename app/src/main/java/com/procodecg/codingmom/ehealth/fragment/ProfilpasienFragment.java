@@ -2,12 +2,14 @@ package com.procodecg.codingmom.ehealth.fragment;
 
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.procodecg.codingmom.ehealth.pasien.KeluargaActivity;
 import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
@@ -18,6 +20,8 @@ import com.procodecg.codingmom.ehealth.R;
  */
 
 public class ProfilpasienFragment extends Fragment {
+
+    Typeface font;
 
     public static Fragment newInstance() {
             ProfilpasienFragment fragment = new ProfilpasienFragment();
@@ -61,6 +65,11 @@ public class ProfilpasienFragment extends Fragment {
                 }
             };
             fabKeluarga.setOnClickListener(listenerKel);
+
+            //font
+            font = Typeface.createFromAsset(getActivity().getAssets(),"font1.ttf");
+            TextView tvNama = (TextView) view.findViewById(R.id.textNamaPasien);
+            tvNama.setTypeface(font);
 
             return view;
         }

@@ -56,6 +56,7 @@
             android:layout_width="wrap_content"
             android:text="Nama Dokter"
             android:textSize="13sp" />
+
         </LinearLayout>
     </RelativeLayout>
 </android.support.v7.widget.CardView>

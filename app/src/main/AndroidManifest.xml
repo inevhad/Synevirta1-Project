@@ -47,7 +47,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingActivity" />
-        <activity android:name=".Edit"></activity>
+        <activity
+            android:name=".Edit"
+            android:theme="@style/AppTheme.CustomTheme" />
     </application>
 
 </manifest>

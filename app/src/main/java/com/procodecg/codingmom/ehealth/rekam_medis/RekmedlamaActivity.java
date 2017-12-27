@@ -1,6 +1,5 @@
 package com.procodecg.codingmom.ehealth.rekam_medis;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -10,10 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
-import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
-import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.fragment.RecycleListAdapter;
 
 /**
@@ -49,7 +47,8 @@ public class RekmedlamaActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
+//                startActivity(new Intent(getApplicationContext(),BottombarActivity.class));
+                finish();
             }
         });
 

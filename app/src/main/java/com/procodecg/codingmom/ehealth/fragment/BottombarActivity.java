@@ -1,5 +1,6 @@
 package com.procodecg.codingmom.ehealth.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
 
 /**
@@ -55,6 +58,8 @@ public class BottombarActivity extends AppCompatActivity {
     private TextView txtSubTitle;
     public static BottombarActivity instance;
 
+    Typeface fontBold;
+
     //SEARCH menu
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
@@ -92,6 +97,9 @@ public class BottombarActivity extends AppCompatActivity {
         txtTitle = (TextView) findViewById(R.id.txt_title);
         txtSubTitle = (TextView) findViewById(R.id.txt_namaDokter);
 
+        fontBold = Typeface.createFromAsset(getAssets(),"font1bold.ttf");
+        txtTitle.setTypeface(fontBold);
+
         //utk title custom action bar
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -99,7 +107,16 @@ public class BottombarActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
 
+        EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
+        mDbHelper.openDB();
+        boolean Tableexist = mDbHelper.isTableExists(EhealthContract.RekamMedisEntry.TABLE_NAME, true);
 
+        if (Tableexist) {
+            //Toast.makeText(this, "Ada", Toast.LENGTH_SHORT).show();
+        }else{
+            mDbHelper.createTableRekMed();
+            //Toast.makeText(this, "Kosong", Toast.LENGTH_SHORT).show();
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
