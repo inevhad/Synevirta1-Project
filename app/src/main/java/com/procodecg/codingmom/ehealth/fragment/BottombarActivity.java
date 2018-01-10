@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
@@ -115,7 +116,7 @@ public class BottombarActivity extends AppCompatActivity {
             //Toast.makeText(this, "Ada", Toast.LENGTH_SHORT).show();
         }else{
             mDbHelper.createTableRekMed();
-            //Toast.makeText(this, "Kosong", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Tidak ada", Toast.LENGTH_SHORT).show();
         }
 
         bottomNavigationView.setOnNavigationItemSelectedListener

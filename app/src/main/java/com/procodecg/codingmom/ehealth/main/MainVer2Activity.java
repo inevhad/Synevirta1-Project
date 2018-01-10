@@ -1,6 +1,7 @@
 package com.procodecg.codingmom.ehealth.main;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -20,6 +21,7 @@ import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 
+import java.io.File;
 import java.io.IOException;
 
 public class MainVer2Activity extends AppCompatActivity {
@@ -46,21 +48,31 @@ public class MainVer2Activity extends AppCompatActivity {
         TextView tv1 = (TextView) findViewById(R.id.textView1);
         tv1.setTypeface(font);
 
-        copyDBEhealth();
+        if (doesDatabaseExist(getApplicationContext(),"ehealth.db"))
+        {
+            //Toast.makeText(this, "DB ada", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            copyDBEhealth();
+        }
         getHPCdata();
     }
 
       public void showEdit(View view) {
       startActivity(new Intent(getApplicationContext(),Edit.class));
 
-
-
-
 // dikomen k irfan
     //copyDBEhealth();
         //getHPCdata();
 
     }
+
+    private static boolean doesDatabaseExist(Context context, String dbName) {
+        File dbFile = context.getDatabasePath(dbName);
+        return dbFile.exists();
+    }
+
 
     public void goToPin(View v){
         Intent activity = new Intent(this, Pin2Activity.class);

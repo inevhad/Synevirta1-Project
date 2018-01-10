@@ -489,7 +489,6 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         private void simpanData(){
 
-            // membuat tabel Rekam medis dinamis
             EhealthDbHelper mDbHelper = new EhealthDbHelper(this);
             mDbHelper.openDB();
             //mDbHelper.createTableRekMed();
