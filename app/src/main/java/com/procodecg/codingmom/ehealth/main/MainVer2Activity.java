@@ -45,6 +45,9 @@ public class MainVer2Activity extends AppCompatActivity {
         font = Typeface.createFromAsset(getAssets(), "font1.ttf");
         TextView tv1 = (TextView) findViewById(R.id.textView1);
         tv1.setTypeface(font);
+
+        copyDBEhealth();
+        getHPCdata();
     }
 
       public void showEdit(View view) {
@@ -55,7 +58,7 @@ public class MainVer2Activity extends AppCompatActivity {
 
 // dikomen k irfan
     //copyDBEhealth();
-        getHPCdata();
+        //getHPCdata();
 
     }
 
@@ -100,7 +103,6 @@ public class MainVer2Activity extends AppCompatActivity {
 
             //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
             // Create database helper
-            //EhealthDBHelper mDbHelper = new EhealthDBHelper(getApplicationContext());
             EhealthDbHelper db = new EhealthDbHelper(getApplicationContext());
             db.openDB();
             db.createTableKartu();
