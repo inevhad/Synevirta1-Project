@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.utils;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +8,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.EditText;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.main.MainVer2Activity;
 
 public class Edit extends AppCompatActivity {

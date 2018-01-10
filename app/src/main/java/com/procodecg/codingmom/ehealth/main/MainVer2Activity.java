@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.procodecg.codingmom.ehealth.Edit;
+import com.procodecg.codingmom.ehealth.utils.Edit;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;

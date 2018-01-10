@@ -85,7 +85,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         //menampilkan nama puskesmas
         prefs=getSharedPreferences("DATAPUSKES",MODE_PRIVATE);
-        String namapuskes=prefs.getString("NAMAPUSKES","");
+        String namapuskes=prefs.getString("IDPUSKES","");
 
         idPuskesmas = (ClearableEditText) findViewById(R.id.idPuskesmas);
         idPuskesmas.setText(namapuskes);
@@ -605,7 +605,19 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         if (!Validation.hasText(mSystole, "Systole")) valid = false;
         if (!Validation.hasText(mDiastole, "Diastole")) valid = false;
+        if (!Validation.hasText(mSuhu, "Suhu")) valid = false;
+        if (!Validation.hasText(mNadi, "Nadi")) valid = false;
+        if (!Validation.hasText(mRespirasi, "Respirasi")) valid = false;
         if (!Validation.hasText(mKeluhanUtama, "Keluhan Utama")) valid = false;
+//        if (!Validation.hasText(mRiwayatPenyakitSkr, "Riwayat Penyakit Sekarang ")) valid = false;
+//        if (!Validation.hasText(mRiwayatPenyakitDulu, "Riwayat Penyakit Dahulu")) valid = false;
+//        if (!Validation.hasText(mRiwayatPenyakitKel, "Riwayat Penyakit Kelaurga")) valid = false;
+        if (!Validation.hasText(mBerat, "Berat")) valid = false;
+        if (!Validation.hasText(mKepala, "Kepala")) valid = false;
+        if (!Validation.hasText(mThorax, "Thorax")) valid = false;
+        if (!Validation.hasText(mAbdomen, "Abdomen")) valid = false;
+        if (!Validation.hasText(mDiagnosisKerja, "Diagnosis Kerja")) valid = false;
+        if (!Validation.hasText(mICD10, "ICD10")) valid = false;
         if (!Validation.hasText(mResep, "Resep")) valid = false;
 
         return valid;

@@ -13,7 +13,7 @@ public class Validation {
     private static final String PHONE_REGEX = "\\d{3}-\\d{7}";
 
     // Error Messages
-    private static final String REQUIRED_MSG = "Harus Diisi";
+    private static final String REQUIRED_MSG = "harus diisi";
     private static final String EMAIL_MSG = "invalid email";
     private static final String PHONE_MSG = "###-#######";
 
