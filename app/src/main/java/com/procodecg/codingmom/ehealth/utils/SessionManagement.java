@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 
-import com.procodecg.codingmom.ehealth.main.MainActivity;
+import com.procodecg.codingmom.ehealth.main.MainVer2Activity;
 
 
 public class SessionManagement extends Activity {
@@ -34,7 +34,7 @@ public class SessionManagement extends Activity {
 
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intent = new Intent(SessionManagement.this,
-                                    MainActivity.class);
+                                    MainVer2Activity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
                                     | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);

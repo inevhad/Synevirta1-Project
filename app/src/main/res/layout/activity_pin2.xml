@@ -19,8 +19,7 @@
         app:cursorVisible="true"
         app:forceKeyboard="true"
         app:inputType="number"
-        app:password="true"
-        />
+        app:password="true" />
 
     <TextView
         android:id="@+id/textPin"
@@ -29,7 +28,7 @@
         android:text="Masukkan 5 digit PIN Anda"
         android:layout_centerInParent="true"
         android:layout_above="@id/pinView"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginBottom="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />

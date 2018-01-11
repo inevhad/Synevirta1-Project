@@ -106,7 +106,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        toolbar.setNavigationIcon(R.drawable.ic_xclose);
+//        toolbar.setNavigationIcon(R.drawable.ic_xclose);
 //        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
 //        View logo = getLayoutInflater().inflate(R.layout.activity_rekmedbaru, null);
 //        mToolbar.addView(logo, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
