@@ -2,18 +2,16 @@ package com.procodecg.codingmom.ehealth.fragment;
 
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.pasien.KeluargaActivity;
 import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
-import com.procodecg.codingmom.ehealth.R;
 
 /**
  * Created by macbookpro on 7/30/17.
@@ -21,7 +19,7 @@ import com.procodecg.codingmom.ehealth.R;
 
 public class ProfilpasienFragment extends Fragment {
 
-    Typeface font;
+//    Typeface font;
 
     public static Fragment newInstance() {
             ProfilpasienFragment fragment = new ProfilpasienFragment();
@@ -67,9 +65,15 @@ public class ProfilpasienFragment extends Fragment {
             fabKeluarga.setOnClickListener(listenerKel);
 
             //font
-            font = Typeface.createFromAsset(getActivity().getAssets(),"font1.ttf");
-            TextView tvNama = (TextView) view.findViewById(R.id.textNamaPasien);
-            tvNama.setTypeface(font);
+//            font = Typeface.createFromAsset(getActivity().getAssets(),"font1.ttf");
+//            TextView tv1 = (TextView) view.findViewById(R.id.textNamaPasien);
+//            TextView tv2 = (TextView) view.findViewById(R.id.textTglLahir);
+//            TextView tv3 = (TextView) view.findViewById(R.id.textUmur);
+//            TextView tv4 = (TextView) view.findViewById(R.id.textJenisKlmn);
+//            tv1.setTypeface(font);
+//            tv2.setTypeface(font);
+//            tv3.setTypeface(font);
+//            tv4.setTypeface(font);
 
             return view;
         }

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -40,6 +41,8 @@ import java.text.SimpleDateFormat;
  */
 
 public class RekmedbaruActivity extends AppCompatActivity {
+
+    Typeface fontBold;
 
     private TextView txtTitle;
     private int mPoli = RekamMedisEntry.POLI_UMUM;
@@ -82,6 +85,9 @@ public class RekmedbaruActivity extends AppCompatActivity {
 
         txtTitle = (TextView) findViewById(R.id.txt_title);
         txtTitle.setText("Rekam Medis Baru");
+
+        fontBold = Typeface.createFromAsset(getAssets(),"font1bold.ttf");
+        txtTitle.setTypeface(fontBold);
 
         //menampilkan nama puskesmas
         prefs=getSharedPreferences("DATAPUSKES",MODE_PRIVATE);

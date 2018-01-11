@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -17,8 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 
 /**
@@ -26,6 +27,9 @@ import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
  */
 
 public class PasiensyncActivity extends AppCompatActivity {
+
+    Typeface font;
+    Typeface fontbold;
 
     public static final int SELECTED_PICTURE =1;
     //rivate static String currentNamaDokter;
@@ -41,7 +45,15 @@ public class PasiensyncActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_pasiensync);
 
-    //SINKRONISASI BERHASIL
+        font = Typeface.createFromAsset(getAssets(), "font1.ttf");
+        fontbold = Typeface.createFromAsset(getAssets(), "font1bold.ttf");
+        TextView tv1 = (TextView) findViewById(R.id.textView1);
+        TextView tv2 = (TextView) findViewById(R.id.textView2);
+        TextView tv3 = (TextView) findViewById(R.id.textNamaDokter);
+        tv1.setTypeface(fontbold);
+        tv2.setTypeface(font);
+        tv3.setTypeface(fontbold);
+
     }
 
     @Override

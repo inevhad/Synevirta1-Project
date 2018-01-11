@@ -52,8 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No Smart Card"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -62,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1234567890"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -77,8 +76,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kategori Pasien/Jenis pembayaran/Asuransi"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -87,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="BPJS"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -102,8 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No BPJS/Asuransi"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -112,7 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1234567890"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -127,8 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Terdaftar"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -137,7 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="23/12/2017"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -152,8 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kelas Perawatan"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -162,7 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kelas 3"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -179,7 +174,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Lengkap"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -188,7 +183,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Muhammad Hakim"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -203,7 +198,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Kepala Keluarga"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -212,7 +207,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Lukman Hakim"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -227,7 +222,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hubungan Keluarga"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -236,7 +231,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Anak"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -251,8 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Alamat"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -261,7 +255,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jalan Kuningan 10"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -276,8 +270,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="RT/RW"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -286,7 +279,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="05/02"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -301,8 +294,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kelurahan/Desa"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -311,7 +303,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kebon Jeruk"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -326,8 +318,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kecamatan"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -336,7 +327,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Andir"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -351,8 +342,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kota/Kabupaten"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -361,7 +351,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bandung"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -376,8 +366,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Propinsi"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -386,7 +375,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jawa Barat"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -401,8 +390,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kode Pos"
-                android:textStyle="bold"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -411,7 +399,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="40123"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -426,7 +414,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Di Luar/Dalam Wilayah Kerja"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -435,7 +423,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dalam"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -450,7 +438,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tempat Tanggal Lahir"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -459,7 +447,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bandung 1 Januari 2000"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -474,7 +462,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No Telepon"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -483,7 +471,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0226502522"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -498,7 +486,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No HP"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -507,7 +495,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0852123456"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -522,7 +510,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No KTP/NIK"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -531,7 +519,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="78743529879438275"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -546,7 +534,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jenis Kelamin"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -555,7 +543,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Laki-laki"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -570,7 +558,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Agama"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -579,7 +567,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Islam"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -594,7 +582,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pendidikan"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -603,7 +591,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SMA"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -618,7 +606,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pekerjaan"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -627,7 +615,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guru"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -642,7 +630,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Surel"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -651,7 +639,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="m.hakim@gmail.com"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -666,7 +654,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Status Perkawinan"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -675,7 +663,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Belum Menikah"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -690,7 +678,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kewarganegaraan"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="9dp"/>
@@ -699,7 +687,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Indonesia"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
 

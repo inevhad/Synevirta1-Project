@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
@@ -100,6 +99,7 @@ public class BottombarActivity extends AppCompatActivity {
 
         fontBold = Typeface.createFromAsset(getAssets(),"font1bold.ttf");
         txtTitle.setTypeface(fontBold);
+        txtSubTitle.setTypeface(fontBold);
 
         //utk title custom action bar
         toolbar = (Toolbar)findViewById(R.id.toolbar);

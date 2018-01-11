@@ -15,7 +15,8 @@
         android:text="Selamat datang di"
         android:gravity="center"
         android:paddingBottom="20dp"
-        android:textSize="20sp"/>
+        android:textSize="24sp"
+        android:textColor="@color/black"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -41,11 +42,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textIdPuskes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="ID Puskesmas"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textColor="@color/blue"/>
 
             <TextView
@@ -55,11 +57,12 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/textNamaPuskes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Puskesmas"
                 android:textColor="@color/blue"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
@@ -84,23 +87,24 @@
     </LinearLayout>
 
         <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Masukkan kartu HPC Anda"
-        android:paddingTop="15dp"
-        android:paddingBottom="5dp"
-        android:textSize="18sp"/>
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Masukkan kartu HPC Anda"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
         <Button
-        android:id="@+id/btnShowDialog"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="..."
-        android:background="@drawable/button1"
-        android:textColor="#fff"
-        android:textAllCaps="true"
-        android:onClick="goToPin" />
+            android:id="@+id/btnShowDialog"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:background="@drawable/button1"
+            android:textColor="#fff"
+            android:textAllCaps="true"
+            android:onClick="goToPin" />
 
 </LinearLayout>

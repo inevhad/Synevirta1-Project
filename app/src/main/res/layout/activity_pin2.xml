@@ -23,38 +23,44 @@
         />
 
     <TextView
-        android:id="@+id/pinText"
+        android:id="@+id/textPin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Masukkan 5 digit PIN Anda"
         android:layout_centerInParent="true"
         android:layout_above="@id/pinView"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/attemptsLeft"
-        android:layout_above="@id/pinText"
-        android:layout_centerInParent="true"
-        >
-    <TextView
-        android:id="@+id/attemptsLeftTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kesempatan Login : "
-        android:visibility="invisible"
-        android:textColor="#FF1401"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_above="@id/textPin"
+        android:layout_marginBottom="10dp"
+        android:layout_centerInParent="true">
 
-    <TextView
-        android:id="@+id/numberOfRemainingLoginAttemptsTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/attemptsLeftTV"
-        android:textColor="#FF1401"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:visibility="invisible" />
+        <TextView
+            android:id="@+id/attemptsLeftTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kesempatan Login : "
+            android:visibility="invisible"
+            android:textColor="#FF1401"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/numberOfRemainingLoginAttemptsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/attemptsLeftTV"
+            android:textColor="#FF1401"
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/textViewKali"
@@ -62,9 +68,11 @@
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/numberOfRemainingLoginAttemptsTV"
             android:textColor="#FF1401"
+            android:textSize="18sp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text=" kali"
             android:visibility="invisible" />
+
     </RelativeLayout>
     <!--Button
         android:id="@+id/btnMasukPin"

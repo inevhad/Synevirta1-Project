@@ -37,8 +37,8 @@ public class MainVer2Activity extends AppCompatActivity {
         //deklarasi KEY untuk SP
         SharedPreferences prefs = getSharedPreferences("DATAPUSKES", MODE_PRIVATE);
         //default values
-        String idpuskes = prefs.getString("IDPUSKES", "[kosong]");
-        String namapuskes = prefs.getString("NAMAPUSKES", "[kosong]");
+        String idpuskes = prefs.getString("IDPUSKES", "________");
+        String namapuskes = prefs.getString("NAMAPUSKES", "________");
 
         //set values
         ((TextView) findViewById(R.id.txt_idPuskesmas)).setText(idpuskes);
@@ -46,7 +46,13 @@ public class MainVer2Activity extends AppCompatActivity {
 
         font = Typeface.createFromAsset(getAssets(), "font1.ttf");
         TextView tv1 = (TextView) findViewById(R.id.textView1);
+        TextView tv2 = (TextView) findViewById(R.id.textView2);
+        TextView tv3 = (TextView) findViewById(R.id.textIdPuskes);
+        TextView tv4 = (TextView) findViewById(R.id.textNamaPuskes);
         tv1.setTypeface(font);
+        tv2.setTypeface(font);
+        tv3.setTypeface(font);
+        tv4.setTypeface(font);
 
         if (doesDatabaseExist(getApplicationContext(),"ehealth.db"))
         {

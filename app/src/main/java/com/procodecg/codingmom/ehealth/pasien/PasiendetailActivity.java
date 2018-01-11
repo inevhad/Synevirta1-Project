@@ -1,6 +1,7 @@
 package com.procodecg.codingmom.ehealth.pasien;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -8,8 +9,8 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
 
-import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 
 /**
  * Created by macbookpro on 8/9/17.
@@ -18,6 +19,7 @@ import com.procodecg.codingmom.ehealth.R;
 public class PasiendetailActivity extends AppCompatActivity {
 
     private TextView txtTitle;
+    Typeface fontBold;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,9 @@ public class PasiendetailActivity extends AppCompatActivity {
 
         txtTitle = (TextView) findViewById(R.id.txt_title);
         txtTitle.setText("Bio Data Pasien");
+
+        fontBold = Typeface.createFromAsset(getAssets(),"font1bold.ttf");
+        txtTitle.setTypeface(fontBold);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -3,6 +3,7 @@ package com.procodecg.codingmom.ehealth.main;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
@@ -14,13 +15,15 @@ import android.widget.Toast;
 
 import com.goodiebag.pinview.Pinview;
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.data.EhealthContract;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 
 public class Pin2Activity extends SessionManagement {
 
-// batas jumlah input pin salah yang diperbolehkan
+    Typeface font;
+    Typeface fontbold;
+
+
+    // batas jumlah input pin salah yang diperbolehkan
     private int numberOfRemainingLoginAttempts = 3;
 
 // fungsi sembunyikan keyboard
@@ -57,6 +60,16 @@ public class Pin2Activity extends SessionManagement {
         final TextView numberOfRemainingLoginAttemptstv = (TextView) findViewById(R.id.numberOfRemainingLoginAttemptsTV);
         final TextView textviewkali = (TextView) findViewById(R.id.textViewKali);
 
+        font = Typeface.createFromAsset(getAssets(), "font1.ttf");
+        fontbold = Typeface.createFromAsset(getAssets(), "font1bold.ttf");
+        TextView tv1 = (TextView) findViewById(R.id.textPin);
+        TextView tv2 = (TextView) findViewById(R.id.attemptsLeftTV);
+        TextView tv3 = (TextView) findViewById(R.id.numberOfRemainingLoginAttemptsTV);
+        TextView tv4 = (TextView) findViewById(R.id.textViewKali);
+        tv1.setTypeface(font);
+        tv2.setTypeface(fontbold);
+        tv3.setTypeface(fontbold);
+        tv4.setTypeface(fontbold);
 
         Pinview pinview = (Pinview) findViewById(R.id.pinView);
         pinview.setPinViewEventListener(new Pinview.PinViewEventListener() {
