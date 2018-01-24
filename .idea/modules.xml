@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Synevirta1-Project.iml" filepath="$PROJECT_DIR$/Synevirta1-Project.iml" />
+      <module fileurl="file://E:\Synevirta1-Project\Synevirta1-Project.iml" filepath="E:\Synevirta1-Project\Synevirta1-Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\Synevirta1-Project\app\app.iml" filepath="E:\Synevirta1-Project\app\app.iml" />
     </modules>
   </component>
 </project>

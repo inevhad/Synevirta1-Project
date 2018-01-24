@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.procodecg.codingmom.ehealth.SettingActivity;
 import com.procodecg.codingmom.ehealth.utils.Edit;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
@@ -84,6 +85,11 @@ public class MainVer2Activity extends AppCompatActivity {
         Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);
         finish();
+    }
+
+    //tambahan untuk masuk ke menu setting
+    public void showSett(View view) {
+        startActivity(new Intent(getApplicationContext(), SettingActivity.class));
     }
 
     public void copyDBEhealth(){

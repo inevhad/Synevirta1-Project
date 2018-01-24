@@ -1,47 +1,79 @@
 package com.procodecg.codingmom.ehealth;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
+import com.procodecg.codingmom.ehealth.main.MainVer2Activity;
 import com.procodecg.codingmom.ehealth.main.SetConfig;
 
 import java.util.HashMap;
 
 public class SettingActivity extends AppCompatActivity {
 
-    private SetConfig setConfig;
-    private EditText idpuskes,namapuskes;
-    private Button simpan,hapus;
+    private EditText settusername;
+    private EditText settpassword;
+    private EditText setip;
+    private EditText settimeout;
 
+    private SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        setConfig = new SetConfig(getApplicationContext() );
-        idpuskes = (EditText) findViewById(R.id.idpuskes);
-        namapuskes = (EditText) findViewById(R.id.namapuskes);
-        simpan = (Button) findViewById(R.id.simpan);
-        hapus = (Button) findViewById(R.id.hapus);
+        preferences = getSharedPreferences("SETTING", MODE_PRIVATE);
+        String username= preferences.getString("USERNAME","");
+        String password= preferences.getString("PASSWORD","");
+        String address= preferences.getString("ADDRESS","");
+        String time= preferences.getString("TIME","");
 
 
-        HashMap<String, String> setting = setConfig.getDetail();
-        idpuskes.setText(setting.get(setConfig.KEY_IDPUSKES));
-        namapuskes.setText(setting.get(setConfig.KEY_NAMAPUSKES));
+        settusername=(EditText)findViewById(R.id.SetUser);
+        settpassword=(EditText)findViewById(R.id.SetPass);
+        setip=(EditText)findViewById(R.id.SetIp);
+        settimeout=(EditText)findViewById(R.id.Settime);
 
-       simpan.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view){
-               setConfig.createSetConfig(
-                       idpuskes.getText().toString(),
-                       namapuskes.getText().toString());
-           }
-       });
+        ((TextView) findViewById(R.id.SetUser)).setText(username);
+        ((TextView) findViewById(R.id.SetPass)).setText(password);
+        ((TextView) findViewById(R.id.SetIp)).setText(address);
+        ((TextView) findViewById(R.id.Settime)).setText(time);
 
 
     }
+
+    //set close button
+    public void closeToMain(View view) {
+        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+    }
+
+    //set simpan data
+    public void SaveSett(View view){
+        //input data
+        String username= settusername.getText().toString();
+        String password= settpassword.getText().toString();
+        String address= setip.getText().toString();
+        String time= settimeout.getText().toString();
+
+        //simpan data
+        SharedPreferences.Editor editor =preferences.edit();
+        editor.putString("USERNAME",username);
+        editor.putString("PASSWORD",password);
+        editor.putString("ADDRESS",address);
+        editor.putString("TIME",time);
+        editor.apply();
+
+
+        //kembali ke mainVer2
+        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+
+    }
+
+
 }
