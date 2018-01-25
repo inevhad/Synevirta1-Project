@@ -1,11 +1,14 @@
 package com.procodecg.codingmom.ehealth.main;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -15,18 +18,47 @@ import android.widget.Toast;
 
 import com.goodiebag.pinview.Pinview;
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
+import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
+import com.procodecg.codingmom.ehealth.utils.States;
 
 public class Pin2Activity extends SessionManagement {
 
     Typeface font;
     Typeface fontbold;
+    HPCActivity hpc;
 
 
     // batas jumlah input pin salah yang diperbolehkan
     private int numberOfRemainingLoginAttempts = 3;
 
-// fungsi sembunyikan keyboard
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (!States.CheckHPC) {
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(Pin2Activity.this);
+            mBuilder.setIcon(R.drawable.logo2);
+            mBuilder.setTitle("Kartu yang Anda masukkan tidak dapat diakses");
+            mBuilder.setMessage("Silahkan coba lagi atau masukkan kartu lain");
+            mBuilder.setCancelable(false);
+            mBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                    Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
+                    startActivity(activity);
+                }
+            });
+
+            AlertDialog alertDialog = mBuilder.create();
+            alertDialog.show();
+        }
+    }
+
+
+    // fungsi sembunyikan keyboard
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
         //Find the currently focused view, so we can grab the correct window token from it.
@@ -54,6 +86,7 @@ public class Pin2Activity extends SessionManagement {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_pin2);
 
         final TextView attemptslefttv = (TextView) findViewById(R.id.attemptsLeftTV);
@@ -72,6 +105,9 @@ public class Pin2Activity extends SessionManagement {
         tv4.setTypeface(fontbold);
 
         Pinview pinview = (Pinview) findViewById(R.id.pinView);
+
+        getHPCdata();
+
         pinview.setPinViewEventListener(new Pinview.PinViewEventListener() {
             @Override
             public void onDataEntered(Pinview pinview, boolean b) {
@@ -82,6 +118,7 @@ public class Pin2Activity extends SessionManagement {
                     Intent activity = new Intent(Pin2Activity.this, PasiensyncActivity.class);
                     startActivity(activity);
                     finish();
+
 //          jika pin salah
                 } else {
 
@@ -109,7 +146,7 @@ public class Pin2Activity extends SessionManagement {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
-                                Intent activity = new Intent(Pin2Activity.this, Main1Activity.class);
+                                Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
                                 startActivity(activity);
                                 finish();
                             }
@@ -126,11 +163,49 @@ public class Pin2Activity extends SessionManagement {
         });
     }
 
-/*    public void goToPasien(View v){
-        Intent activity = new Intent(this, PasiensyncActivity.class);
-        startActivity(activity);
-        finish();
+
+    /** mengambil data dari kartu HPC
+     *
+     */
+
+    public void getHPCdata() {
+
+        hpc = new HPCActivity(getApplicationContext());
+        //Boolean statusKartuHPC = true;
+        String HPCnumberString = "D12345";
+        String namaDokterString = "dr. Sinta";
+
+            //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
+            // Create database helper
+            EhealthDbHelper db = new EhealthDbHelper(getApplicationContext());
+            db.openDB();
+            db.createTableKartu();
+            //db.createTableRekMed();
+            //mDbHelper.deleteAll();
+            // Gets the database in write mode
+            SQLiteDatabase mDbHelper = db.getWritableDatabase();
+
+            // Create a ContentValues object where column names are the keys
+            ContentValues values = new ContentValues();
+            values.put(EhealthContract.KartuEntry.COLUMN_HPCNUMBER, HPCnumberString);
+//            values.put(KartuEntry.COLUMN_PIN_HPC, PIN_HPC);
+            values.put(EhealthContract.KartuEntry.COLUMN_DOKTER, namaDokterString);
+
+            // Insert a new row in the database, returning the ID of that new row.
+            long newRowId = mDbHelper.insert(EhealthContract.KartuEntry.TABLE_NAME, null, values);
+            mDbHelper.close();
+            // Show a toast message depending on whether or not the insertion was successful
+            if (newRowId == -1) {
+                // If the row ID is -1, then there was an error with insertion.
+                Toast.makeText(this, "Sinkronisasi kartu HPC GAGAL!", Toast.LENGTH_SHORT).show();
+                Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
+                startActivity(activity);
+                finish();
+            } else {
+                // Otherwise, the insertion was successful and we can display a toast with the row ID.
+                Toast.makeText(this, "Sinkronisasi kartu HPC BERHASIL! ", Toast.LENGTH_SHORT).show();
+            }
+
     }
-*/
 
 }

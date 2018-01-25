@@ -337,7 +337,6 @@ public final class EhealthContract {
          * Type: TEXT (200)
          */
         public final static String COLUMN_RESEP = "resep";
-
         /**
          * Catatan resep.
          *

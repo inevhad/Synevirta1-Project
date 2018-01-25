@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainVer2Activity">
+        <activity android:name=".main.MainVer2Activity"
+            android:windowSoftInputMode="stateHidden"
+            />
+
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -23,9 +26,10 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
 
-        </activity>
+
         <activity android:name=".PinActivity" />
         <activity android:name=".main.PasiensyncActivity" />
+
         <activity android:name=".fragment.BottombarActivity" />
         <activity
             android:name=".pasien.PasiendetailActivity"

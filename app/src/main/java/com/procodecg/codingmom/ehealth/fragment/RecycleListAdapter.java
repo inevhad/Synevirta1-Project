@@ -64,6 +64,7 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
         //ini line 63-64 koreksi dari kang Irfan
         //listTanggal.size();
         return (null != listNamaDokter ? listNamaDokter.size():null);
+        // if listnamadokter != null maka listnamadokter = array size, else listnamadokter = null
     }
 
     @Override

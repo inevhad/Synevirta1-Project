@@ -25,6 +25,8 @@ import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import java.io.File;
 import java.io.IOException;
 
+import static com.procodecg.codingmom.ehealth.main.Pin2Activity.hideKeyboard;
+
 public class MainVer2Activity extends AppCompatActivity {
 
     Typeface font;
@@ -34,6 +36,7 @@ public class MainVer2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_ver2);
 
+        hideKeyboard(MainVer2Activity.this);
 
         //deklarasi KEY untuk SP
         SharedPreferences prefs = getSharedPreferences("DATAPUSKES", MODE_PRIVATE);
@@ -63,7 +66,7 @@ public class MainVer2Activity extends AppCompatActivity {
         {
             copyDBEhealth();
         }
-        getHPCdata();
+        //getHPCdata();
     }
 
       public void showEdit(View view) {
@@ -82,6 +85,7 @@ public class MainVer2Activity extends AppCompatActivity {
 
 
     public void goToPin(View v){
+
         Intent activity = new Intent(this, Pin2Activity.class);
         startActivity(activity);
         finish();
@@ -111,71 +115,6 @@ public class MainVer2Activity extends AppCompatActivity {
         mDBHelper.close();
     }
 
-
-    /** mengambil data dari kartu HPC
-     *
-     */
-
-    public void getHPCdata() {
-        // Read from input fields
-        // Use trim to eliminate leading or trailing white space
-        Boolean statusKartuHPC = true;
-        String HPCnumberString = "D12345";
-        String namaDokterString = "dr. Sinta";
-
-        if (statusKartuHPC != false) {
-
-            //Toast.makeText(this, "true ", Toast.LENGTH_SHORT).show();
-            // Create database helper
-            EhealthDbHelper db = new EhealthDbHelper(getApplicationContext());
-            db.openDB();
-            db.createTableKartu();
-            //db.createTableRekMed();
-            //mDbHelper.deleteAll();
-            // Gets the database in write mode
-            SQLiteDatabase mDbHelper = db.getWritableDatabase();
-
-            // Create a ContentValues object where column names are the keys
-            ContentValues values = new ContentValues();
-            values.put(EhealthContract.KartuEntry.COLUMN_HPCNUMBER, HPCnumberString);
-//            values.put(KartuEntry.COLUMN_PIN_HPC, PIN_HPC);
-            values.put(EhealthContract.KartuEntry.COLUMN_DOKTER, namaDokterString);
-
-            // Insert a new row in the database, returning the ID of that new row.
-            long newRowId = mDbHelper.insert(EhealthContract.KartuEntry.TABLE_NAME, null, values);
-            mDbHelper.close();
-            // Show a toast message depending on whether or not the insertion was successful
-            if (newRowId == -1) {
-                // If the row ID is -1, then there was an error with insertion.
-                Toast.makeText(this, "Sinkronisasi kartu HPC GAGAL!", Toast.LENGTH_SHORT).show();
-            } else {
-                // Otherwise, the insertion was successful and we can display a toast with the row ID.
-                Toast.makeText(this, "Sinkronisasi kartu HPC BERHASIL! ", Toast.LENGTH_SHORT).show();
-//                Intent activity = new Intent(this, Pin2Activity.class);
-//                startActivity(activity);
-//                finish();
-            }
-        } else
-        {
-
-            AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainVer2Activity.this);
-            mBuilder.setIcon(R.drawable.logo2);
-            mBuilder.setTitle("Kartu yang Anda masukkan tidak dapat diakses");
-            mBuilder.setMessage("Silahkan coba lagi atau masukkan kartu lain");
-            mBuilder.setCancelable(false);
-            mBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    dialogInterface.dismiss();
-                }
-            });
-
-            AlertDialog alertDialog = mBuilder.create();
-            alertDialog.show();
-
-        }
-
-    }
 
 }
 
