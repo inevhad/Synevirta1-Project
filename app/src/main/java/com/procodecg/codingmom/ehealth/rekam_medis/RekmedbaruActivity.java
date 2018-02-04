@@ -34,6 +34,7 @@ import com.procodecg.codingmom.ehealth.utils.NothingSelectedSpinnerAdapter;
 import com.procodecg.codingmom.ehealth.utils.Validation;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 /**
@@ -502,8 +503,16 @@ public class RekmedbaruActivity extends AppCompatActivity {
             if(validateData()){
                 // Read from input fields
                 // Use trim to eliminate leading or trailing white space
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                String mTanggalPeriksa = sdf.format(new java.util.Date());
+                //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                //String mTanggalPeriksa = sdf.format(new java.util.Date());
+
+                //setting format tanggal device yg baru
+                Long tsLong = System.currentTimeMillis();
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTimeInMillis(tsLong);
+                String mTanggalPeriksa = String.valueOf(formatter.format(calendar.getTime()));
+
                 String mIDPuskesmasString = mIDPuskesmas.getText().toString().trim();
                 String mNamaDokterString = PasiensyncActivity.getNamaDokter();
                 //  PoliSpinner

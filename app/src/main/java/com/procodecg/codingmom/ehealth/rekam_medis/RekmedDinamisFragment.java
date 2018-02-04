@@ -13,11 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.fragment.RecycleListAdapter;
 
 import java.util.ArrayList;
+
+import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA;
 
 
 /**
@@ -36,6 +39,7 @@ public class RekmedDinamisFragment extends Fragment {
 
     private ArrayList<String> listTanggal;
     private ArrayList<String> listNamaDokter;
+    private int currentID;
     //private ArrayList<String> listIDPuskesmas;
     EhealthDbHelper dbHelper;
     boolean Tableexist;
@@ -103,18 +107,19 @@ public class RekmedDinamisFragment extends Fragment {
         String[] projection = {
                 RekamMedisEntry._ID,
                 RekamMedisEntry.COLUMN_NAMA_DOKTER,
-                RekamMedisEntry.COLUMN_TGL_PERIKSA,
+                COLUMN_TGL_PERIKSA,
                 //RekamMedisEntry.COLUMN_ID_PUSKESMAS
         };
+        Cursor cursor = db.query(RekamMedisEntry.TABLE_NAME, projection, null, null, null, null, EhealthContract.RekamMedisEntry._ID+" DESC");
 
-        Cursor cursor = db.query(RekamMedisEntry.TABLE_NAME, projection, null, null, null, null, null);
+//        Cursor cursor = db.query(RekamMedisEntry.TABLE_NAME, projection, null, null, null, null, null);
         try {
             // Display the number of rows in the Cursor (which reflects the number of rows in the
             // table in the database).
             // Figure out the index of each column
             int idColumnIndex = cursor.getColumnIndex(RekamMedisEntry._ID);
             int namaDokterIndex = cursor.getColumnIndex(RekamMedisEntry.COLUMN_NAMA_DOKTER);
-            int tanggalPeriksaIndex = cursor.getColumnIndex(RekamMedisEntry.COLUMN_TGL_PERIKSA);
+            int tanggalPeriksaIndex = cursor.getColumnIndex(COLUMN_TGL_PERIKSA);
             //int IDPuskesmasIndex = cursor.getColumnIndex(RekamMedisEntry.COLUMN_ID_PUSKESMAS);
             listNamaDokter = new ArrayList<>();
             //listIDPuskesmas = new ArrayList<>();
@@ -125,7 +130,7 @@ public class RekmedDinamisFragment extends Fragment {
                 do {
                     // Use that index to extract the String or Int value of the word
                     // at the current row the cursor is on.
-                    int currentID = cursor.getInt(idColumnIndex);
+                    currentID = cursor.getInt(idColumnIndex);
                     String currentNamaDokter = cursor.getString(namaDokterIndex);
                     String currentTanggalPeriksa = cursor.getString(tanggalPeriksaIndex);
                     //String currentIDPuskesmas = cursor.getString(IDPuskesmasIndex);

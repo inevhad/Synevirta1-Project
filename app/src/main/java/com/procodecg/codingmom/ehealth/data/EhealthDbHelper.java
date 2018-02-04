@@ -1,9 +1,15 @@
 package com.procodecg.codingmom.ehealth.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.procodecg.codingmom.ehealth.fragment.Pencarian;
+
+import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_NAMA_DOKTER;
+import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA;
 
 /**
  * Created by neo on 11/21/17.
@@ -47,6 +53,14 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean checkDbOpen(){
+        if(db != null && db.isOpen()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public String[] getAllDiagnosa(){
         Cursor cursor = db.query(
                 EhealthContract.DiagnosaEntry.TABLE_NAME,
@@ -76,8 +90,8 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_REKMED_TABLE =  "CREATE TABLE IF NOT EXISTS " + EhealthContract.RekamMedisEntry.TABLE_NAME + " ("
                 + EhealthContract.RekamMedisEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA + " TEXT, "
-                + EhealthContract.RekamMedisEntry.COLUMN_NAMA_DOKTER + " TEXT, "
+                + COLUMN_TGL_PERIKSA + " DATETIME, "
+                + COLUMN_NAMA_DOKTER + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_POLI + " INTEGER, "
                 + EhealthContract.RekamMedisEntry.COLUMN_RUJUKAN + " TEXT, "
@@ -131,7 +145,6 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_KARTU_TABLE);
     }
 
-
     public boolean isTableExists(String tableName, boolean openDb) {
         if(openDb) {
             if(db == null || !db.isOpen()) {
@@ -154,4 +167,38 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
         }
         return false;
     }
+
+    //setting untuk Pencarian
+
+    public void addBeneficiary(Pencarian pencarian) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(EhealthContract.RekamMedisEntry._ID, pencarian.getId());
+        values.put(COLUMN_NAMA_DOKTER, pencarian.getNamaDokter());
+        values.put(EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA, pencarian.getEmail());
+        values.put(EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA, pencarian.getAddress());
+        values.put(EhealthContract.RekamMedisEntry.COLUMN_ICD10_DIAGNOSA, pencarian.getCountry());
+
+        db.insert(EhealthContract.RekamMedisEntry.TABLE_NAME, null, values);
+        db.close();
+    }
+
+    public Cursor retrieve (String searchTerm)
+    {
+        String[] columns={EhealthContract.RekamMedisEntry._ID, COLUMN_NAMA_DOKTER};
+        Cursor context =null;
+
+        if(searchTerm != null && searchTerm.length()>0)
+        {
+            String sql="SELECT * FROM "+EhealthContract.RekamMedisEntry.TABLE_NAME+" WHERE "+ COLUMN_NAMA_DOKTER+" OR "+EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA+" LIKE '%"+searchTerm+"%'";
+            context=db.rawQuery(sql,null);
+            return context;
+
+        }
+
+        context=db.query(EhealthContract.RekamMedisEntry.TABLE_NAME,columns,null,null,null,null,null);
+        return context;
+    }
+
 }

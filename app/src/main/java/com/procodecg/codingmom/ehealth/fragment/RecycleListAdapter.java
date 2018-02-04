@@ -77,7 +77,8 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+//    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
 
         //font
         font = Typeface.createFromAsset(activity.getAssets(),"font1.ttf");
@@ -85,10 +86,14 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
 
         holder.mTextView1.setText(listTanggal.get(position));
         holder.mTextView2.setText(listNamaDokter.get(position));
+//        holder.mTextView2.setText(listNamaDokter.get(position).getNamaDokter());
 
         //ini dikomen yg bikin error 3 record
         //Bitmap icon = BitmapFactory.decodeResource(activity.getResources(),ic[position]);
         //holder.mImage.setImageBitmap(icon);
+
+//    public void onBindViewHolder(final BeneficiaryViewHolder holder, int position) {
+//        holder.textViewName.setText(listBeneficiary.get(position).getName());
 
         holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -619,4 +619,7 @@ public final class EhealthContract {
 
         public final static String COLUMN_DIAGNOSA = "PENYAKIT";
     }
+
+    public class TB_NAME {
+    }
 }
