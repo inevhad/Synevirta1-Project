@@ -1,26 +1,20 @@
 package com.procodecg.codingmom.ehealth.main;
 
-import android.content.ContentValues;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.procodecg.codingmom.ehealth.SettingActivity;
-import com.procodecg.codingmom.ehealth.utils.Edit;
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.SettingActivity;
 import com.procodecg.codingmom.ehealth.data.CopyDBHelper;
-import com.procodecg.codingmom.ehealth.data.EhealthContract;
-import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
+import com.procodecg.codingmom.ehealth.utils.Edit;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,7 +66,6 @@ public class MainVer2Activity extends AppCompatActivity {
       public void showEdit(View view) {
       startActivity(new Intent(getApplicationContext(),Edit.class));
 
-// dikomen k irfan
     //copyDBEhealth();
         //getHPCdata();
 
