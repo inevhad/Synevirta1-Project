@@ -1,6 +1,5 @@
 package com.procodecg.codingmom.ehealth.main;
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,17 +8,11 @@ import android.content.IntentFilter;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbManager;
-
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.felhr.usbserial.UsbSerialDevice;
 import com.felhr.usbserial.UsbSerialInterface;
-
-import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.HPCData;
 import com.procodecg.codingmom.ehealth.utils.CardUtil;
 

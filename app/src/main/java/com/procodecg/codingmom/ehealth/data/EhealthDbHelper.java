@@ -1,12 +1,9 @@
 package com.procodecg.codingmom.ehealth.data;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.procodecg.codingmom.ehealth.fragment.Pencarian;
 
 import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_NAMA_DOKTER;
 import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA;
@@ -170,19 +167,19 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
     //setting untuk Pencarian
 
-    public void addBeneficiary(Pencarian pencarian) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(EhealthContract.RekamMedisEntry._ID, pencarian.getId());
-        values.put(COLUMN_NAMA_DOKTER, pencarian.getNamaDokter());
-        values.put(EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA, pencarian.getEmail());
-        values.put(EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA, pencarian.getAddress());
-        values.put(EhealthContract.RekamMedisEntry.COLUMN_ICD10_DIAGNOSA, pencarian.getCountry());
-
-        db.insert(EhealthContract.RekamMedisEntry.TABLE_NAME, null, values);
-        db.close();
-    }
+//    public void addBeneficiary(Pencarian pencarian) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        values.put(EhealthContract.RekamMedisEntry._ID, pencarian.getId());
+//        values.put(COLUMN_NAMA_DOKTER, pencarian.getNamaDokter());
+//        values.put(EhealthContract.RekamMedisEntry.COLUMN_KELUHANUTAMA, pencarian.getEmail());
+//        values.put(EhealthContract.RekamMedisEntry.COLUMN_DIAGNOSIS_KERJA, pencarian.getAddress());
+//        values.put(EhealthContract.RekamMedisEntry.COLUMN_ICD10_DIAGNOSA, pencarian.getCountry());
+//
+//        db.insert(EhealthContract.RekamMedisEntry.TABLE_NAME, null, values);
+//        db.close();
+//    }
 
     public Cursor retrieve (String searchTerm)
     {

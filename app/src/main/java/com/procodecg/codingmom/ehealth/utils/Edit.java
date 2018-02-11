@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.procodecg.codingmom.ehealth.R;
-import com.procodecg.codingmom.ehealth.main.MainVer2Activity;
+import com.procodecg.codingmom.ehealth.main.MainActivity;
 
 public class Edit extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class Edit extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit);
+        setContentView(R.layout.edit);
 
         prefs = getSharedPreferences("DATAPUSKES", MODE_PRIVATE);
         String idpuskes= prefs.getString("IDPUSKES","");
@@ -42,7 +42,7 @@ public class Edit extends AppCompatActivity {
 
     //set close button
     public void closeToMain(View view) {
-        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
     //set simpan data
@@ -58,7 +58,7 @@ public class Edit extends AppCompatActivity {
         editor.apply();
 
         //kembali ke mainVer2
-        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
     }
 

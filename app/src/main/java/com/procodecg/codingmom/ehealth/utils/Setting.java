@@ -1,20 +1,17 @@
-package com.procodecg.codingmom.ehealth;
+package com.procodecg.codingmom.ehealth.utils;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.procodecg.codingmom.ehealth.main.MainVer2Activity;
-import com.procodecg.codingmom.ehealth.main.SetConfig;
+import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.main.MainActivity;
 
-import java.util.HashMap;
-
-public class SettingActivity extends AppCompatActivity {
+public class Setting extends AppCompatActivity {
 
     private EditText settusername;
     private EditText settpassword;
@@ -26,7 +23,7 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.setting);
 
         preferences = getSharedPreferences("SETTING", MODE_PRIVATE);
         String username= preferences.getString("USERNAME","");
@@ -50,7 +47,7 @@ public class SettingActivity extends AppCompatActivity {
 
     //set close button
     public void closeToMain(View view) {
-        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
     //set simpan data
@@ -71,7 +68,7 @@ public class SettingActivity extends AppCompatActivity {
 
 
         //kembali ke mainVer2
-        startActivity(new Intent(getApplicationContext(), MainVer2Activity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
 
     }
 

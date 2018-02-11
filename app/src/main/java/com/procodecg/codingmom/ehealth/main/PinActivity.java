@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
@@ -23,7 +22,7 @@ import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 import com.procodecg.codingmom.ehealth.utils.States;
 
-public class Pin2Activity extends SessionManagement {
+public class PinActivity extends SessionManagement {
 
     Typeface font;
     Typeface fontbold;
@@ -38,7 +37,7 @@ public class Pin2Activity extends SessionManagement {
         super.onStart();
 
         if (!States.CheckHPC) {
-            AlertDialog.Builder mBuilder = new AlertDialog.Builder(Pin2Activity.this);
+            AlertDialog.Builder mBuilder = new AlertDialog.Builder(PinActivity.this);
             mBuilder.setIcon(R.drawable.logo2);
             mBuilder.setTitle("Kartu yang Anda masukkan tidak dapat diakses");
             mBuilder.setMessage("Silahkan coba lagi atau masukkan kartu lain");
@@ -47,7 +46,7 @@ public class Pin2Activity extends SessionManagement {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     dialogInterface.dismiss();
-                    Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
+                    Intent activity = new Intent(PinActivity.this, MainActivity.class);
                     startActivity(activity);
                 }
             });
@@ -87,7 +86,7 @@ public class Pin2Activity extends SessionManagement {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_pin2);
+        setContentView(R.layout.activity_pin);
 
         final TextView attemptslefttv = (TextView) findViewById(R.id.attemptsLeftTV);
         final TextView numberOfRemainingLoginAttemptstv = (TextView) findViewById(R.id.numberOfRemainingLoginAttemptsTV);
@@ -113,9 +112,9 @@ public class Pin2Activity extends SessionManagement {
             public void onDataEntered(Pinview pinview, boolean b) {
 //          jika pin benar
                 if (pinview.getValue().toString().equals("12345")) {
-                    Toast.makeText(Pin2Activity.this, "Pin Anda benar", Toast.LENGTH_SHORT).show();
-                    hideKeyboard(Pin2Activity.this);
-                    Intent activity = new Intent(Pin2Activity.this, PasiensyncActivity.class);
+                    Toast.makeText(PinActivity.this, "Pin Anda benar", Toast.LENGTH_SHORT).show();
+                    hideKeyboard(PinActivity.this);
+                    Intent activity = new Intent(PinActivity.this, PasiensyncActivity.class);
                     startActivity(activity);
                     finish();
 
@@ -137,16 +136,16 @@ public class Pin2Activity extends SessionManagement {
 
 //                  jika kesempatan login habis
                     if (numberOfRemainingLoginAttempts == 0) {
-                        hideKeyboard(Pin2Activity.this);
+                        hideKeyboard(PinActivity.this);
 //                      tampilkan dialog box alert
-                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(Pin2Activity.this);
+                        AlertDialog.Builder mBuilder = new AlertDialog.Builder(PinActivity.this);
                         mBuilder.setTitle(R.string.dialog_title_pin);
                         mBuilder.setMessage(R.string.dialog_msg_pin);
                         mBuilder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 dialogInterface.dismiss();
-                                Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
+                                Intent activity = new Intent(PinActivity.this, MainActivity.class);
                                 startActivity(activity);
                                 finish();
                             }
@@ -198,7 +197,7 @@ public class Pin2Activity extends SessionManagement {
             if (newRowId == -1) {
                 // If the row ID is -1, then there was an error with insertion.
                 Toast.makeText(this, "Sinkronisasi kartu HPC GAGAL!", Toast.LENGTH_SHORT).show();
-                Intent activity = new Intent(Pin2Activity.this, MainVer2Activity.class);
+                Intent activity = new Intent(PinActivity.this, MainActivity.class);
                 startActivity(activity);
                 finish();
             } else {

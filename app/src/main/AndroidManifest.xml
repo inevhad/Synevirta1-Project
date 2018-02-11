@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainVer2Activity"
+        <activity android:name=".main.MainActivity"
             android:windowSoftInputMode="stateHidden"
             />
 
@@ -27,7 +27,6 @@
             <!-- </intent-filter> -->
 
 
-        <activity android:name=".PinActivity" />
         <activity android:name=".main.PasiensyncActivity" />
 
         <activity android:name=".fragment.BottombarActivity" />
@@ -37,12 +36,11 @@
         <activity
             android:name=".pasien.KeluargaActivity"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".main.Pin2Activity" />
+        <activity android:name=".main.PinActivity" />
         <activity android:name=".rekam_medis.RekmedlamaActivity" />
         <activity
             android:name=".rekam_medis.RekmedbaruActivity"
             android:exported="true" />
-        <activity android:name=".IsirekammedisActivity" />
         <activity android:name=".main.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,7 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingActivity" />
+        <activity android:name=".utils.Setting" />
         <activity
             android:name=".utils.Edit"
             android:theme="@style/AppTheme.CustomTheme" />
