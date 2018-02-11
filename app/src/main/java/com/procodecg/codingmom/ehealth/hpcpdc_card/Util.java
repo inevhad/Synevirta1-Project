@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth.utils;
+package com.procodecg.codingmom.ehealth.hpcpdc_card;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.Comparator;
  * Created by neo on 24/01/18.
  */
 
-public class CardUtil {
+public class Util {
 
     public static byte[] hexStringToByteArray(String s) {
         int len = s.length();

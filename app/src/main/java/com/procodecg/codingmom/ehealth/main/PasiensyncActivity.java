@@ -21,6 +21,7 @@ import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract.KartuEntry;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
+import com.procodecg.codingmom.ehealth.hpcpdc_card.PDCDataActivity;
 
 /**
  * Created by macbookpro on 7/27/17.
@@ -30,6 +31,7 @@ public class PasiensyncActivity extends AppCompatActivity {
 
     Typeface font;
     Typeface fontbold;
+    PDCDataActivity pdc;
 
     public static final int SELECTED_PICTURE =1;
     //rivate static String currentNamaDokter;
@@ -63,6 +65,8 @@ public class PasiensyncActivity extends AppCompatActivity {
     }
 
     public void goToProfil(View v){
+        pdc = new PDCDataActivity(getApplicationContext());
+
         Intent activity = new Intent(this, BottombarActivity.class);
         startActivity(activity);
         finish();

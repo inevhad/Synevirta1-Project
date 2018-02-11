@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth.main;
+package com.procodecg.codingmom.ehealth.hpcpdc_card;
 
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -8,13 +8,12 @@ import android.content.IntentFilter;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbDeviceConnection;
 import android.hardware.usb.UsbManager;
+
 import android.util.Log;
 import android.widget.TextView;
 
 import com.felhr.usbserial.UsbSerialDevice;
 import com.felhr.usbserial.UsbSerialInterface;
-import com.procodecg.codingmom.ehealth.data.HPCData;
-import com.procodecg.codingmom.ehealth.utils.CardUtil;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
@@ -154,7 +153,7 @@ public class HPCActivity{
         public void onReceivedData(byte[] bytes) {
             Log.d(TAG, "Received bytes");
             data = null;
-            data = CardUtil.bytesToHex(bytes);
+            data = Util.bytesToHex(bytes);
 
             Log.d(TAG, "Data " + data);
             Log.d(TAG, "i: " + i);
@@ -168,7 +167,7 @@ public class HPCActivity{
                     respondData.get(selectResponse);
                     respondData.position(0);
 
-                    Log.i(TAG, "Select response string: " + CardUtil.bytesToHex(selectResponse));
+                    Log.i(TAG, "Select response string: " + Util.bytesToHex(selectResponse));
                     send();
                 }
             } else if (i == 2) {
@@ -180,7 +179,7 @@ public class HPCActivity{
                     respondData.get(authResponse);
                     respondData.position(0);
 
-                    Log.i(TAG, "Auth response string: " + CardUtil.bytesToHex(authResponse));
+                    Log.i(TAG, "Auth response string: " + Util.bytesToHex(authResponse));
                     send();
                 }
             } else if (i == 3) {
@@ -194,7 +193,7 @@ public class HPCActivity{
                     respondData.get(hpdata);
                     respondData.position(0);
 
-                    Log.i(TAG, "HP Data response string: " + CardUtil.bytesToHex(hpdata));
+                    Log.i(TAG, "HP Data response string: " + Util.bytesToHex(hpdata));
 
                     nik = Arrays.copyOfRange(hpdata, 0, 16);
                     byte nameLen = hpdata[16];
@@ -202,9 +201,9 @@ public class HPCActivity{
                     byte sipLen = hpdata[17 + nameLen];
                     sip = Arrays.copyOfRange(hpdata, 17 + nameLen + 1, 17 + nameLen + 1 + sipLen);
 
-                    Log.i(TAG, "nik: " + CardUtil.bytesToString(nik));
-                    Log.i(TAG, "nama: " + CardUtil.bytesToString(nama));
-                    Log.i(TAG, "sip: " + CardUtil.bytesToString(sip));
+                    Log.i(TAG, "nik: " + Util.bytesToString(nik));
+                    Log.i(TAG, "nama: " + Util.bytesToString(nama));
+                    Log.i(TAG, "sip: " + Util.bytesToString(sip));
 /*
                     tvSet(hpcNama, CardUtil.bytesToString(nama));
                     tvSet(hpcRole, "Dokter");
@@ -222,7 +221,7 @@ public class HPCActivity{
                     respondData.get(cert);
                     respondData.position(0);
 
-                    Log.i(TAG, "Cert response string: " + CardUtil.bytesToHex(cert));
+                    Log.i(TAG, "Cert response string: " + Util.bytesToHex(cert));
 
                     role = cert[0];
 
