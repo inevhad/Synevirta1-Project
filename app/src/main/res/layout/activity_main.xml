@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="#42b665">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="100dp">
 
     <TextView
         android:id="@+id/textView1"
@@ -107,15 +112,19 @@
             android:textAllCaps="true"
             android:onClick="goToPin" />
 
+    </LinearLayout>
+
     <ImageButton
         android:id="@+id/btnSet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:src="@drawable/ic_setting"
         android:background="@null"
-        android:layout_marginTop="120dp"
         android:layout_marginRight="35dp"
+        android:layout_marginBottom="35dp"
         android:onClick="showSett"
         android:layout_gravity="end"/>
 
-</LinearLayout>
+</RelativeLayout>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.procodecg.codingmom.ehealth.utils.Edit"
-    android:orientation="vertical" android:layout_width="300dp"
+    android:orientation="vertical"
+    android:layout_width="300dp"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="3dp">

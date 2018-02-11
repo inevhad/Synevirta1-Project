@@ -48,7 +48,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".utils.Setting" />
+        <activity android:name=".utils.Setting"
+            android:theme="@style/AppTheme.CustomTheme" />
         <activity
             android:name=".utils.Edit"
             android:theme="@style/AppTheme.CustomTheme" />
