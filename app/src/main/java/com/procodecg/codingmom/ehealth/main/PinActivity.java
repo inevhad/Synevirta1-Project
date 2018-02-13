@@ -19,6 +19,7 @@ import com.goodiebag.pinview.Pinview;
 import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.data.EhealthContract;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
+import com.procodecg.codingmom.ehealth.hpcpdc_card.HPCActivity;
 import com.procodecg.codingmom.ehealth.utils.SessionManagement;
 import com.procodecg.codingmom.ehealth.utils.States;
 

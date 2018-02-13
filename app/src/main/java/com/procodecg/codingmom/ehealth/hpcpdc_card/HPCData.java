@@ -1,4 +1,4 @@
-package com.procodecg.codingmom.ehealth.data;
+package com.procodecg.codingmom.ehealth.hpcpdc_card;
 
 /**
  * Created by irma on 24/01/18.
