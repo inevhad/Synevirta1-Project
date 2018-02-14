@@ -1078,7 +1078,7 @@
                     android:text="Repetisi Resep"
                     android:textColor="#A7ADB2"
                     android:textSize="14sp" />
-
+<!--
                 <RadioGroup
                     android:id="@+id/repetisiResep"
                     android:layout_width="wrap_content"
@@ -1094,7 +1094,17 @@
                         android:textColor="@color/grey"
                         android:textSize="13sp" />
                 </RadioGroup>
+-->
 
+                <TextView
+                    android:id="@+id/showrepetisiResep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Tidak"
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
             </LinearLayout>
 
             <View
