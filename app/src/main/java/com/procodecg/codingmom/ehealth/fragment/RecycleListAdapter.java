@@ -13,9 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.procodecg.codingmom.ehealth.R;
+import com.procodecg.codingmom.ehealth.model.RekamMedisModel;
 import com.procodecg.codingmom.ehealth.rekam_medis.RekmedlamaActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by macbookpro on 9/4/17.
@@ -26,6 +28,15 @@ public class RecycleListAdapter extends RecyclerView.Adapter<RecycleListAdapter.
     private ArrayList<String> listNamaDokter;
     private Activity activity;
     public static String currentPosition;
+
+/*
+    private List<RekamMedisModel> rekamMedisModelList = new ArrayList<>();
+
+    public RecycleListAdapter(List<RekamMedisModel> rekamMedisModelList){
+        this.rekamMedisModelList = rekamMedisModelList;
+    }
+*/
+
 
     private int[] ic;
 

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -83,6 +84,8 @@ public class RekmedlamaActivity extends AppCompatActivity {
         final TextView textResep= (TextView) findViewById(R.id.showResep);
         final TextView textCatResep = (TextView) findViewById(R.id.showCatResep);
         final TextView textStatusResep= (TextView) findViewById(R.id.showStatusResep);
+        // repetisi resep
+        final TextView textRepetisiResep= (TextView) findViewById(R.id.showrepetisiResep);
         final TextView textTindakan= (TextView) findViewById(R.id.showTindakan);
         final TextView textAdVitam = (TextView) findViewById(R.id.showAdVitam);
         final TextView textAdFunctionam= (TextView) findViewById(R.id.showAdFunctionam);
@@ -124,6 +127,7 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 EhealthContract.RekamMedisEntry.COLUMN_RESEP,
                 EhealthContract.RekamMedisEntry.COLUMN_CATTRESEP,
                 EhealthContract.RekamMedisEntry.COLUMN_STATUSRESEP,
+                EhealthContract.RekamMedisEntry.COLUMN_REPETISIRESEP,
                 EhealthContract.RekamMedisEntry.COLUMN_TINDAKAN,
                 EhealthContract.RekamMedisEntry.COLUMN_AD_VITAM,
                 EhealthContract.RekamMedisEntry.COLUMN_AD_FUNCTIONAM,
@@ -170,6 +174,7 @@ public class RekmedlamaActivity extends AppCompatActivity {
             int idResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_RESEP);
             int idCatResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_CATTRESEP);
             int idStatusResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_STATUSRESEP);
+            int idRepetisiResepIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_REPETISIRESEP);
             int idTindakanIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_TINDAKAN);
             int idAdVitamIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_AD_VITAM);
             int idAdFunctionamIndex = cursor.getColumnIndex(EhealthContract.RekamMedisEntry.COLUMN_AD_FUNCTIONAM);
@@ -276,6 +281,9 @@ public class RekmedlamaActivity extends AppCompatActivity {
                 int currentStatusResep = cursor.getInt(idStatusResepIndex);
                 textStatusResep.setText(getStatusResep(currentStatusResep));
 
+                int currentRepetisiResep = cursor.getInt(idRepetisiResepIndex);
+                textRepetisiResep.setText(getRepetisiResepString(currentRepetisiResep));
+
                 String currentTindakan = cursor.getString(idTindakanIndex);
                 textTindakan.setText(currentTindakan);
 
@@ -357,6 +365,17 @@ public class RekmedlamaActivity extends AppCompatActivity {
             statusResep = "Resep dilayani sebagian penggantian";
         }
         return statusResep;
+    }
+
+    public String getRepetisiResepString (int currentRepetisiResep){
+        String repetisiResep = "";
+
+        if (currentRepetisiResep == 0) {
+            repetisiResep = "Tidak";
+        } else {
+            repetisiResep = "Ya";
+        }
+        return repetisiResep;
     }
 
     public String getAd (int currentStatusAd){

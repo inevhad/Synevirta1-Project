@@ -5,6 +5,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.procodecg.codingmom.ehealth.model.RekamMedisModel;
+import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_NAMA_DOKTER;
 import static com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry.COLUMN_TGL_PERIKSA;
 
@@ -86,10 +92,10 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
     public void createTableRekMed(){
 
         String SQL_CREATE_REKMED_TABLE =  "CREATE TABLE IF NOT EXISTS " + EhealthContract.RekamMedisEntry.TABLE_NAME + " ("
-                + EhealthContract.RekamMedisEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + RekamMedisEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + COLUMN_TGL_PERIKSA + " DATETIME, "
                 + COLUMN_NAMA_DOKTER + " TEXT, "
-                + EhealthContract.RekamMedisEntry.COLUMN_ID_PUSKESMAS + " TEXT, "
+                + RekamMedisEntry.COLUMN_ID_PUSKESMAS + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_POLI + " INTEGER, "
                 + EhealthContract.RekamMedisEntry.COLUMN_RUJUKAN + " TEXT, "
                 + EhealthContract.RekamMedisEntry.COLUMN_SYSTOLE + " INTEGER, "
@@ -196,6 +202,24 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
 
         context=db.query(EhealthContract.RekamMedisEntry.TABLE_NAME,columns,null,null,null,null,null);
         return context;
+    }
+
+    public List<RekamMedisModel> getRekamMedisModel(){
+        List<RekamMedisModel> RekamMedisModelList = new ArrayList<>();
+        String selectQuery = "SELECT _ID, tgl_periksa, nama_dokter FROM " + RekamMedisEntry.TABLE_NAME;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()){
+            do {
+                RekamMedisModel rekammedismodel = new RekamMedisModel(cursor.getInt(1), cursor.getString(2), cursor.getString(3));
+                RekamMedisModelList.add(rekammedismodel);
+            } while (cursor.moveToNext());
+        }
+
+        return RekamMedisModelList;
+
     }
 
 }
