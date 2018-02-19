@@ -30,6 +30,7 @@ import com.procodecg.codingmom.ehealth.data.EhealthContract.RekamMedisEntry;
 import com.procodecg.codingmom.ehealth.data.EhealthDbHelper;
 import com.procodecg.codingmom.ehealth.fragment.BottombarActivity;
 import com.procodecg.codingmom.ehealth.main.PasiensyncActivity;
+import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
 import com.procodecg.codingmom.ehealth.utils.NothingSelectedSpinnerAdapter;
 import com.procodecg.codingmom.ehealth.utils.Validation;
 
@@ -46,6 +47,7 @@ public class RekmedbaruActivity extends AppCompatActivity {
     Typeface fontBold;
 
     private TextView txtTitle;
+    private TextView txtSubTitle;
     private int mPoli = RekamMedisEntry.POLI_UMUM;
     private int mKesadaran = RekamMedisEntry.KESADARAN_COMPOSMENTIS;
     private int mStatusLabRadio = RekamMedisEntry.LABRADIO_DILAYANIPENUH;
@@ -87,15 +89,23 @@ public class RekmedbaruActivity extends AppCompatActivity {
         txtTitle = (TextView) findViewById(R.id.txt_title);
         txtTitle.setText("Rekam Medis Baru");
 
+//        String subTitle = getString();
+//        TextView theFact = (TextView) findViewById(R.id.theFact);
+//        String namaPasien = txtSubTitle.getText().toString();
+//        textIDPuskesmas.setText(umur);
+
+        txtSubTitle = (TextView) findViewById(R.id.txt_subtitle);
+        txtSubTitle.setText(PasiendetailActivity.getNamaPasien());
+
         fontBold = Typeface.createFromAsset(getAssets(),"font1bold.ttf");
         txtTitle.setTypeface(fontBold);
 
-        //menampilkan nama puskesmas
+        //menampilkan id/nama puskesmas
         prefs=getSharedPreferences("DATAPUSKES",MODE_PRIVATE);
-        String namapuskes=prefs.getString("IDPUSKES","");
+        String idPuskes=prefs.getString("IDPUSKES","");
 
         idPuskesmas = (ClearableEditText) findViewById(R.id.idPuskesmas);
-        idPuskesmas.setText(namapuskes);
+        idPuskesmas.setText(idPuskes);
 
 
         ScrollView scrollView = (ScrollView) findViewById(R.id.scrollView);
@@ -219,7 +229,9 @@ public class RekmedbaruActivity extends AppCompatActivity {
 */
         }
 
-        private void setupSpinner(){
+
+
+    private void setupSpinner(){
 
             //spinner poli
             Spinner spinnerPoli = (Spinner) findViewById(R.id.poli_spinner);

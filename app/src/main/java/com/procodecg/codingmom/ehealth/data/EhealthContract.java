@@ -89,6 +89,14 @@ public final class EhealthContract {
          */
         public final static String COLUMN_NAMAPASIEN = "nama_pasien";
 
+        /**
+         * umur pasien.
+         *
+         * Type:
+         */
+        public final static String COLUMN_UMURPASIEN = "umur_pasien";
+
+
     }
 
 

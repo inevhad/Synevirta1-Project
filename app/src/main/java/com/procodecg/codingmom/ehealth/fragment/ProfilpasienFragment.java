@@ -13,6 +13,8 @@ import com.procodecg.codingmom.ehealth.R;
 import com.procodecg.codingmom.ehealth.pasien.KeluargaActivity;
 import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
 
+//import static com.procodecg.codingmom.ehealth.main.PasiensyncActivity.currentNamaDokter;
+
 /**
  * Created by macbookpro on 7/30/17.
  */
@@ -20,6 +22,8 @@ import com.procodecg.codingmom.ehealth.pasien.PasiendetailActivity;
 public class ProfilpasienFragment extends Fragment {
 
 //    Typeface font;
+//    PDCActivity pdc;
+
 
     public static Fragment newInstance() {
             ProfilpasienFragment fragment = new ProfilpasienFragment();
@@ -40,6 +44,8 @@ public class ProfilpasienFragment extends Fragment {
             ((BottombarActivity) getActivity()).setSubTitleText();
 //            ((AppCompatActivity) getActivity()).getSupportActionBar().setSubtitle("dr X");
 
+
+            //setting floating button
             FloatingActionButton fabDetail = (FloatingActionButton) view.findViewById(R.id.fabDetail);
                 View.OnClickListener listener = new View.OnClickListener() {
                 @Override
@@ -77,7 +83,5 @@ public class ProfilpasienFragment extends Fragment {
 
             return view;
         }
-
-
 
 }

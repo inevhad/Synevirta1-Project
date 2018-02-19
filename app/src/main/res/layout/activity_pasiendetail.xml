@@ -180,12 +180,16 @@
                 android:layout_marginTop="9dp"/>
 
             <TextView
+                android:id="@+id/textNamaPasien"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Muhammad Hakim"
                 android:textSize="14sp"
                 android:layout_marginBottom="9dp"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible" />
+
+            <!--android:text="Muhammad Hakim"-->
+
 
             <View
                 android:layout_width="match_parent"
@@ -437,7 +441,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tempat Tanggal Lahir"
+                android:text="Tempat Lahir"
                 android:textSize="16sp"
                 android:textColor="@color/colorPrimary"
                 android:layout_marginLeft="20dp"
@@ -446,10 +450,35 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bandung 1 Januari 2000"
+                android:text="Bandung"
                 android:textSize="14sp"
                 android:layout_marginBottom="9dp"
                 android:layout_marginLeft="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Lahir"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:id="@+id/textUmurPasien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible" />
 
             <View
                 android:layout_width="match_parent"

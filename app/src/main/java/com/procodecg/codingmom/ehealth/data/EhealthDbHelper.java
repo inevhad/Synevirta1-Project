@@ -142,7 +142,8 @@ public class EhealthDbHelper extends SQLiteOpenHelper {
                 + EhealthContract.KartuEntry.COLUMN_HPCNUMBER + " TEXT, "
                 + EhealthContract.KartuEntry.COLUMN_DOKTER + " TEXT, "
                 + EhealthContract.KartuEntry.COLUMN_PDCNUMBER + " TEXT, "
-                + EhealthContract.KartuEntry.COLUMN_NAMAPASIEN + " TEXT);";
+                + EhealthContract.KartuEntry.COLUMN_NAMAPASIEN + " TEXT, "
+                + EhealthContract.KartuEntry.COLUMN_UMURPASIEN + " TEXT);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_KARTU_TABLE);

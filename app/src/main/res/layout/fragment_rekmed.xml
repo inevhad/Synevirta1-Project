@@ -45,58 +45,6 @@ tools:context="com.procodecg.codingmom.ehealth.fragment.RekmedFragment">
 
     <!--</android.support.v7.widget.Toolbar>-->
 
-    <!--&lt;!&ndash;<android.support.design.widget.AppBarLayout&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/appbar"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-
-        <!--&lt;!&ndash;android:theme="@style/AppTheme.AppBarOverlay">&ndash;&gt;-->
-
-        <!--&lt;!&ndash;android:paddingTop="@dimen/appbar_padding_top"&ndash;&gt;-->
-
-        <!--&lt;!&ndash;<android.support.v7.widget.Toolbar&ndash;&gt;-->
-            <!--&lt;!&ndash;android:id="@+id/toolbar"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:layout_height="?attr/actionBarSize"&ndash;&gt;-->
-            <!--&lt;!&ndash;android:background="?attr/colorPrimary"&ndash;&gt;-->
-            <!--&lt;!&ndash;app:layout_scrollFlags="scroll|enterAlways"&ndash;&gt;-->
-            <!--&lt;!&ndash;app:popupTheme="@style/AppTheme.PopupOverlay">&ndash;&gt;-->
-
-        <!--&lt;!&ndash;</android.support.v7.widget.Toolbar>&ndash;&gt;-->
-
-        <!--<android.support.design.widget.TabLayout-->
-            <!--android:id="@+id/tabs"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
-
-    <!--</android.support.design.widget.AppBarLayout>-->
-
-    <!--<FrameLayout-->
-        <!--android:id="@+id/frame_layout"-->
-        <!--android:layout_marginTop="?attr/actionBarSize"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_above="@+id/navigation"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:animateLayoutChanges="true">-->
-    <!--</FrameLayout>-->
-
-    <!--&lt;!&ndash;<android.support.design.widget.BottomNavigationView&ndash;&gt;-->
-        <!--&lt;!&ndash;android:id="@+id/navigation"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:layout_alignParentBottom="true"&ndash;&gt;-->
-        <!--&lt;!&ndash;android:background="@color/colorBottomBar"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:itemIconTint="@color/nav_item_state_list"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:itemTextColor="@color/nav_item_state_list"&ndash;&gt;-->
-        <!--&lt;!&ndash;app:menu="@menu/bottom_navigation_items"/>&ndash;&gt;-->
-
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:id="@+id/container"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" />-->
-
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/main_content"
         android:layout_width="match_parent"
